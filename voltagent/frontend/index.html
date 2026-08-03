@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltAgent — Field Copilot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>VoltAgent</h1>
+      <p class="app__subtitle">EV charger field copilot — voice-first, source-verified</p>
+    </header>
+
+    <section class="controls">
+      <label for="lang-select">Language</label>
+      <select id="lang-select">
+        <option value="en-IN">English</option>
+        <option value="hi-IN">हिन्दी (Hindi)</option>
+      </select>
+
+      <button id="mic-btn" class="mic-btn" aria-pressed="false">
+        <span id="mic-icon">🎤</span>
+        <span id="mic-label">Tap to ask</span>
+      </button>
+    </section>
+
+    <section class="transcript" aria-live="polite">
+      <div id="status" class="status">Ready.</div>
+      <div id="user-text" class="bubble bubble--user" hidden></div>
+      <div id="answer-block" class="answer-block" hidden>
+        <div id="answer-text" class="bubble bubble--agent"></div>
+        <div id="confidence-badge" class="badge"></div>
+        <div id="citations" class="citations"></div>
+        <div id="raw-source" class="raw-source" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

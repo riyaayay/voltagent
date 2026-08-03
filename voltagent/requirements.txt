@@ -1,0 +1,41 @@
+# --- Web / API ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# --- Orchestration ---
+langgraph==0.2.34
+langchain-core==0.3.9
+
+# --- LLM providers (pick one, both supported) ---
+google-generativeai==0.8.2
+openai==1.51.0
+
+# --- Retrieval ---
+elasticsearch==8.15.1
+qdrant-client==1.11.2
+sentence-transformers==3.1.1
+rank-bm25==0.2.2          # optional fallback sparse leg (no ES required)
+
+# --- Ingestion ---
+pypdf==5.0.1
+tiktoken==0.8.0
+
+# --- Cache ---
+cachetools==5.5.0
+redis==5.0.8               # optional, only if REDIS_URL is set
+
+# --- Voice ---
+gTTS==2.5.3                 # simple TTS fallback for non-browser playback
+langdetect==1.0.9           # language detection fallback
+
+# --- Observability / utils ---
+python-dotenv==1.0.1
+structlog==24.4.0
+
+# --- Testing ---
+pytest==8.3.3
+pytest-asyncio==0.24.0
+httpx==0.27.2

@@ -1,0 +1,22 @@
+[
+  {
+    "query": "what does error code E203 mean",
+    "expected_doc_id": "charger-error-codes"
+  },
+  {
+    "query": "OCPP StopTransaction required fields",
+    "expected_doc_id": "ocpp-2.0.1-spec"
+  },
+  {
+    "query": "charger keeps resetting mid charging session",
+    "expected_doc_id": "ocpp-2.0.1-spec"
+  },
+  {
+    "query": "minimum clearance distance for high voltage cabinet",
+    "expected_doc_id": "ev-safety-compliance"
+  },
+  {
+    "query": "red blink code three times",
+    "expected_doc_id": "charger-error-codes"
+  }
+]
