@@ -77,19 +77,6 @@ system.
     verifier confidence, cache hit/miss, latency per stage)
 ```
 
-## What each JD requirement maps to
-
-| Requirement | Where |
-|---|---|
-| RAG architecture | `voltagent/agents/graph.py` (full retrieve → augment → generate loop) |
-| LangChain/LangGraph | `voltagent/agents/graph.py` |
-| Elasticsearch hybrid search | `voltagent/retrieval/sparse_es.py` + `fusion.py` |
-| Vector databases | `voltagent/retrieval/dense_qdrant.py` |
-| Agent-based AI systems | `voltagent/agents/verifier_agent.py` — a second agent that critiques the first, not single-shot generation |
-| Low-latency / caching | `voltagent/cache.py` |
-| Observability | `voltagent/logging_utils.py`, `scripts/evaluate_retrieval.py` |
-| Prompt engineering | `voltagent/agents/generation_agent.py` (grounded, citation-forcing prompts) |
-
 ## Build stages (this is a multi-weekend project, by design)
 
 1. **Stage 1 — core RAG loop.** Chunk OCPP/error-code PDFs, index into Qdrant,
