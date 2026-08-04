@@ -32,6 +32,8 @@ from sentence_transformers import util
 
 from voltagent.agents.generation_agent import GenerationResult
 from voltagent.config import settings
+from voltagent.insights.feedback_loop import get_threshold_override
+from voltagent.logging_utils import extract_error_code
 from voltagent.retrieval.dense_qdrant import get_embedder
 
 
@@ -50,6 +52,7 @@ class VerificationResult:
     sentence_checks: list[SentenceCheck] = field(default_factory=list)
     fallback: bool = False
     fallback_reason: str | None = None
+    threshold_applied: float | None = None   # set when insights feedback loop tightened the bar
 
 
 def _split_sentences(text: str) -> list[str]:
@@ -67,7 +70,7 @@ def _cited_chunk_id_for_sentence(sentence: str, chunk_by_index: dict[int, str]) 
     return chunk_by_index.get(int(refs[0]))
 
 
-def run_verifier_agent(generation: GenerationResult) -> VerificationResult:
+def run_verifier_agent(generation: GenerationResult, query_text: str | None = None) -> VerificationResult:
     if generation.is_insufficient:
         # Model already declined to answer — nothing to verify, and this
         # counts as an honest (non-hallucinated) outcome, not a failure.
@@ -80,6 +83,13 @@ def run_verifier_agent(generation: GenerationResult) -> VerificationResult:
             fallback=True,
             fallback_reason="No source chunks were retrieved for this query.",
         )
+
+    # Insights feedback loop: if the docs cited here (or the error code in
+    # the query) are on the nightly Spark job's "known documentation gap"
+    # list, hold this answer to a stricter bar than the default.
+    doc_ids = [c.doc_id for c in generation.used_chunks]
+    error_code = extract_error_code(query_text) if query_text else None
+    threshold = get_threshold_override(doc_ids=doc_ids, error_code=error_code)
 
     embedder = get_embedder()
     chunk_by_index = {i + 1: c.chunk_id for i, c in enumerate(generation.used_chunks)}
@@ -106,7 +116,7 @@ def run_verifier_agent(generation: GenerationResult) -> VerificationResult:
         src_emb = embedder.encode(source_text, convert_to_tensor=True)
         similarity = float(util.cos_sim(sent_emb, src_emb)[0][0])
 
-        supported = similarity >= settings.verifier_confidence_threshold
+        supported = similarity >= threshold
         checks.append(
             SentenceCheck(
                 sentence=sentence, cited_chunk_id=cited_id, support_score=similarity, supported=supported
@@ -123,7 +133,7 @@ def run_verifier_agent(generation: GenerationResult) -> VerificationResult:
     overall_confidence = sum(scored) / len(scored) if scored else 0.0
     all_supported = all(c.supported for c in checks)
 
-    verified = all_supported and overall_confidence >= settings.verifier_confidence_threshold
+    verified = all_supported and overall_confidence >= threshold
 
     return VerificationResult(
         verified=verified,
@@ -131,4 +141,5 @@ def run_verifier_agent(generation: GenerationResult) -> VerificationResult:
         sentence_checks=checks,
         fallback=not verified,
         fallback_reason=None if verified else "One or more claims were uncited or not well-supported by the retrieved sources.",
+        threshold_applied=threshold,
     )

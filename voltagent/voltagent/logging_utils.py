@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 import time
 import uuid
 from contextlib import contextmanager
@@ -26,6 +27,17 @@ from voltagent.config import settings
 
 logger = logging.getLogger("voltagent")
 logging.basicConfig(level=settings.log_level)
+
+# Matches the same normalized error-code shape query_agent.py corrects
+# transcripts into (e.g. "E203"). Used to auto-populate the
+# `error_code_mentioned` field the insights layer aggregates on, without
+# requiring every caller to pass it explicitly.
+_ERROR_CODE_PATTERN = re.compile(r"\bE\d{3}\b")
+
+
+def extract_error_code(text: str) -> str | None:
+    match = _ERROR_CODE_PATTERN.search(text)
+    return match.group(0) if match else None
 
 
 def _write(event: dict[str, Any]) -> None:
@@ -46,6 +58,15 @@ def log_event(stage: str, **fields: Any) -> None:
     logger.info("%s | %s", stage, {k: v for k, v in fields.items() if k != "chunks"})
 
 
+def log_feedback(query_id: str, resolved: bool) -> None:
+    """Technician reports back whether the answer actually fixed the issue.
+    A separate event rather than mutating the original `query_complete` line
+    — the JSONL log is append-only by design, which is exactly the shape
+    Spark/HDFS batch jobs want to read. The insights log-export job joins
+    `query_complete` and `feedback` events on `query_id`."""
+    log_event("feedback", query_id=query_id, resolved=resolved)
+
+
 @dataclass
 class QueryTrace:
     """Accumulates everything about one end-to-end query for a single log line
@@ -57,11 +78,19 @@ class QueryTrace:
         trace.record(retrieval_top_k=len(results))
         ...
         trace.finalize()
+
+    `station_id` and `charger_model` are optional field-context passed from
+    the API layer (a technician's app knows which station/charger it's at).
+    They're what let the Insights batch layer aggregate faults per station
+    and correlate them with hardware/firmware — without them, every log line
+    is just an isolated query with nothing to join against.
     """
 
     query_text: str
     query_id: str = field(default_factory=lambda: uuid.uuid4().hex[:12])
     language: str | None = None
+    station_id: str | None = None
+    charger_model: str | None = None
     fields: dict[str, Any] = field(default_factory=dict)
     _stage_start: float | None = None
     _current_stage: str | None = None
@@ -84,6 +113,10 @@ class QueryTrace:
             query_id=self.query_id,
             query_text=self.query_text,
             language=self.language,
+            station_id=self.station_id,
+            charger_model=self.charger_model,
+            error_code_mentioned=extract_error_code(self.query_text),
+            resolved=None,          # filled in later via POST /feedback, if the technician reports back
             **self.fields,
             **extra,
         )

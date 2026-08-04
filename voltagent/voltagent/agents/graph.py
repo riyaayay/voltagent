@@ -93,8 +93,13 @@ def _node_generate(state: GraphState) -> GraphState:
 def _node_verify(state: GraphState) -> GraphState:
     trace = state["trace"]
     with trace.stage("verification"):
-        result = run_verifier_agent(state["generation"])
-    trace.record(verified=result.verified, confidence=result.confidence, fallback=result.fallback)
+        result = run_verifier_agent(state["generation"], query_text=state["query_result"].reformulated_query)
+    trace.record(
+        verified=result.verified,
+        confidence=result.confidence,
+        fallback=result.fallback,
+        threshold_applied=result.threshold_applied,
+    )
     state["verification"] = result
     return state
 
@@ -173,9 +178,19 @@ def build_graph() -> Any:
 _compiled_graph = build_graph()
 
 
-def run_pipeline(raw_query: str) -> dict[str, Any]:
-    """Public entry point used by the API layer."""
-    trace = QueryTrace(query_text=raw_query)
+def run_pipeline(
+    raw_query: str, station_id: str | None = None, charger_model: str | None = None
+) -> dict[str, Any]:
+    """Public entry point used by the API layer.
+
+    `station_id`/`charger_model` are passed through purely for observability
+    — they ride along in the log line so the Insights batch layer can
+    aggregate faults per station and correlate with hardware/firmware. They
+    don't affect retrieval or generation.
+    """
+    trace = QueryTrace(query_text=raw_query, station_id=station_id, charger_model=charger_model)
     initial_state: GraphState = {"raw_query": raw_query, "trace": trace}
     final_state = _compiled_graph.invoke(initial_state)
-    return final_state["final_response"]
+    response = final_state["final_response"]
+    response["query_id"] = trace.query_id
+    return response

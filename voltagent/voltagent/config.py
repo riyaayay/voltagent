@@ -52,5 +52,16 @@ class Settings(BaseSettings):
     chunk_size_tokens: int = 350
     chunk_overlap_tokens: int = 60
 
+    # --- Insights (Spark/HDFS batch analytics layer) ---
+    hdfs_uri: str | None = None            # e.g. "hdfs://localhost:9000" — leave unset to use local filesystem
+    insights_log_dir: str = "observability/parquet"     # partitioned by date/station_id
+    priority_flags_path: str = "observability/priority_flags.json"
+    spark_app_name: str = "voltagent-insights"
+    fault_recurrence_window_days: int = 7
+    documentation_gap_confidence_threshold: float = 0.5  # queries below this feed the gap detector
+    documentation_gap_min_occurrences: int = 3           # min repeated low-confidence hits to flag a doc
+    streaming_fault_spike_count: int = 3                 # N reports in the window trigger an alert
+    streaming_fault_spike_window_minutes: int = 60
+
 
 settings = Settings()
