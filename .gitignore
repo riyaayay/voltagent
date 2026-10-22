@@ -1,0 +1,46 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/raw/*.pdf
+observability/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.ruff_cache/
+
+# Data - adjust as needed
+# data/raw/*.pdf  # commented out if you want to track docs
+
+# OS
+.DS_Store
+
+#claude 
+.AGENTS.md
+.CLAUDE.md

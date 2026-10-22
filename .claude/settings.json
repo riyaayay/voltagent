@@ -1,0 +1,25 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "permissions": {
+        "deny": [
+            "Bash(rm -rf *)",
+            "Bash(git push --force *)",
+            "Read(//**/.env)",
+            "Read(//**/.env.*)",
+            "Edit(//**/.claude/settings.json)",
+            "Write(//**/.claude/settings.json)"
+        ],
+        "allow": [
+            "Bash(pytest *)",
+            "Bash(make *)",
+            "Bash(docker compose *)",
+            "Bash(python scripts/*)"
+        ],
+        "defaultMode": "dontAsk"
+    },
+    "attribution": {
+        "commit": "",
+        "pr": "",
+        "sessionUrl": false
+    }
+}
