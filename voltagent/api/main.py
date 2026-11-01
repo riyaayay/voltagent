@@ -86,6 +86,7 @@ def _warmup_backend():
             pages = []
             if Path("data/raw/synthetic").exists():
                 pages.extend(load_directory("data/raw/synthetic"))
+<<<<<<< HEAD
 
             # Load OSHA 3075 standard pages (from JSON text fixture or raw PDF)
             osha_json = Path("data/demo/osha_3075_pages.json")
@@ -105,6 +106,20 @@ def _warmup_backend():
                         logger.info("Loading OSHA 3075 safety manual from %s", osha_path)
                         pages.extend(load_pdf(str(osha_path)))
                         break
+=======
+            
+            # Look for OSHA 3075 standard manual in demo or real directories
+            osha_candidates = [
+                Path("data/demo/ev-safety-compliance.pdf"),
+                Path("data/raw/real/ev-safety-compliance.pdf"),
+                Path("data/raw/ev-safety-compliance.pdf"),
+            ]
+            for osha_path in osha_candidates:
+                if osha_path.exists():
+                    logger.info("Loading OSHA 3075 safety manual from %s", osha_path)
+                    pages.extend(load_pdf(str(osha_path)))
+                    break
+>>>>>>> 77da7954d301318847f56ca27fcfcfacf7b7afb9
 
             if pages:
                 chunks = chunk_pages(pages, chunk_size_tokens=100, overlap_tokens=20)
