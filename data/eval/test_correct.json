@@ -1,0 +1,322 @@
+[
+  {
+    "case_id": "C01_green_led",
+    "source": "real",
+    "query": "What does a green halo light mean on Pulsar Plus?",
+    "answer_text": "A green halo light means no EV is connected to the charger and the charger is ready to use [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Green: No EV is connected to the charger. Charger is ready to use. Light blue: EV is connected to the charger. Charger is connecting."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C02_light_blue_led",
+    "source": "real",
+    "query": "What does light blue halo mean on Pulsar Plus?",
+    "answer_text": "Light blue halo indicates the EV is connected to the charger and the charger is connecting [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Green: No EV is connected to the charger. Charger is ready to use. Light blue: EV is connected to the charger. Charger is connecting."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C03_yellow_led",
+    "source": "real",
+    "query": "What does yellow halo mean on Pulsar Plus?",
+    "answer_text": "A yellow halo indicates the charger is locked and will not charge [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Yellow: The charger is locked and will not charge. Red: An error has been detected on the EV, grid or the charger."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C04_red_led",
+    "source": "real",
+    "query": "What does red halo mean on Pulsar Plus?",
+    "answer_text": "A red halo indicates an error has been detected on the EV, grid or the charger [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Yellow: The charger is locked and will not charge. Red: An error has been detected on the EV, grid or the charger. See Troubleshooting."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C05_pulsing_blue_led",
+    "source": "real",
+    "query": "What does dark blue pulsing mean on Pulsar Plus?",
+    "answer_text": "Dark blue pulsing halo indicates charging is in progress [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Dark blue (pulsing): Charging is in progress. Yellow: The charger is locked and will not charge."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C06_shock_1ma",
+    "source": "real",
+    "query": "What effect does 1 mA current have on human body?",
+    "answer_text": "An electric current of 1 milliampere causes a faint tingle [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "1 milliampere Faint tingle. 5 milliamperes Slight shock felt; not painful but disturbing. Average individual can let go."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C07_shock_5ma",
+    "source": "real",
+    "query": "What effect does 5 mA current have on human body?",
+    "answer_text": "At 5 milliamperes a slight shock is felt that is disturbing but the average individual can let go [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "1 milliampere Faint tingle. 5 milliamperes Slight shock felt; not painful but disturbing. Average individual can let go."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C08_shock_men_letgo",
+    "source": "real",
+    "query": "What is the let-go current range for men?",
+    "answer_text": "The freezing current or let-go range for men is 9 to 30 milliamperes where the individual cannot let go [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "6\u201325 milliamperes (women) Painful shock, loss of muscular control. 9\u201330 milliamperes (men) The freezing current or \u201clet-go\u201d range. Individual cannot let go, but can be thrown away from the circuit if extensor muscles are stimulated."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C09_shock_cardiac",
+    "source": "real",
+    "query": "What happens at 10000 mA electric shock?",
+    "answer_text": "A current of 10,000 milliamperes causes cardiac arrest and severe burns with death probable [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "1,000\u20134,300 milliamperes Rhythmic pumping action of the heart ceases. 10,000 milliamperes Cardiac arrest, severe burns; death probable."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C10_mounting_height",
+    "source": "real",
+    "query": "What is recommended mounting height for Pulsar Plus?",
+    "answer_text": "We recommend mounting the charging station at a height of 1.40 m above ground level [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:9:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 9,
+        "text": "height \u201cy\u201d (I-2) between 1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C11_ocpp_seqno_init",
+    "source": "real",
+    "query": "What should seqNo be when transaction starts?",
+    "answer_text": "When a transaction starts, the Charging Station SHOULD set the seqNo field for the TransactionEventRequest message to 0 [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:128:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 128,
+        "text": "When a transaction starts, the Charging Station SHOULD set the seqNo field for the TransactionEventRequest message to 0. After each TransactionEventRequest Charging Station SHALL increase the seqNo by 1."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C12_ocpp_seqno_step",
+    "source": "real",
+    "query": "How is seqNo incremented in TransactionEventRequest?",
+    "answer_text": "After each TransactionEventRequest the Charging Station SHALL increase the seqNo by 1 [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:128:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 128,
+        "text": "When a transaction starts, the Charging Station SHOULD set the seqNo field for the TransactionEventRequest message to 0. After each TransactionEventRequest Charging Station SHALL increase the seqNo by 1."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C13_air_cooling",
+    "source": "real",
+    "query": "What is AirCoolingSystem in OCPP?",
+    "answer_text": "The AirCoolingSystem standardized component provides cooling using fans or equivalent devices [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-appendices:16:0",
+        "doc_id": "ocpp-2.0.1-appendices",
+        "page_number": 16,
+        "text": "3.2.5. AirCoolingSystem Description Fans (or equivalent devices) used to provide cooling. Typically used variables: Enabled, Active, Problem, FanSpeed."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C14_fan_speed_var",
+    "source": "real",
+    "query": "What variable represents fan speed in AirCoolingSystem?",
+    "answer_text": "The FanSpeed variable indicates the speed of cooling fan or fans [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-appendices:16:0",
+        "doc_id": "ocpp-2.0.1-appendices",
+        "page_number": 16,
+        "text": "Problem fault: e.g. fan stalled/slow. FanSpeed Speed of cooling fan(s)."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C15_e203_meaning",
+    "source": "synthetic",
+    "query": "What does error code E203 indicate on VoltCo chargers?",
+    "answer_text": "Fault Code E203 indicates a DC ground insulation fault detected on the power module [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_err_codes:1:0",
+        "doc_id": "voltco_err_codes",
+        "page_number": 1,
+        "text": "Fault Code E203: Indicates DC ground insulation fault detected on power module. Insulation resistance fell below 100 kohm. Technicians must isolate power before testing harness continuity for code E203."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C16_e208_meaning",
+    "source": "synthetic",
+    "query": "What does error code E208 indicate on VoltCo chargers?",
+    "answer_text": "Fault Code E208 indicates an output overcurrent condition where charging current exceeded 160 A for more than 50 ms [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_err_codes:1:0",
+        "doc_id": "voltco_err_codes",
+        "page_number": 1,
+        "text": "Fault Code E208: Indicates output overcurrent condition where charging current exceeded 160 A for more than 50 ms."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C17_dc50_v1_wait",
+    "source": "synthetic",
+    "query": "What is capacitor discharge wait time for VoltCo DC-50 Rev 1?",
+    "answer_text": "After isolating AC mains supply, wait exactly 10 minutes for DC bus capacitors to discharge below 50 V before opening enclosure [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v1:1:0",
+        "doc_id": "voltco_dc50_manual_v1",
+        "page_number": 1,
+        "text": "Safety Isolation: After isolating AC mains supply, wait exactly 10 minutes for DC bus capacitors to discharge below 50 V before opening enclosure."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C18_dc50_v2_wait",
+    "source": "synthetic",
+    "query": "What is capacitor discharge wait time for VoltCo DC-50 Rev 2?",
+    "answer_text": "With active discharge resistors enabled, wait exactly 5 minutes for capacitor discharge before opening enclosure [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v2:1:0",
+        "doc_id": "voltco_dc50_manual_v2",
+        "page_number": 1,
+        "text": "Safety Isolation (Updated): With active discharge resistors enabled, wait exactly 5 minutes for capacitor discharge before opening enclosure."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C19_ac22_torque",
+    "source": "synthetic",
+    "query": "What is the terminal screw torque for VoltCo AC-22?",
+    "answer_text": "The terminal screw torque specification for VoltCo AC-22 is 2.8 Nm [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "VoltCo AC-22 Commercial Hardware Specifications: Terminal Screw Torque is 2.8 Nm. Nominal AC Voltage is 400 V AC."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "C20_hindi_correct",
+    "source": "real",
+    "query": "5 \u092e\u093f\u0932\u0940\u090f\u092e\u094d\u092a\u0940\u092f\u0930 \u0915\u0930\u0902\u091f \u092a\u0930 \u092e\u093e\u0928\u0935 \u0936\u0930\u0940\u0930 \u0915\u0940 \u0915\u094d\u092f\u093e \u092a\u094d\u0930\u0924\u093f\u0915\u094d\u0930\u093f\u092f\u093e \u0939\u094b\u0924\u0940 \u0939\u0948?",
+    "answer_text": "5 \u092e\u093f\u0932\u0940\u090f\u092e\u094d\u092a\u0940\u092f\u0930 \u0915\u0930\u0902\u091f \u092a\u0930 \u0939\u0932\u094d\u0915\u093e \u091d\u091f\u0915\u093e \u092e\u0939\u0938\u0942\u0938 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u094b \u0915\u0937\u094d\u091f\u092a\u094d\u0930\u0926 \u0939\u094b\u0924\u093e \u0939\u0948 \u0932\u0947\u0915\u093f\u0928 \u0938\u093e\u092e\u093e\u0928\u094d\u092f \u0935\u094d\u092f\u0915\u094d\u0924\u093f \u0939\u093e\u0925 \u091b\u0941\u0921\u093c\u093e \u0938\u0915\u0924\u093e \u0939\u0948 [1]\u0964",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "5 milliamperes Slight shock felt; not painful but disturbing. Average individual can let go. Strong involuntary reactions can lead to other injuries."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  }
+]

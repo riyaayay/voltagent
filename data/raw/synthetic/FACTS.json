@@ -1,0 +1,62 @@
+[
+  {
+    "fact": "E203 indicates DC ground insulation fault",
+    "doc": "voltco_err_codes",
+    "page": 1
+  },
+  {
+    "fact": "E208 indicates output overcurrent exceeding 160 A",
+    "doc": "voltco_err_codes",
+    "page": 1
+  },
+  {
+    "fact": "DC-50 Rev 1 discharge wait time is 10 minutes",
+    "doc": "voltco_dc50_manual_v1",
+    "page": 1
+  },
+  {
+    "fact": "DC-50 Rev 1 maximum output current is 125 A",
+    "doc": "voltco_dc50_manual_v1",
+    "page": 1
+  },
+  {
+    "fact": "DC-50 Rev 2 discharge wait time is 5 minutes",
+    "doc": "voltco_dc50_manual_v2",
+    "page": 1
+  },
+  {
+    "fact": "DC-50 Rev 2 maximum output current is 150 A",
+    "doc": "voltco_dc50_manual_v2",
+    "page": 1
+  },
+  {
+    "fact": "AC-22 terminal screw torque specification is 2.8 Nm",
+    "doc": "voltco_ac22_specs",
+    "page": 1
+  },
+  {
+    "fact": "AC-22 nominal AC voltage is 400 V AC",
+    "doc": "voltco_ac22_specs",
+    "page": 1
+  },
+  {
+    "fact": "Ground insulation test requires 500 V DC test voltage",
+    "doc": "voltco_troubleshooting_hi_en",
+    "page": 1
+  },
+  {
+    "fact": "Scanned notice contains no text layer",
+    "doc": "voltco_scanned_notice",
+    "page": 1
+  },
+  {
+    "fact": "Rule A-1 states isolation wait time is 3 minutes",
+    "doc": "voltco_internal_contradiction",
+    "page": 1
+  },
+  {
+    "fact": "Rule A-2 states isolation wait time is 8 minutes",
+    "doc": "voltco_internal_contradiction",
+    "page": 1
+  }
+]

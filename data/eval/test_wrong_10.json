@@ -1,0 +1,222 @@
+[
+  {
+    "case_id": "W01_wrong_error_code_meaning",
+    "source": "real",
+    "failure_type": "wrong_error_code_meaning",
+    "true_fact": "A steady yellow halo light on the Pulsar Plus indicates the charger is locked and will not charge.",
+    "where_true_fact_lives": {
+      "doc_id": "charger-error-codes",
+      "page": 5
+    },
+    "query": "What does a yellow halo light mean on the Pulsar Plus?",
+    "answer_text": "A steady yellow halo light indicates that an error has been detected on the EV, grid or charger [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED halo on the front of the charger: Yellow: The charger is locked and will not charge. Red: An error has been detected on the EV, grid or the charger."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W02_swapped_numeric_value",
+    "source": "real",
+    "failure_type": "swapped_numeric_value",
+    "true_fact": "A shock current of 5 milliamperes produces a slight shock felt but average individual can let go.",
+    "where_true_fact_lives": {
+      "doc_id": "ev-safety-compliance",
+      "page": 12
+    },
+    "query": "What physiological effect does a 5 mA shock current have?",
+    "answer_text": "A current of 50 milliamperes produces a slight shock that is disturbing but allows an individual to let go [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "Effects of Electric Current in the Human Body: 1 milliampere Faint tingle. 5 milliamperes Slight shock felt; not painful but disturbing. Average individual can let go. 50\u2013150 milliamperes Extreme pain, respiratory arrest, severe muscular contractions. Death is possible."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W03_wrong_unit",
+    "source": "real",
+    "failure_type": "wrong_unit",
+    "true_fact": "Pulsar Plus mounting height should be 1.40 m above ground level.",
+    "where_true_fact_lives": {
+      "doc_id": "wallbox-pulsar-plus-install",
+      "page": 9
+    },
+    "query": "What is the recommended mounting height for Pulsar Plus?",
+    "answer_text": "We recommend mounting the charging station at a height of 1.40 inches above ground level [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:9:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 9,
+        "text": "height \u201cy\u201d (I-2) between 1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m. Remember that local regulations may require different installation heights."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W04_negation_flip",
+    "source": "real",
+    "failure_type": "negation_flip",
+    "true_fact": "A yellow halo indicates the charger is locked and will not charge.",
+    "where_true_fact_lives": {
+      "doc_id": "charger-error-codes",
+      "page": 5
+    },
+    "query": "Will the Pulsar Plus charge when yellow LED is displayed?",
+    "answer_text": "When the yellow LED halo is illuminated, the charger is unlocked and will charge normally [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Yellow: The charger is locked and will not charge. Red: An error has been detected on the EV, grid or the charger."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W05_wrong_ocpp_field_message",
+    "source": "real",
+    "failure_type": "wrong_ocpp_field_message",
+    "true_fact": "When a transaction starts, the Charging Station sets the seqNo field for TransactionEventRequest to 0.",
+    "where_true_fact_lives": {
+      "doc_id": "ocpp-2.0.1-spec",
+      "page": 128
+    },
+    "query": "Which message carries the sequence number seqNo at transaction start?",
+    "answer_text": "When a transaction starts, the Charging Station sets the seqNo field for the BootNotificationRequest message to 0 [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:128:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 128,
+        "text": "When a transaction starts, the Charging Station SHOULD set the seqNo field for the TransactionEventRequest message to 0. After each TransactionEventRequest Charging Station SHALL increase the seqNo by 1."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W06_citation_real_wrong_chunk",
+    "source": "real",
+    "failure_type": "citation_pointing_to_real_but_wrong_chunk",
+    "true_fact": "Dark blue pulsing LED on Pulsar Plus means charging is in progress.",
+    "where_true_fact_lives": {
+      "doc_id": "charger-error-codes",
+      "page": 5
+    },
+    "query": "What does pulsing dark blue light mean on Pulsar Plus?",
+    "answer_text": "Pulsing dark blue light indicates that charging is in progress [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:8:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 8,
+        "text": "OSHA general industry electrical safety standards are published in Title 29 Code of Federal Regulations (CFR), Part 1910.302 through 1910.308 Design Safety Standards for Electrical Systems."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W07_citation_nonexistent_chunk",
+    "source": "synthetic",
+    "failure_type": "citation_to_nonexistent_chunk",
+    "true_fact": "VoltCo AC-22 terminal screw torque is 2.8 Nm.",
+    "where_true_fact_lives": {
+      "doc_id": "voltco_ac22_specs",
+      "page": 1
+    },
+    "query": "What torque is required for VoltCo AC-22 terminal screws?",
+    "answer_text": "The terminal screw torque specification for VoltCo AC-22 is 2.8 Nm [99].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "VoltCo AC-22 Commercial Hardware Specifications: Terminal Screw Torque is 2.8 Nm. Nominal AC Voltage 400 V AC."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W08_uncited_claim",
+    "source": "synthetic",
+    "failure_type": "uncited_claim",
+    "true_fact": "Fault Code E203 indicates DC ground insulation fault.",
+    "where_true_fact_lives": {
+      "doc_id": "voltco_err_codes",
+      "page": 1
+    },
+    "query": "What does fault code E203 indicate on VoltCo chargers?",
+    "answer_text": "Fault Code E203 indicates a DC ground insulation fault detected on the power module.",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_err_codes:1:0",
+        "doc_id": "voltco_err_codes",
+        "page_number": 1,
+        "text": "Fault Code E203: Indicates DC ground insulation fault detected on power module. Insulation resistance fell below 100 kohm."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W09_fluent_fabrication",
+    "source": "synthetic",
+    "failure_type": "fluent_fabrication_no_basis_in_corpus",
+    "true_fact": "No liquid nitrogen coolant procedure exists in the corpus.",
+    "where_true_fact_lives": {
+      "doc_id": "none",
+      "page": 0
+    },
+    "query": "How do you refill the sub-zero cryogenic coolant loop?",
+    "answer_text": "Connect the pressurized liquid nitrogen line to port J-9 and open the cryogenic bleed valve until pressure hits 45 PSI [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_err_codes:1:0",
+        "doc_id": "voltco_err_codes",
+        "page_number": 1,
+        "text": "Fault Code E203: Indicates DC ground insulation fault detected on power module. Insulation resistance fell below 100 kohm. Fault Code E208: Indicates output overcurrent."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "W10_hindi_wrong_answer",
+    "source": "real",
+    "failure_type": "hindi_wrong_answer",
+    "true_fact": "1 mA \u0927\u093e\u0930\u093e \u0915\u0947\u0935\u0932 \u0939\u0932\u094d\u0915\u0940 \u091d\u0928\u091d\u0928\u093e\u0939\u091f (faint tingle) \u092a\u0948\u0926\u093e \u0915\u0930\u0924\u0940 \u0939\u0948\u0964",
+    "where_true_fact_lives": {
+      "doc_id": "ev-safety-compliance",
+      "page": 12
+    },
+    "query": "1 \u092e\u093f\u0932\u0940\u090f\u092e\u094d\u092a\u0940\u092f\u0930 \u0915\u0930\u0902\u091f \u0932\u0917\u0928\u0947 \u092a\u0930 \u0936\u0930\u0940\u0930 \u092a\u0930 \u0915\u094d\u092f\u093e \u092a\u094d\u0930\u092d\u093e\u0935 \u0939\u094b\u0924\u093e \u0939\u0948?",
+    "answer_text": "1 \u092e\u093f\u0932\u0940\u090f\u092e\u094d\u092a\u0940\u092f\u0930 \u0915\u0930\u0902\u091f \u0932\u0917\u0928\u0947 \u092a\u0930 \u0926\u093f\u0932 \u0915\u0940 \u0927\u0921\u093c\u0915\u0928 \u0924\u0941\u0930\u0902\u0924 \u092c\u0902\u0926 \u0939\u094b \u091c\u093e\u0924\u0940 \u0939\u0948 \u0914\u0930 \u0917\u0902\u092d\u0940\u0930 \u091c\u0932\u0928 \u0939\u094b\u0924\u0940 \u0939\u0948 [1]\u0964",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "Effects of Electric Current in the Human Body: 1 milliampere Faint tingle. 5 milliamperes Slight shock felt; not painful but disturbing. Average individual can let go. 10,000 milliamperes Cardiac arrest, severe burns; death probable."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  }
+]

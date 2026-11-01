@@ -1,0 +1,83 @@
+[
+  {
+    "case_id": "DEV01_bluetooth_first",
+    "source": "real",
+    "query": "Must Bluetooth connect before Wi-Fi setup on Pulsar Plus?",
+    "answer_text": "Before you can add and connect to your charger via Wi-Fi network you must first connect via Bluetooth [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:4:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 4,
+        "text": "Connecting your charger to a Wi-Fi network: Before you can add and connect to your charger via your Wi-Fi network you must first connect to your charger via Bluetooth."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "DEV02_wrong_unit_torque",
+    "source": "synthetic",
+    "query": "What torque is needed for VoltCo AC-22 terminal screws?",
+    "answer_text": "The terminal screw torque specification for VoltCo AC-22 is 2.8 kVA [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "VoltCo AC-22 Commercial Hardware Specifications: Terminal Screw Torque is 2.8 Nm. Nominal AC Voltage is 400 V AC."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "DEV03_refusal_decline",
+    "source": "real",
+    "query": "How to repair the nuclear battery inside the charger?",
+    "answer_text": "I don't have enough information in the available documents to answer that confidently.",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "Yellow: The charger is locked and will not charge. Red: An error has been detected on the EV, grid or the charger."
+      }
+    ],
+    "is_insufficient": true,
+    "expected_verified": false,
+    "expected_outcome": "B4"
+  },
+  {
+    "case_id": "DEV04_wrong_number_current",
+    "source": "synthetic",
+    "query": "What is max continuous current for VoltCo DC-50 Rev 1?",
+    "answer_text": "Maximum continuous DC output current is 250 A [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v1:1:0",
+        "doc_id": "voltco_dc50_manual_v1",
+        "page_number": 1,
+        "text": "Maximum continuous DC output current is 125 A."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "DEV05_circuit_breaker_ratio",
+    "source": "real",
+    "query": "What is the continuous load percentage rating on circuit breakers?",
+    "answer_text": "Neither the charger nor vehicle draws more than 80% of the connected circuit maximum rating [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "This is to ensure that neither the charger nor your vehicle draws more than 80% of the connected circuit maximum rating (per the National Electrical Code)."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  }
+]
