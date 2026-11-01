@@ -23,7 +23,12 @@ class GeminiClient(LLMClient):
         import google.generativeai as genai
 
         genai.configure(api_key=settings.gemini_api_key)
-        self._model = genai.GenerativeModel(settings.generation_model)
+        model_name = settings.generation_model
+        if model_name in ("gemini-1.5-flash", "models/gemini-1.5-flash"):
+            model_name = "gemini-2.5-flash"
+        elif model_name in ("gemini-1.5-pro", "models/gemini-1.5-pro"):
+            model_name = "gemini-2.5-pro"
+        self._model = genai.GenerativeModel(model_name)
 
     def complete(self, prompt: str, temperature: float = 0.2) -> str:
         response = self._model.generate_content(

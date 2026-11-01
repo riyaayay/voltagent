@@ -62,8 +62,8 @@ def run_eval(gold_path: str, k: int = 6) -> dict:
             expected_doc_id=c.get("expected_doc_id"),
             query_id=c.get("query_id", ""),
             source=c.get("source", "unknown"),
-            category=c.get("category", "general"),
-            language=c.get("language", "en"),
+            category=c.get("query_type") or c.get("category", "general"),
+            language=c.get("lang") or c.get("language", "en"),
             expected_page=c.get("expected_page"),
             evidence=c.get("evidence", ""),
         )
@@ -140,6 +140,8 @@ def run_eval(gold_path: str, k: int = 6) -> dict:
         s_recall = sum(1 for x in items if x["sparse_hit"]) / n
         d_recall = sum(1 for x in items if x["dense_hit"]) / n
         f_recall = sum(1 for x in items if x["fused_hit"]) / n
+        s_mrr = sum(x["sparse_mrr"] for x in items) / n
+        d_mrr = sum(x["dense_mrr"] for x in items) / n
         f_mrr = sum(x["fused_mrr"] for x in items) / n
 
         summary_by_split[split_name] = {
@@ -147,11 +149,14 @@ def run_eval(gold_path: str, k: int = 6) -> dict:
             "sparse_recall": round(s_recall, 3),
             "dense_recall": round(d_recall, 3),
             "fused_recall": round(f_recall, 3),
+            "sparse_mrr": round(s_mrr, 3),
+            "dense_mrr": round(d_mrr, 3),
             "fused_mrr": round(f_mrr, 3),
         }
         print(
-            f"{split_name:<25} {n:<8} {s_recall*100:>10.1f}% {d_recall*100:>10.1f}% "
-            f"{f_recall*100:>10.1f}% {f_mrr:>10.3f}"
+            f"{split_name:<25} {n:<5} "
+            f"R@k: S={s_recall*100:>5.1f}% D={d_recall*100:>5.1f}% F={f_recall*100:>5.1f}% | "
+            f"MRR: S={s_mrr:>5.3f} D={d_mrr:>5.3f} F={f_mrr:>5.3f}"
         )
     print("=" * 90)
 
@@ -162,15 +167,15 @@ def run_eval(gold_path: str, k: int = 6) -> dict:
         "splits": summary_by_split,
         "details": splits["all"],
     }
-    with open("results/retrieval_eval.json", "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2)
-
     return report
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate hybrid retrieval quality.")
     parser.add_argument("--gold", default="data/eval/gold.json", help="Path to gold query JSON file.")
-    parser.add_argument("--k", type=int, default=6)
+    parser.add_argument("--k", type=int, default=5)
+    parser.add_argument("--out", default="results/retrieval_eval.json", help="Path to write results json.")
     args = parser.parse_args()
-    run_eval(args.gold, k=args.k)
+    report = run_eval(args.gold, k=args.k)
+    with open(args.out, "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2)

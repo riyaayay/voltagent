@@ -5,6 +5,7 @@ __pycache__/
 data/raw/*.pdf
 data/raw/real/
 data/raw_malformed/
+data/index_cache/
 observability/
 .pytest_cache/
 .ruff_cache/

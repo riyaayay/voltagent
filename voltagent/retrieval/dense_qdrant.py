@@ -9,8 +9,12 @@ import uuid
 from pathlib import Path
 from typing import Any
 
-from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, PointStruct, VectorParams
+try:
+    from qdrant_client import QdrantClient
+    from qdrant_client.models import Distance, PointStruct, VectorParams
+except ImportError:
+    QdrantClient = None
+    Distance = PointStruct = VectorParams = None
 from sentence_transformers import SentenceTransformer, util
 import torch
 
@@ -46,7 +50,7 @@ class InProcessDenseRetriever:
     def _load(self) -> None:
         if self.cache_file.exists():
             try:
-                data = torch.load(self.cache_file, map_location="cpu")
+                data = torch.load(self.cache_file, map_location="cpu", weights_only=False)
                 self.chunks = data["chunks"]
                 self.embeddings = data["embeddings"]
                 logger.info("Loaded %d chunks and embeddings from %s", len(self.chunks), self.cache_file)
@@ -88,10 +92,15 @@ _in_memory_dense = InProcessDenseRetriever()
 
 class QdrantRetriever:
     def __init__(self, url: str | None = None, collection: str | None = None) -> None:
-        self.client = QdrantClient(url=url or settings.qdrant_url, timeout=settings.qdrant_timeout_seconds)
+        if QdrantClient is not None:
+            self.client = QdrantClient(url=url or settings.qdrant_url, timeout=settings.qdrant_timeout_seconds)
+        else:
+            self.client = None
         self.collection = collection or settings.qdrant_collection
 
     def ensure_collection(self, vector_size: int) -> None:
+        if self.client is None:
+            return
         existing = [c.name for c in self.client.get_collections().collections]
         if self.collection in existing:
             return
@@ -104,18 +113,21 @@ class QdrantRetriever:
         # Also maintain in-process index as instant fallback
         _in_memory_dense.index_chunks(chunks)
 
-        embedder = get_embedder()
-        vector_size = embedder.get_sentence_embedding_dimension()
-        self.ensure_collection(vector_size)
+        try:
+            embedder = get_embedder()
+            vector_size = embedder.get_sentence_embedding_dimension()
+            self.ensure_collection(vector_size)
 
-        for i in range(0, len(chunks), batch_size):
-            batch = chunks[i : i + batch_size]
-            vectors = embedder.encode([c.text for c in batch], show_progress_bar=False)
-            points = [
-                PointStruct(id=_point_id(c.chunk_id), vector=v.tolist(), payload=c.to_payload())
-                for c, v in zip(batch, vectors)
-            ]
-            self.client.upsert(collection_name=self.collection, points=points)
+            for i in range(0, len(chunks), batch_size):
+                batch = chunks[i : i + batch_size]
+                vectors = embedder.encode([c.text for c in batch], show_progress_bar=False)
+                points = [
+                    PointStruct(id=_point_id(c.chunk_id), vector=v.tolist(), payload=c.to_payload())
+                    for c, v in zip(batch, vectors)
+                ]
+                self.client.upsert(collection_name=self.collection, points=points)
+        except Exception as e:
+            logger.warning("Qdrant service unreachable during indexing (%s); in-process dense index is active.", e)
 
     def search(self, query: str, top_k: int | None = None) -> list[DenseHit]:
         k = top_k or settings.top_k_dense

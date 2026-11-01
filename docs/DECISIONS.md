@@ -24,3 +24,4 @@
 - **Context**: Previously, if Elasticsearch or Qdrant was unreachable, the FastAPI service threw an unhandled exception resulting in an HTTP 500 status code.
 - **Decision**: Wrapped pipeline execution in `voltagent/agents/graph.py` with structured degradation boundaries. If either leg fails, hybrid retrieval falls back to the surviving leg and flags `degraded_stages`. If catastrophic unhandled failure occurs, the pipeline catches the exception, logs a complete trace, and returns an HTTP 200 response with typed `Outcome C` ("Cannot answer / degraded").
 - **Consequence**: Field technicians never encounter raw 500 error pages, stack traces, or silent failures.
+

@@ -12,7 +12,8 @@
  * a proper STT SDK) rather than assuming an arbitrary mobile browser works.
  */
 
-const API_BASE = "http://localhost:8000";
+// Relative API path so it works across localhost, Hugging Face Spaces, and any HTTPS deployment
+const API_BASE = "";
 
 const micBtn = document.getElementById("mic-btn");
 const micLabel = document.getElementById("mic-label");

@@ -11,7 +11,10 @@ import re
 from pathlib import Path
 from typing import Any
 
-from elasticsearch import Elasticsearch
+try:
+    from elasticsearch import Elasticsearch
+except ImportError:
+    Elasticsearch = None
 from rank_bm25 import BM25Okapi
 
 from voltagent.config import settings
@@ -81,15 +84,18 @@ _in_memory_bm25 = RankBM25Retriever()
 
 class ElasticsearchRetriever:
     def __init__(self, url: str | None = None, index: str | None = None) -> None:
-        self.client = Elasticsearch(
-            url or settings.elasticsearch_url,
-            request_timeout=settings.elasticsearch_timeout_seconds,
-            max_retries=0,
-        )
+        if Elasticsearch is not None:
+            self.client = Elasticsearch(
+                url or settings.elasticsearch_url,
+                request_timeout=settings.elasticsearch_timeout_seconds,
+                max_retries=0,
+            )
+        else:
+            self.client = None
         self.index = index or settings.elasticsearch_index
 
     def ensure_index(self) -> None:
-        if self.client.indices.exists(index=self.index):
+        if self.client is None or self.client.indices.exists(index=self.index):
             return
         self.client.indices.create(
             index=self.index,
@@ -107,24 +113,31 @@ class ElasticsearchRetriever:
     def index_chunks(self, chunks: list[Chunk]) -> None:
         # Also index into in-memory BM25 so fallback is always pre-populated
         _in_memory_bm25.index_chunks(chunks)
-        self.ensure_index()
-        for chunk in chunks:
-            self.client.index(index=self.index, id=chunk.chunk_id, document=chunk.to_payload())
-        self.client.indices.refresh(index=self.index)
+        try:
+            self.ensure_index()
+            for chunk in chunks:
+                self.client.index(index=self.index, id=chunk.chunk_id, document=chunk.to_payload())
+            self.client.indices.refresh(index=self.index)
+        except Exception as e:
+            logger.warning("Elasticsearch unavailable during indexing (%s); in-memory BM25 fallback is active.", e)
 
     def search(self, query: str, top_k: int | None = None) -> list[SparseHit]:
         if settings.sparse_backend == "bm25":
             return _in_memory_bm25.search(query, top_k=top_k)
 
         k = top_k or settings.top_k_sparse
-        resp = self.client.search(
-            index=self.index,
-            query={"match": {"text": {"query": query}}},
-            size=k,
-        )
-        hits: list[SparseHit] = []
-        for hit in resp["hits"]["hits"]:
-            hits.append(
-                SparseHit(chunk_id=hit["_source"]["chunk_id"], score=hit["_score"], payload=hit["_source"])
+        try:
+            resp = self.client.search(
+                index=self.index,
+                query={"match": {"text": {"query": query}}},
+                size=k,
             )
-        return hits
+            hits: list[SparseHit] = []
+            for hit in resp["hits"]["hits"]:
+                hits.append(
+                    SparseHit(chunk_id=hit["_source"]["chunk_id"], score=hit["_score"], payload=hit["_source"])
+                )
+            return hits
+        except Exception as e:
+            logger.warning("Elasticsearch search failed (%s); falling back to in-memory rank-bm25", e)
+            return _in_memory_bm25.search(query, top_k=top_k)

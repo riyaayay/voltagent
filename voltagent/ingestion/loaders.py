@@ -104,21 +104,16 @@ def load_pdf(path: str, doc_title: str | None = None) -> list[SourcePage]:
 
 
 def load_directory(directory: str) -> list[SourcePage]:
-    """Load every PDF in `directory` safely, skipping bad files without aborting the batch."""
+    """Load every PDF in `directory` (and subdirectories) safely, skipping bad files without aborting the batch."""
     all_pages: list[SourcePage] = []
-    try:
-        entries = sorted(os.listdir(directory))
-    except Exception as e:
-        logger.error("Could not list directory %s: %s", directory, e)
-        return []
-
-    for fname in entries:
-        if not fname.lower().endswith(".pdf"):
-            continue
-        full_path = os.path.join(directory, fname)
-        try:
-            all_pages.extend(load_pdf(full_path))
-        except Exception as e:
-            logger.warning("Skipping corrupt or unreadable PDF %s: %s", fname, e)
-            continue
+    for root, _, files in os.walk(directory):
+        for fname in sorted(files):
+            if not fname.lower().endswith(".pdf"):
+                continue
+            full_path = os.path.join(root, fname)
+            try:
+                all_pages.extend(load_pdf(full_path))
+            except Exception as e:
+                logger.warning("Skipping corrupt or unreadable PDF %s: %s", fname, e)
+                continue
     return all_pages

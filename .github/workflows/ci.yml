@@ -37,3 +37,4 @@ jobs:
       - name: Run Frozen Verifier Evaluation (Claim C)
         run: |
           python scripts/evaluate_verifier.py
+

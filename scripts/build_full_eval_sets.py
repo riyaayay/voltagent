@@ -376,7 +376,7 @@ for query, qtype in adversarial:
         "query_type": qtype,
         "expected_doc_id": "voltco_err_codes" if "E203" in query else None,
         "expected_page": 1 if "E203" in query else None,
-        "evidence": "Indicates DC ground insulation fault" if "E203" in query else None,
+        "evidence": "E203 indicates DC ground insulation fault" if "E203" in query else None,
         "needs_native_review": False
     })
 

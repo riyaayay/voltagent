@@ -15,11 +15,11 @@ class Settings(BaseSettings):
     llm_provider: str = "gemini"           # "gemini" | "openai" | "fake"
     gemini_api_key: str | None = None
     openai_api_key: str | None = None
-    generation_model: str = "gemini-1.5-flash"
+    generation_model: str = "gemini-2.5-flash"
     llm_timeout_seconds: float = 15.0
 
     # --- Sparse retrieval ---
-    sparse_backend: str = "elasticsearch"  # "elasticsearch" | "bm25"
+    sparse_backend: str = "bm25"           # "bm25" | "elasticsearch"
     elasticsearch_url: str = "http://localhost:9200"
     elasticsearch_index: str = "voltagent-chunks"
     elasticsearch_timeout_seconds: float = 2.0
@@ -67,8 +67,10 @@ class Settings(BaseSettings):
     chunk_overlap_tokens: int = 60
 
     # --- API ---
-    cors_allowed_origins: list[str] = ["http://localhost:8000", "http://127.0.0.1:8000", "http://localhost:3000"]
+    cors_allowed_origins: list[str] = ["*"]
     max_query_text_length: int = 4000
+    daily_llm_cap: int = 200
+    rate_limit_per_minute: int = 20
 
     # --- Insights (Spark/HDFS batch analytics layer) ---
     hdfs_uri: str | None = None

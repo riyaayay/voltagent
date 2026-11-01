@@ -1,0 +1,851 @@
+{
+  "timestamp": "2026-11-01T05:39:31Z",
+  "dataset": "heldout_60.json",
+  "sha256": "0a758d62c985b1d62b7aeedd02e326fb1ccc01f9cac9ad4840540fc1238b8c69",
+  "threshold": 0.55,
+  "metrics": {
+    "wrong_flag_count": 27,
+    "wrong_flag_total": 30,
+    "wrong_flag_rate": 0.9,
+    "wrong_real_flagged": 21,
+    "wrong_real_total": 22,
+    "wrong_synth_flagged": 6,
+    "wrong_synth_total": 8,
+    "false_flag_count": 4,
+    "false_flag_total": 30,
+    "false_flag_rate": 0.13333333333333333,
+    "correct_real_false_flags": 4,
+    "correct_real_total": 22,
+    "correct_synth_false_flags": 0,
+    "correct_synth_total": 8,
+    "failure_mode_breakdown": {
+      "wrong_error_code_meaning": {
+        "total": 3,
+        "flagged": 2
+      },
+      "swapped_numeric_value": {
+        "total": 3,
+        "flagged": 3
+      },
+      "wrong_unit": {
+        "total": 3,
+        "flagged": 2
+      },
+      "negation_flip": {
+        "total": 3,
+        "flagged": 3
+      },
+      "wrong_ocpp_field_message": {
+        "total": 3,
+        "flagged": 3
+      },
+      "citation_pointing_to_real_but_wrong_chunk": {
+        "total": 3,
+        "flagged": 3
+      },
+      "citation_to_nonexistent_chunk": {
+        "total": 3,
+        "flagged": 3
+      },
+      "uncited_claim": {
+        "total": 3,
+        "flagged": 3
+      },
+      "fluent_fabrication_no_basis_in_corpus": {
+        "total": 3,
+        "flagged": 3
+      },
+      "hindi_wrong_answer": {
+        "total": 3,
+        "flagged": 2
+      }
+    }
+  },
+  "wrong_cases_details": [
+    {
+      "case_id": "HW01_red_led_meaning",
+      "source": "real",
+      "failure_type": "wrong_error_code_meaning",
+      "query": "What does a steady red halo light indicate on the Pulsar Plus?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.534,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 8728.24
+    },
+    {
+      "case_id": "HW02_purple_led_meaning",
+      "source": "real",
+      "failure_type": "wrong_error_code_meaning",
+      "query": "What does purple LED halo light mean on Pulsar Plus?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.529,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 274.78
+    },
+    {
+      "case_id": "HW03_e208_code_meaning",
+      "source": "synthetic",
+      "failure_type": "wrong_error_code_meaning",
+      "query": "What does fault code E208 indicate on VoltCo chargers?",
+      "expected_verified": false,
+      "actual_verified": true,
+      "confidence": 0.581,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 271.44
+    },
+    {
+      "case_id": "HW04_shock_men_letgo",
+      "source": "real",
+      "failure_type": "swapped_numeric_value",
+      "query": "What is the freezing current or let-go range for men?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.61,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "45 mA",
+        "90 mA"
+      ],
+      "elapsed_ms": 370.87
+    },
+    {
+      "case_id": "HW05_women_letgo_range",
+      "source": "real",
+      "failure_type": "swapped_numeric_value",
+      "query": "What current causes painful shock and muscular control loss in women?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.692,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "120 mA",
+        "80 mA"
+      ],
+      "elapsed_ms": 226.86
+    },
+    {
+      "case_id": "HW06_dc50_v2_wait_swap",
+      "source": "synthetic",
+      "failure_type": "swapped_numeric_value",
+      "query": "How long must a technician wait after isolation on VoltCo DC-50 Rev 2?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.469,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "45 min"
+      ],
+      "elapsed_ms": 190.76
+    },
+    {
+      "case_id": "HW07_drilling_depth_unit",
+      "source": "real",
+      "failure_type": "wrong_unit",
+      "query": "What drill hole depth is specified for the Pulsar Plus wall plate?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.316,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "8 mm"
+      ],
+      "elapsed_ms": 249.12
+    },
+    {
+      "case_id": "HW08_body_shock_unit",
+      "source": "real",
+      "failure_type": "wrong_unit",
+      "query": "At what current level can an electric shock cause severe muscular contractions?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.549,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "150 kV"
+      ],
+      "elapsed_ms": 226.45
+    },
+    {
+      "case_id": "HW09_ac22_screw_torque_unit",
+      "source": "synthetic",
+      "failure_type": "wrong_unit",
+      "query": "What torque is required for VoltCo AC-22 terminal screws?",
+      "expected_verified": false,
+      "actual_verified": true,
+      "confidence": 0.621,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 235.14
+    },
+    {
+      "case_id": "HW10_neutral_ground_bond",
+      "source": "real",
+      "failure_type": "negation_flip",
+      "query": "Can the neutral conductor be bonded to ground downstream of the service disconnect?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.306,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 247.25
+    },
+    {
+      "case_id": "HW11_open_cabinet_energized",
+      "source": "real",
+      "failure_type": "negation_flip",
+      "query": "Can technicians open the charger enclosure while energized?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.425,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 253.5
+    },
+    {
+      "case_id": "HW12_fan_failure_run",
+      "source": "synthetic",
+      "failure_type": "negation_flip",
+      "query": "Will the VoltCo DC-50 operate if a cooling fan fails?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.452,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 201.38
+    },
+    {
+      "case_id": "HW13_ocpp_heartbeat_message",
+      "source": "real",
+      "failure_type": "wrong_ocpp_field_message",
+      "query": "Which message is periodically sent to inform the CSMS the station is alive?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.285,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "FirmwareStatusNotificationRequest"
+      ],
+      "elapsed_ms": 166.29
+    },
+    {
+      "case_id": "HW14_ocpp_authorize_message",
+      "source": "real",
+      "failure_type": "wrong_ocpp_field_message",
+      "query": "Which request message does a charging station use to authenticate an RFID badge?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.531,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "MeterValuesRequest"
+      ],
+      "elapsed_ms": 222.41
+    },
+    {
+      "case_id": "HW15_ocpp_status_notification",
+      "source": "real",
+      "failure_type": "wrong_ocpp_field_message",
+      "query": "Which message reports a connector state change to Available or Occupied?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.467,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "SetChargingProfileRequest"
+      ],
+      "elapsed_ms": 218.12
+    },
+    {
+      "case_id": "HW16_citation_wrong_pdf",
+      "source": "real",
+      "failure_type": "citation_pointing_to_real_but_wrong_chunk",
+      "query": "What is the recommended mounting height for Pulsar Plus?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.162,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "1.4 m"
+      ],
+      "elapsed_ms": 228.38
+    },
+    {
+      "case_id": "HW17_citation_wrong_page",
+      "source": "real",
+      "failure_type": "citation_pointing_to_real_but_wrong_chunk",
+      "query": "What physiological effect does a 1 milliampere shock current have?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.335,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "1 mA"
+      ],
+      "elapsed_ms": 199.91
+    },
+    {
+      "case_id": "HW18_citation_wrong_spec",
+      "source": "synthetic",
+      "failure_type": "citation_pointing_to_real_but_wrong_chunk",
+      "query": "What torque is required for VoltCo AC-22 terminal screws?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.526,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "2.8 Nm",
+        "AC-22"
+      ],
+      "elapsed_ms": 185.54
+    },
+    {
+      "case_id": "HW19_nonexistent_chunk_pulsar",
+      "source": "real",
+      "failure_type": "citation_to_nonexistent_chunk",
+      "query": "What does green halo light mean on Pulsar Plus?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.0,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 0.04
+    },
+    {
+      "case_id": "HW20_nonexistent_chunk_seqno",
+      "source": "real",
+      "failure_type": "citation_to_nonexistent_chunk",
+      "query": "What is seqNo set to at transaction start?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.0,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 0.02
+    },
+    {
+      "case_id": "HW21_nonexistent_chunk_ac22",
+      "source": "synthetic",
+      "failure_type": "citation_to_nonexistent_chunk",
+      "query": "What is the nominal AC voltage for VoltCo AC-22?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.0,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 0.01
+    },
+    {
+      "case_id": "HW22_uncited_halo_yellow",
+      "source": "real",
+      "failure_type": "uncited_claim",
+      "query": "What does a yellow halo mean on the Pulsar Plus?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.0,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 0.01
+    },
+    {
+      "case_id": "HW23_uncited_cat_meter",
+      "source": "real",
+      "failure_type": "uncited_claim",
+      "query": "What meter category rating is required for electrical testing?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.0,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 0.01
+    },
+    {
+      "case_id": "HW24_uncited_dc50_v1",
+      "source": "synthetic",
+      "failure_type": "uncited_claim",
+      "query": "What is the maximum DC current for VoltCo DC-50 Rev 1?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.0,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 0.01
+    },
+    {
+      "case_id": "HW25_fabrication_plasma_igniter",
+      "source": "real",
+      "failure_type": "fluent_fabrication_no_basis_in_corpus",
+      "query": "How do you align the laser plasma igniter on the Pulsar Plus?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.274,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 249.33
+    },
+    {
+      "case_id": "HW26_fabrication_quantum_resistor",
+      "source": "real",
+      "failure_type": "fluent_fabrication_no_basis_in_corpus",
+      "query": "What resistance is expected across the quantum entanglement shunt?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.237,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 237.19
+    },
+    {
+      "case_id": "HW27_fabrication_fusion_cell",
+      "source": "synthetic",
+      "failure_type": "fluent_fabrication_no_basis_in_corpus",
+      "query": "How is tritium flushed from the VoltCo DC-50 fuel cell?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.445,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "25 min"
+      ],
+      "elapsed_ms": 212.33
+    },
+    {
+      "case_id": "HW28_hindi_wrong_current_shock",
+      "source": "real",
+      "failure_type": "hindi_wrong_answer",
+      "query": "5 \u092e\u093f\u0932\u0940\u090f\u092e\u094d\u092a\u093f\u092f\u0930 \u0915\u0930\u0902\u091f \u0938\u0947 \u0936\u0930\u0940\u0930 \u092a\u0930 \u0915\u094d\u092f\u093e \u0905\u0938\u0930 \u0939\u094b\u0924\u093e \u0939\u0948?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.401,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "5 mA"
+      ],
+      "elapsed_ms": 255.3
+    },
+    {
+      "case_id": "HW29_hindi_wrong_led_halo",
+      "source": "real",
+      "failure_type": "hindi_wrong_answer",
+      "query": "\u092a\u0932\u094d\u0938\u0930 \u092a\u094d\u0932\u0938 \u092a\u0930 \u0939\u0930\u0940 \u092c\u0924\u094d\u0924\u0940 \u0915\u093e \u0915\u094d\u092f\u093e \u092e\u0924\u0932\u092c \u0939\u0948?",
+      "expected_verified": false,
+      "actual_verified": false,
+      "confidence": 0.482,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 246.52
+    },
+    {
+      "case_id": "HW30_hindi_wrong_mounting_height",
+      "source": "real",
+      "failure_type": "hindi_wrong_answer",
+      "query": "\u091a\u093e\u0930\u094d\u091c\u0930 \u0915\u094b \u091c\u092e\u0940\u0928 \u0938\u0947 \u0915\u093f\u0924\u0928\u0940 \u090a\u0902\u091a\u093e\u0908 \u092a\u0930 \u0932\u0917\u093e\u0928\u093e \u091a\u093e\u0939\u093f\u090f?",
+      "expected_verified": false,
+      "actual_verified": true,
+      "confidence": 0.733,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 245.22
+    }
+  ],
+  "correct_cases_details": [
+    {
+      "case_id": "HC01_yellow_halo_locked",
+      "source": "real",
+      "query": "What does a yellow halo mean on Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.607,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 240.77
+    },
+    {
+      "case_id": "HC02_green_halo_ready",
+      "source": "real",
+      "query": "What does a green halo light indicate on Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.649,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 206.55
+    },
+    {
+      "case_id": "HC03_light_blue_halo",
+      "source": "real",
+      "query": "What does light blue halo light signify on Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.62,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 239.85
+    },
+    {
+      "case_id": "HC04_pulsing_dark_blue",
+      "source": "real",
+      "query": "What does pulsing dark blue LED mean on Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.588,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 199.34
+    },
+    {
+      "case_id": "HC05_red_error_detected",
+      "source": "real",
+      "query": "What does a red halo light signify on Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.568,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 232.64
+    },
+    {
+      "case_id": "HC06_pulsing_purple_sync",
+      "source": "real",
+      "query": "What does pulsing purple halo light mean on Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.614,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 235.98
+    },
+    {
+      "case_id": "HC07_white_light_tracking",
+      "source": "real",
+      "query": "What does spinning white halo mean on Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.586,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 223.48
+    },
+    {
+      "case_id": "HC08_tingle_1ma",
+      "source": "real",
+      "query": "What bodily effect occurs at 1 milliampere current?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.741,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 232.29
+    },
+    {
+      "case_id": "HC09_shock_5ma_slight",
+      "source": "real",
+      "query": "What sensation does a 5 milliampere current cause?",
+      "expected_verified": true,
+      "actual_verified": false,
+      "confidence": 0.683,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "5 mA"
+      ],
+      "elapsed_ms": 240.28
+    },
+    {
+      "case_id": "HC10_men_letgo_range",
+      "source": "real",
+      "query": "What is the freezing current or let-go range for men?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.63,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 229.99
+    },
+    {
+      "case_id": "HC11_women_letgo_range",
+      "source": "real",
+      "query": "What is the painful shock range for women?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.692,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 229.06
+    },
+    {
+      "case_id": "HC12_extreme_pain_current",
+      "source": "real",
+      "query": "What symptoms occur between 50 and 150 milliamperes current?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.633,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 268.57
+    },
+    {
+      "case_id": "HC13_cardiac_arrest_current",
+      "source": "real",
+      "query": "What happens at 10,000 milliamperes electric current?",
+      "expected_verified": true,
+      "actual_verified": false,
+      "confidence": 0.517,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 231.54
+    },
+    {
+      "case_id": "HC14_mounting_height_rec",
+      "source": "real",
+      "query": "What mounting height does Wallbox recommend for Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.808,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 227.84
+    },
+    {
+      "case_id": "HC15_mounting_height_bounds",
+      "source": "real",
+      "query": "What is the permitted mounting height range for Pulsar Plus?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.617,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 230.07
+    },
+    {
+      "case_id": "HC16_drill_hole_diameter",
+      "source": "real",
+      "query": "What drill hole diameter is required for Pulsar Plus wall anchors?",
+      "expected_verified": true,
+      "actual_verified": false,
+      "confidence": 0.355,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [
+        "8 mm"
+      ],
+      "elapsed_ms": 230.89
+    },
+    {
+      "case_id": "HC17_ocpp_seqno_zero",
+      "source": "real",
+      "query": "What should the seqNo be when a transaction starts in OCPP 2.0.1?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.809,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 229.8
+    },
+    {
+      "case_id": "HC18_ocpp_seqno_increment",
+      "source": "real",
+      "query": "How is the seqNo incremented after each TransactionEventRequest?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.794,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 230.18
+    },
+    {
+      "case_id": "HC19_osha_design_standards",
+      "source": "real",
+      "query": "Which federal regulations publish OSHA general electrical design standards?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.828,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 228.2
+    },
+    {
+      "case_id": "HC20_circuit_continuous_load",
+      "source": "real",
+      "query": "What is the continuous circuit load percentage per NEC?",
+      "expected_verified": true,
+      "actual_verified": false,
+      "confidence": 0.407,
+      "fallback": true,
+      "fallback_reason": "One or more claims were uncited or not well-supported by the retrieved sources.",
+      "missing_values": [],
+      "elapsed_ms": 245.05
+    },
+    {
+      "case_id": "HC21_hindi_shock_1ma",
+      "source": "real",
+      "query": "1 \u092e\u093f\u0932\u0940\u090f\u092e\u094d\u092a\u093f\u092f\u0930 \u0915\u0930\u0902\u091f \u0932\u0917\u0928\u0947 \u092a\u0930 \u0936\u0930\u0940\u0930 \u092a\u0930 \u0915\u094d\u092f\u093e \u092e\u0939\u0938\u0942\u0938 \u0939\u094b\u0924\u093e \u0939\u0948?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.655,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 253.62
+    },
+    {
+      "case_id": "HC22_hindi_mounting_height",
+      "source": "real",
+      "query": "\u092a\u0932\u094d\u0938\u0930 \u092a\u094d\u0932\u0938 \u0915\u094b \u0915\u093f\u0924\u0928\u0940 \u090a\u0902\u091a\u093e\u0908 \u092a\u0930 \u0932\u0917\u093e\u0928\u0947 \u0915\u0940 \u0938\u093f\u092b\u093e\u0930\u093f\u0936 \u0915\u0940 \u0917\u0908 \u0939\u0948?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.758,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 235.24
+    },
+    {
+      "case_id": "HC23_ac22_terminal_torque",
+      "source": "synthetic",
+      "query": "What torque is specified for VoltCo AC-22 terminal screws?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.695,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 221.2
+    },
+    {
+      "case_id": "HC24_ac22_nominal_voltage",
+      "source": "synthetic",
+      "query": "What is the nominal AC voltage for VoltCo AC-22?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.693,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 208.43
+    },
+    {
+      "case_id": "HC25_dc50_v1_wait_time",
+      "source": "synthetic",
+      "query": "How long must a technician wait on VoltCo DC-50 Rev 1 before opening cabinet?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.572,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 204.96
+    },
+    {
+      "case_id": "HC26_dc50_v2_wait_time",
+      "source": "synthetic",
+      "query": "What is the capacitor discharge wait time for VoltCo DC-50 Rev 2?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.63,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 195.71
+    },
+    {
+      "case_id": "HC27_dc50_v1_continuous_current",
+      "source": "synthetic",
+      "query": "What is max continuous current for VoltCo DC-50 Rev 1?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.735,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 186.23
+    },
+    {
+      "case_id": "HC28_e203_fault_meaning",
+      "source": "synthetic",
+      "query": "What does fault code E203 indicate on VoltCo chargers?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.758,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 184.69
+    },
+    {
+      "case_id": "HC29_e208_overcurrent",
+      "source": "synthetic",
+      "query": "What does fault code E208 indicate on VoltCo chargers?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.686,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 216.99
+    },
+    {
+      "case_id": "HC30_ac22_insulation_resistance",
+      "source": "synthetic",
+      "query": "What is minimum insulation resistance for VoltCo AC-22?",
+      "expected_verified": true,
+      "actual_verified": true,
+      "confidence": 0.686,
+      "fallback": false,
+      "fallback_reason": null,
+      "missing_values": [],
+      "elapsed_ms": 207.55
+    }
+  ]
+}

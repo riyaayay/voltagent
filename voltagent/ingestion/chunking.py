@@ -52,6 +52,17 @@ def chunk_page(
     if not tokens:
         return []
 
+    if len(tokens) <= chunk_size:
+        return [
+            Chunk(
+                chunk_id=_chunk_id(page.doc_id, page.page_number, 0, text=page.text),
+                doc_id=page.doc_id,
+                doc_title=page.doc_title,
+                page_number=page.page_number,
+                text=page.text,
+            )
+        ]
+
     chunks: list[Chunk] = []
     start = 0
     window_index = 0
@@ -69,14 +80,20 @@ def chunk_page(
                 text=text,
             )
         )
+        if start + chunk_size >= len(tokens):
+            break
         window_index += 1
         start += step
 
     return chunks
 
 
-def chunk_pages(pages: list[SourcePage]) -> list[Chunk]:
+def chunk_pages(
+    pages: list[SourcePage],
+    chunk_size_tokens: int | None = None,
+    overlap_tokens: int | None = None,
+) -> list[Chunk]:
     all_chunks: list[Chunk] = []
     for page in pages:
-        all_chunks.extend(chunk_page(page))
+        all_chunks.extend(chunk_page(page, chunk_size_tokens=chunk_size_tokens, overlap_tokens=overlap_tokens))
     return all_chunks
