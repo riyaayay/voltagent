@@ -5,23 +5,30 @@ running on host 0.0.0.0, port 7860.
 """
 from __future__ import annotations
 
-# ZeroGPU startup check compliance (must be imported before torch/voltagent)
-try:
-    import spaces
-
-    @spaces.GPU
-    def _zerogpu_startup_marker() -> str:
-        # Never called. Exists only so ZeroGPU's startup check finds a GPU function.
-        return "ok"
-except ImportError:
-    pass
-
 import os
 from pathlib import Path
 import uvicorn
 from fastapi.staticfiles import StaticFiles
 
 from voltagent.api.main import app
+
+# ZeroGPU startup check compliance: register a GPU-decorated handler with Gradio
+try:
+    import spaces
+
+    @spaces.GPU
+    def _zerogpu_handler(text: str) -> str:
+        return text
+except ImportError:
+    def _zerogpu_handler(text: str) -> str:
+        return text
+
+try:
+    import gradio as gr
+    demo = gr.Interface(fn=_zerogpu_handler, inputs="text", outputs="text", title="VoltAgent Space")
+    app = gr.mount_gradio_app(app, demo, path="/_gradio")
+except ImportError:
+    pass
 
 # Mount frontend/ static files at "/"
 frontend_dir = Path(__file__).resolve().parent / "frontend"
@@ -33,4 +40,3 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 7860))
     host = os.environ.get("HOST", "0.0.0.0")
     uvicorn.run("app:app", host=host, port=port, reload=False)
-
