@@ -7,10 +7,36 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-import uvicorn
+
+# Disable Gradio MCP server which attempts to bind to secondary port 7861
+os.environ["GRADIO_MCP_SERVER"] = "false"
+
 from fastapi.staticfiles import StaticFiles
+import uvicorn
 
 from voltagent.api.main import app
+
+# ZeroGPU startup check compliance (needed if Space hardware is set to ZeroGPU)
+try:
+    import spaces
+
+    @spaces.GPU
+    def _zerogpu_marker(text: str) -> str:
+        return text
+except ImportError:
+    def _zerogpu_marker(text: str) -> str:
+        return text
+
+try:
+    import gradio as gr
+
+    demo = gr.Interface(fn=_zerogpu_marker, inputs="text", outputs="text", title="VoltAgent Space")
+    try:
+        app = gr.mount_gradio_app(app, demo, path="/_gradio", mcp_server=False)
+    except TypeError:
+        app = gr.mount_gradio_app(app, demo, path="/_gradio")
+except Exception:
+    pass
 
 # Mount frontend/ static files at "/"
 frontend_dir = Path(__file__).resolve().parent / "frontend"
