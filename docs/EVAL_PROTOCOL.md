@@ -25,6 +25,7 @@ To prevent gaming or overfitting to evaluation benchmarks:
 | :--- | :--- | :--- | :--- |
 | `data/eval/test_wrong_10.json` | `dd0e1ce1b3a516eae81816793072f681cb55315fae3dfed8860f5e8d07d09b51` | 10 | 70% (7/10) |
 | `data/eval/test_correct.json` | `511a4ef2519b25fb010ebfacc235f8fe37cdaaf026ef6b4fc5bf7d290bfbb6dd` | 20 | 70% (14/20) |
+| `data/eval/heldout_60.json` | `0a758d62c985b1d62b7aeedd02e326fb1ccc01f9cac9ad4840540fc1238b8c69` | 60 | 73.3% (44/60) |
 | `data/eval/dev.json` | `13e52fc997a081b5efa8ccefcdd2bad7fc40d0435468b14ac41965a9cd4d13a3` | 5 | 60% (3/5) |
 | `data/eval/gold.json` | `8dedf9829f7010520c5a28015bb84bc3b7353629fa8eb63655bb3f6932cd2d36` | 62 | 75.8% (47/62) |
 

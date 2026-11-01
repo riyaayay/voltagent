@@ -1,0 +1,992 @@
+[
+  {
+    "case_id": "HW01_red_led_meaning",
+    "source": "real",
+    "failure_type": "wrong_error_code_meaning",
+    "query": "What does a steady red halo light indicate on the Pulsar Plus?",
+    "answer_text": "A red halo light indicates that the vehicle is successfully charging and battery level is above 80% [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW02_purple_led_meaning",
+    "source": "real",
+    "failure_type": "wrong_error_code_meaning",
+    "query": "What does purple LED halo light mean on Pulsar Plus?",
+    "answer_text": "A purple halo light indicates the charger has lost power and needs a fuse replacement [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW03_e208_code_meaning",
+    "source": "synthetic",
+    "failure_type": "wrong_error_code_meaning",
+    "query": "What does fault code E208 indicate on VoltCo chargers?",
+    "answer_text": "Fault Code E208 indicates an ambient humidity sensor failure in the subassembly [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_err_codes:1:0",
+        "doc_id": "voltco_err_codes",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo EV Charger Error Codes Reference\nFault Code E203: Indicates DC ground insulation fault detected on power module. Insulation resistance fell\nbelow 100 kohm.\nFault Code E208: Indicates output overcurrent condition where charging current exceeded 160 A for more than\n50 ms.\nTechnicians must isolate power before testing harness continuity for code E203."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW04_shock_men_letgo",
+    "source": "real",
+    "failure_type": "swapped_numeric_value",
+    "query": "What is the freezing current or let-go range for men?",
+    "answer_text": "The freezing current or let-go range for men is 45 to 90 milliamperes where the individual cannot let go [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW05_women_letgo_range",
+    "source": "real",
+    "failure_type": "swapped_numeric_value",
+    "query": "What current causes painful shock and muscular control loss in women?",
+    "answer_text": "In women, painful shock and loss of muscular control occurs between 80 to 120 milliamperes [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW06_dc50_v2_wait_swap",
+    "source": "synthetic",
+    "failure_type": "swapped_numeric_value",
+    "query": "How long must a technician wait after isolation on VoltCo DC-50 Rev 2?",
+    "answer_text": "Wait exactly 45 minutes after isolating the DC bus before opening the power cabinet [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v2:1:0",
+        "doc_id": "voltco_dc50_manual_v2",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 2.0)\nSafety Isolation (Updated): With active discharge resistors enabled, wait exactly 5 minutes for capacitor\ndischarge before opening enclosure.\nCurrent Limit (Updated): Upgraded busbars support maximum continuous DC output current of 150 A."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW07_drilling_depth_unit",
+    "source": "real",
+    "failure_type": "wrong_unit",
+    "query": "What drill hole depth is specified for the Pulsar Plus wall plate?",
+    "answer_text": "Drill three holes with a diameter of 8 mm and minimum depth of 65 yards [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:10:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 10,
+        "text": "10\nENAlways use standard cables that can drive the current that has been setup in the current \nselector. 2. Current selector\nUse the selector to select the maximum input \ncurrent of the device. Positions 0, 8 and 9 are \nreserved for the Power Sharing Smart feature (I-5).\n3. Electrical connection\n3-A. Rear connection\nStep 3-A.1: In the back of your Wallbox an area with a thinner wall can be found; use a cutter or any sharp \ntool and make an incision for entry of the cable.\nStep 3-A.2: Carefully and firmly insert the power cable through the board. The board has been designed \nso cables from 11 to 17 mm can pass through it, which is the standard for cables that can drive up to 22 kW.\nStep 3-A.3: Proceed to fix the charger to the wall. Insert the screws in the marked positions, starting at the top \nand following a clockwise direction (I-6.1). Check that your Wallbox Pulsar Plus is firmly fixed to the wall.\nStep 3-A.4: Make sure the previous steps have been completed correctly.\n3-B. Lower connection\nStep 3-B.1:  Proceed to fix the charger to the wall. Insert the screws in the marked positions, starting at the \ntop and following a clockwise direction (I-6.1). Check that your Wallbox Pulsar Plus is firmly fixed to the wall.\nStep 3-B.2: Insert the power supply cables through the cable connector (I-6.2, I-6.3).\nStep 3-B.3: Make sure the previous steps have been completed correctly.I-5: Current selector\nConnect the neutral and earth power lines to the terminal according to the supply configuration (I-6.2, I-6.3).CURRENT (A) R 13 32 6 16 R 10 2520 R0 3 7 1 4 8 2 65 9 POSITION\nIn the case that your Wallbox uses the rear input follow the steps in section 3-A. Otherwise go to section 3-B."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW08_body_shock_unit",
+    "source": "real",
+    "failure_type": "wrong_unit",
+    "query": "At what current level can an electric shock cause severe muscular contractions?",
+    "answer_text": "Extreme pain and severe muscular contractions occur between 50 and 150 kilovolts [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW09_ac22_screw_torque_unit",
+    "source": "synthetic",
+    "failure_type": "wrong_unit",
+    "query": "What torque is required for VoltCo AC-22 terminal screws?",
+    "answer_text": "The terminal screw torque specification for VoltCo AC-22 is 2.8 kilograms [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo AC-22 Commercial Hardware Specifications\nReference ratings for installation and periodic field maintenance:\nParameter\nSpecification\nTolerance / Unit\nTerminal Screw Torque\n2.8\nNm\nNominal AC Voltage\n400\nV AC (3-Phase)\nMaximum Continuous Current\n32\nA per phase\nInsulation Resistance Min\n50\nMOhm\nOperating Temperature\n-25 to +50\ndeg C"
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW10_neutral_ground_bond",
+    "source": "real",
+    "failure_type": "negation_flip",
+    "query": "Can the neutral conductor be bonded to ground downstream of the service disconnect?",
+    "answer_text": "The neutral conductor shall be bonded to ground at all subpanels downstream of the disconnect [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:20:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 20,
+        "text": "15What work practices help protect\nyou against electrical hazards?\nElectrical accidents are largely preventable through\nsafe work practices. Examples of these practices include\nthe following:\ndeenergizing electric equipment before inspection\nor repair ,\nkeeping electric tools properly maintained,\nexercising caution when working near energized lines,\nand\nusing appropriate protective equipment.\nElectrical safety-related work practice requirements\nfor general industry are detailed in Subpart S of 29 CFR\nPart 1910, in Sections 1910.331–1910.335. Forconstruction applications, electrical safety-related workpractice requirements are detailed in Subpart K of\n29 CFR  Part 1926.416 to 1926.417.\nHow can you protect yourself against\nmetal parts that become energized?\nA break in an electric tool’s or machine’s insulation can\ncause its metal parts to become “hot” or energized, meaningthat they conduct electricity. T ouching these energized partscan result in an electrical shock, burn, or electrocution. Thebest way to protect yourself when using electrical tools ormachines is to establish a low-resistance path from the device’s\nmetallic case to the ground. This requires an equipment\ngrounding conductor , a low-resistance wire that directsunwanted current directly to the ground. A properly installedgrounding conductor has a low resistance to ground and greatlyreduces the amount of current that passes through your body.Cord and plug equipment with a three-prong plug is a common\nexample of equipment incorporating this ground conductor ."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW11_open_cabinet_energized",
+    "source": "real",
+    "failure_type": "negation_flip",
+    "query": "Can technicians open the charger enclosure while energized?",
+    "answer_text": "Technicians can open the main power enclosure while the primary feeder remains energized [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:9:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 9,
+        "text": "9\nDimensions and Positioning of the Device\nIn accordance with the product standards, the charging station must be located at height “y” (I-2) between \n1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m. \nRemember that local regulations may limit this height. It is mandatory to consider the following precautions:\n• The mounting area required for the Wallbox \ncharging station is at least 250x150 mm \n(height by width) (I-2).\n• When installing the Wallbox, the cable should \neasily reach the vehicle inlet.\n• For a safe operation of your charging station, \nyou must observe the minimum distances \nrecommended to other technical installations.\n• The plug holder (I-3) should be placed \nat a height between 0.50 m and 1.50 m \nabove ground level. Maintaining a square of \n400x400 mm around it to provide sufficient \nspace for the ergonomics is recommended.I-2: Mounting area\nI-3: Maintaining \ndistance around plug \nholder\n*between 1.30 m and 1.70 m above ground level\n250 mm\n400 mm400 mm250 mmy*150 mm 150 mm\nCorrect installation is absolutely essential and is outside the scope of the liability of Wallbox.\nInstallation video available at https://wallbox.com/\nI-4Drill\n• Use the drilling template as a guide to mark the place for the three anchor screws on the wall. Take special \ncare to keep the template level. The use of a spirit level is highly recommended.\n• Drill the anchor hole marks to the diameter specified for the selected equipment for the installation.  \nFor installation on wood, brick and concrete walls use the equipment delivered with the charger.\nMake sure the power supply is turned off during all mounting steps.\nMounting\n1. Opening the device (I-4)\nStep 1.1:  Remove the screw on the bottom side.\nStep 1.2:  Carefully open the cover with the opening \ntool included (I-1).\nStep 1.3.  Remove the ribbon cable from the cover."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW12_fan_failure_run",
+    "source": "synthetic",
+    "failure_type": "negation_flip",
+    "query": "Will the VoltCo DC-50 operate if a cooling fan fails?",
+    "answer_text": "The charger will operate at maximum capacity even when the internal cooling fan has failed [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v1:1:0",
+        "doc_id": "voltco_dc50_manual_v1",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 1.0)\nSafety Isolation: After isolating AC mains supply, wait exactly 10 minutes for DC bus capacitors to discharge\nbelow 50 V before opening enclosure.\nCurrent Limit: Maximum continuous DC output current is 125 A."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW13_ocpp_heartbeat_message",
+    "source": "real",
+    "failure_type": "wrong_ocpp_field_message",
+    "query": "Which message is periodically sent to inform the CSMS the station is alive?",
+    "answer_text": "The Charging Station periodically sends a FirmwareStatusNotificationRequest message to prove it is alive [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:52:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 52,
+        "text": "B. Provisioning\nEdition 2 FINAL, 2022-12-15 B. Provisioning\nOCPP 2.0.1 Edition 2 - © Open Charge Alliance 2022 42/471 Part 2 - Specification"
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW14_ocpp_authorize_message",
+    "source": "real",
+    "failure_type": "wrong_ocpp_field_message",
+    "query": "Which request message does a charging station use to authenticate an RFID badge?",
+    "answer_text": "To request authorization for an idToken the Charging Station sends a MeterValuesRequest message [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:34:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 34,
+        "text": "ID Precondition Requirement definition\nA00.FR.323A00.FR.320\nAND\nThe Charging Station detects that\nthe CSMS only allows connections\nusing one of these suitesThe Charging Station SHALL trigger an InvalidTLSCipherSuite security\nevent AND terminate the connection (See part 2 appendices for the full list\nof security events).\nA00.FR.324 A00.FR.302 The CSMS SHALL validate that Charging Station identity and the Basic\nAuthentication password match with username and password in the\nauthorization header of the connection request.\n1.3.6. TLS with Client Side Certificates Profile - 3\nTable 17. Security Profile 3 - TLS with Client Side Certificates\nNo. Type Description\n1 Name TLS with Client Side Certificates\n2 Profile No. 3\n3 Description In the TLS with Client Side Certificates profile, the communication channel is secured using\nTransport Layer Security (TLS). Both the Charging Station and CSMS authenticate themselves\nusing certificates.\n4 Charging Station\nAuthenticationThe CSMS authenticates the Charging Station via the TLS client certificate.\n5 CSMS Authentication The Charging Station authenticates the CSMS via the TLS server certificate.\n6 Communication\nSecurityThe communication between Charging Station and CSMS is secured using TLS.\nCharging Station CSMS\nClient Hello\nServer Hello\nServer Certificate\nCertificate Server Request\nServer Hello Done\nClient Certificate\nClient Key Exchange\nCertificate Verify\n[ChangeCipherSpec]\nFinished\n[ChangeCipherSpec]\nFinished\nApplication Data (Authenticated and encrypted communication)\nFigure 4. Sequence Diagram: TLS with Client Side Certificates\n7 Remark(s) N/a\n1.3.7. TLS with Client Side Certificates Profile - Requirements\nTable 18. Security Profile 3 - TLS with Client Side Certificates - Requirements\nID Precondition Requirement definition\nA00.FR.401 The Charging Station SHALL authenticate itself to the CSMS using the\nCharging Station certificate.\nA00.FR.402 The Charging Station certificate SHALL be used as a TLS client side\ncertificate\nA00.FR.403 The CSMS SHALL verify the certification path of the Charging Station’s\ncertificate according to the path validation rules established in Section 6\nof [3]\nEdition 2 FINAL, 2022-12-15 A. Security\nOCPP 2.0.1 Edition 2 - © Open Charge Alliance 2022 24/471 Part 2 - Specification"
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW15_ocpp_status_notification",
+    "source": "real",
+    "failure_type": "wrong_ocpp_field_message",
+    "query": "Which message reports a connector state change to Available or Occupied?",
+    "answer_text": "A connector state change is communicated to the CSMS using the SetChargingProfileRequest message [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:140:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 140,
+        "text": "ID Precondition Requirement definition Note\nE02.FR.17 When a transaction-related trigger\nevent occurs, listed in\nTriggerReasonEnumType  AND\nthe transaction is ongoing.The Charging Station SHALL send a\nTransactionEventRequest  with a triggerReason\ncorresponding to the occurred event.When two trigger\nreasons overlap, the\nmore specific one should\nbe used. For example,\nwhen a cable is plugged\nin, triggerReason\nCablePluggedIn  should\nbe used, not\nChargingStateChanged .\nWhen two events occur\nat the same time, they\nneed transmitted using\ntwo separate\nTransactionEventReques\nt messages. This is to\nprevent information loss,\nwhen something goes\nwrong.\nE02.FR.18When the energy transfer starts AND\nIf the Charging Station is able to report\nthe number of phases usedThe Charging Station SHALL provide the number of\nphases used, using the numberOfPhasesUsed  field.\nE02.FR.19E02.FR.18 AND\nduring the transaction the number of\nphases used changesThe Charging Station SHALL provide the adjusted\nnumber of phases used, using the\nnumberOfPhasesUsed  field.\nE02.FR.20 When a transaction has not been\nauthorized before AND\nthe Charging Station authorizes an\nidToken  to start chargingThe next TransactionEventRequest from Charging\nStation SHALL contain the idToken  and have\ntriggerReason  = Authorized.If authorization is not\nsuccessful, then no\nTransactionEventReques\nt is sent, because this\nevent has no effect on\nthe running transaction.\n(For authorization to stop\ncharging, see E07).\nE02.FR.21 When configured to send meter data\nin the TransactionEventRequest \n(eventType = Started ), See: Meter\nValues - Configuration\nAND\nEVSE is not known at start of\ntransactionThe Charging Station SHALL add the measurands\nfor eventType  = Started to the optional\nmeterValue field with context  =\nTransaction.Begin  in the\nTransactionEventRequest (eventType = Updated )\nthat occurs when charging starts.\nEdition 2 FINAL, 2022-12-15 E. Transactions\nOCPP 2.0.1 Edition 2 - © Open Charge Alliance 2022 130/471 Part 2 - Specification"
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW16_citation_wrong_pdf",
+    "source": "real",
+    "failure_type": "citation_pointing_to_real_but_wrong_chunk",
+    "query": "What is the recommended mounting height for Pulsar Plus?",
+    "answer_text": "We recommend mounting the charging station at a height of 1.40 m above ground level [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:8:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 8,
+        "text": "3What OSHA standards\naddress electrical safety?\nOSHA standards cover many electrical hazards in many\ndifferent industries. OSHA’s general industry electrical\nsafety standards are published in Title 29 Code of Federal\nRegulations (CFR), Part 1910.302 through 1910.308 —\nDesign Safety Standards for Electrical Systems, and1910.331 through 1910.335 — Electrical Safety-RelatedWork Practices Standards.\nOSHA’s electrical standards are based on the\nNational Fire Protection Association Standards NFPA 70,\nNational Electric Code, and NFPA 70E,  Electrical\nSafety Requirements for Employee Workplace s.\nOSHA also has electrical safety standards for the\nconstruction industry, in 29 CFR  1926, Subpart K. OSHA’s\nstandards for marine terminals, in 29 CFR  1917, and for\nlongshoring, in 29 CFR  1918, reference the general industry\nelectrical standards in Subpart S of Part 1910. The shipyardstandards, in \n29 CFR  1915, cover limited electrical safety\nwork practices in 29 CFR  1915.181.\nAlthough OSHA operates a federal occupational safety\nand health program, 24 states and 2 territories operate\ntheir own OSHA-approved programs. In those states, the\nstandards and other procedures governing electrical safetymay not be identical to the federal requirements. They must,however, be at least as effective as the federal standards."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW17_citation_wrong_page",
+    "source": "real",
+    "failure_type": "citation_pointing_to_real_but_wrong_chunk",
+    "query": "What physiological effect does a 1 milliampere shock current have?",
+    "answer_text": "A 1 milliampere current causes a faint tingling sensation in the body [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:6:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 6,
+        "text": "6Start/pause the charging \nWhen the EV connector is plugged into the vehicle, charging starts automatically. There are some exceptions, for \nexample when there is a scheduled charge, or when the connected vehicle is fully charged (see “understanding \nPulsar Plus LED lights”).\nWhen your charger is connected to your vehicle, the LED halo on the charger and the color of the charger app \nscreen will be first light blue (turquoise)--this indicates your charger is ready to charge--and then turns to a blinking \ndarker blue once the charging process has been accepted by the vehicle.\nClick the pause icon on the \ncharger app screen. The LED \nhalo on the charger will turn \nlight blue (turquoise) and the \ncharger app screen will be light \nblue (turquoise). 2. To start/restart a charging session (from a \npreviously paused session or to overwrite a \nschedule).\nClick the arrow icon on the charger \napp screen. The LED halo on the \ncharger will change to pulsing \nblue and the charger app screen \nwill change to blue, indicating \ncharging has resumed.1. To stop/pause a charging session (while \ncharging is in process)Basics - UsageQUICK REFERENCE GUIDE\nTo adjust the amperage setting:\nOn the charger app screen, click on the power adjustment wheel and scroll clockwise or counterclockwise to \nadjust to your preferred power setting.\nNote: You cannot exceed the maximum \npower capacity of your charger. If your \ninstaller has set the physical current \nselection switch to a lower amperage, you \ncannot exceed that amperage setting.\n• Scroll anti-clockwise to \nreduce the amperage.• Scroll clockwise to increase \nthe amperage.\nNote: If a charging session has been scheduled, the charger status lights will be pulsing light \nblue (turquoise) and the charger will not automatically start charging. You can manually override \na set schedule following the start instructions above.\nLock/unlock the charger \nIf your charger is installed at a location where someone outside your household might be able to access and use \nyour charger, or if you want to otherwise restrict the use of your charger (for example, to prevent a user from \ncharging during peak utility rate hours), you can use myWallbox to lock or unlock your charger and prevent \nunauthorized use.\n1. To lock: Click the green lock icon on the charger app screen. When locked, the yellow lock icon will appear.\n2. To unlock: Click the yellow lock icon on the charger app screen. When unlocked, the green lock icon will appear."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW18_citation_wrong_spec",
+    "source": "synthetic",
+    "failure_type": "citation_pointing_to_real_but_wrong_chunk",
+    "query": "What torque is required for VoltCo AC-22 terminal screws?",
+    "answer_text": "The terminal screw torque specification for VoltCo AC-22 is 2.8 Nm [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v1:1:0",
+        "doc_id": "voltco_dc50_manual_v1",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 1.0)\nSafety Isolation: After isolating AC mains supply, wait exactly 10 minutes for DC bus capacitors to discharge\nbelow 50 V before opening enclosure.\nCurrent Limit: Maximum continuous DC output current is 125 A."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW19_nonexistent_chunk_pulsar",
+    "source": "real",
+    "failure_type": "citation_to_nonexistent_chunk",
+    "query": "What does green halo light mean on Pulsar Plus?",
+    "answer_text": "Green halo light indicates charger is ready and no EV is connected [88].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW20_nonexistent_chunk_seqno",
+    "source": "real",
+    "failure_type": "citation_to_nonexistent_chunk",
+    "query": "What is seqNo set to at transaction start?",
+    "answer_text": "The seqNo field is initialized to 0 at transaction start [404].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:128:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 128,
+        "text": "1.3.2.1. Sequence number generation\nThis section is normative .\nWhen a transaction starts, the Charging Station SHOULD set the seqNo  field for the TransactionEventRequest  message to 0.\n(Implementations with a continuously increasing seqNo  are still allowed.)\nAfter each TransactionEventRequest  Charging Station SHALL increase the seqNo  by 1.\n1.4. Authorization\nTo simplify the use cases in this functional block, the way an EV Driver is authorized is not part of these use cases. It will simply be\ncalled something like: \"User authorization successful\" or \"The EV Driver is authorized by the Charging Station and/or CSMS.\". This\nmay be any way of authorizing an EV Driver. See functional block: C Authorization  for all the options and requirements for\nauthorization.\n1.5. Clarification for optional fields in TransactionEventRequest\nThis section is informative.\nThe TransactionEventRequest contains several optional fields. Some of these fields should only be sent once and should not be\nrepeated in every TransactionEventRequest. The following summary points to the requirements related to these optional fields.\nevse\n(E01.FR.16) The field evse  is only provided in the first TransactionEventRequest that occurs after the EV has connected. It is\nnot repeated in all future TransactionEventRequests.\nidToken\n(E03.FR.01) The field idToken  is provided once in the first TransactionEventRequest that occurs after the transaction has\nbeen authorized.\n(E07.FR.02) The field idToken  is provided once in the TransactionEventRequest that occurs when the authorization of the\ntransaction has been ended.\n(C12.FR.02) The above is also the case when authorization was granted because the idToken is present in the authorization\ncache with a Accepted status.\n(F02.FR.05): The above is also the case when the idToken is provided by a RequestStartTransactionRequest.\nreservationId\n(E03.FR.03/H01.FR.15) The field reservationId  is only provided in the first TransactionEventRequest that occurs when the\ntransaction has been authorized by the idToken for which a reservation existed in the charging station.\n(F02.FR.06) The above is also the case when the idToken is provided by a RequestStartTransactionRequest.\nmeterValue\n(E02.FR.09) The TransactionEventRequest( eventType =Started) must contain the meter values that have been configured\nin SampledDataCtrlr.TxStartedMeasurands.\n(E02.FR.10) A TransactionEventRequest( eventType =Updated) must be sent at every interval configured in\nSampledDataCtrlr.TxUpdatedInterval and contain the meter values that have been configured in\nSampledDataCtrlr.TxUpdatedMeasurands. If TxUpdatedMeasurands == 0, then no meter values are sent.\n(E06.FR.11) The TransactionEventRequest( eventType =Ended) must contain the meter values that have been configured in\nSampledDataCtrlr.TxEndedMeasurands. If SampledDataCtrlr.TxEndedInterval == 0, then only the values taken at start and\nend of the transaction are included.\ntransactionInfo.chargingState\n(E02.FR.13) Whenever the charging state changes, the Charging Station must send a TransactionEventRequest containing\nchargingState .\nA TransactionEventRequest with triggerReason  = ChargingStateChanged  must contain chargingState .\ntransactionInfo.stoppedReason\n(C15.FR.04, E05.FR.10, E05.FR.08/09, E07.FR.06) The stoppedReason  must be provided in the\nTransactionEventRequest( eventType =Ended), unless the value is Local, in which case it may be omitted.\n(F03.FR.03, F03.FR.10, F04.FR.03) The above also applies to transactions that are stopped by a\nRequestStopTransactionRequest, however in this case the stoppedReason  value must be Remote.\nEdition 2 FINAL, 2022-12-15 E. Transactions\nOCPP 2.0.1 Edition 2 - © Open Charge Alliance 2022 118/471 Part 2 - Specification"
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW21_nonexistent_chunk_ac22",
+    "source": "synthetic",
+    "failure_type": "citation_to_nonexistent_chunk",
+    "query": "What is the nominal AC voltage for VoltCo AC-22?",
+    "answer_text": "The nominal AC voltage for VoltCo AC-22 is 400 V AC [12].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo AC-22 Commercial Hardware Specifications\nReference ratings for installation and periodic field maintenance:\nParameter\nSpecification\nTolerance / Unit\nTerminal Screw Torque\n2.8\nNm\nNominal AC Voltage\n400\nV AC (3-Phase)\nMaximum Continuous Current\n32\nA per phase\nInsulation Resistance Min\n50\nMOhm\nOperating Temperature\n-25 to +50\ndeg C"
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW22_uncited_halo_yellow",
+    "source": "real",
+    "failure_type": "uncited_claim",
+    "query": "What does a yellow halo mean on the Pulsar Plus?",
+    "answer_text": "A steady yellow halo light indicates that the charger is locked and will not charge.",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW23_uncited_cat_meter",
+    "source": "real",
+    "failure_type": "uncited_claim",
+    "query": "What meter category rating is required for electrical testing?",
+    "answer_text": "Technicians must always verify zero voltage using a CAT III rated multimeter.",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:28:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 28,
+        "text": "23Does OSHA provide any incentives\nfor seeking consultation assistance?\nY es. Under the consultation program, certain exemplary\nemployers may request participation in OSHA’s Safety\nand Health Achievement Recognition Program (SHARP).Eligibility for participation in SHARP includes, but is notlimited to, receiving a full-service, comprehensive consultationvisit, correcting all identified hazards, and developing aneffective safety and health management system.\nEmployers accepted into SHARP may receive an\nexemption from programmed inspections (not complaintor accident investigation inspections) for a period of 1 yearinitially, or 2 years upon renewal. For more informationconcerning consultation assistance, see the consultationdirectory at the end of this publication, contact your regional\nor area OSHA office, or visit OSHA’s website at www.osha.gov.\nWhat is the Voluntary Protection Program?\nVoluntary Protection Programs (VPPs) represent one\npart of OSHA’s effort to extend worker protection beyondthe minimum required by OSHA standards. VPP — alongwith onsite consultation services, full-service area offices,and OSHA’s Strategic Partnership Program (OSPP) —\nrepresents a cooperative approach which, when coupled\nwith an effective enforcement program, expands workerprotection to help meet the goals of the \nOSH Act ."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW24_uncited_dc50_v1",
+    "source": "synthetic",
+    "failure_type": "uncited_claim",
+    "query": "What is the maximum DC current for VoltCo DC-50 Rev 1?",
+    "answer_text": "Maximum continuous DC output current on the Rev 1 unit is 125 A.",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v1:1:0",
+        "doc_id": "voltco_dc50_manual_v1",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 1.0)\nSafety Isolation: After isolating AC mains supply, wait exactly 10 minutes for DC bus capacitors to discharge\nbelow 50 V before opening enclosure.\nCurrent Limit: Maximum continuous DC output current is 125 A."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW25_fabrication_plasma_igniter",
+    "source": "real",
+    "failure_type": "fluent_fabrication_no_basis_in_corpus",
+    "query": "How do you align the laser plasma igniter on the Pulsar Plus?",
+    "answer_text": "Rotate the optical collimator dial on the laser plasma igniter until the beam aligns with receiver photodiode D-4 [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW26_fabrication_quantum_resistor",
+    "source": "real",
+    "failure_type": "fluent_fabrication_no_basis_in_corpus",
+    "query": "What resistance is expected across the quantum entanglement shunt?",
+    "answer_text": "The superconducting quantum entanglement shunt should measure exactly 0.0001 micro-ohms at absolute zero [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW27_fabrication_fusion_cell",
+    "source": "synthetic",
+    "failure_type": "fluent_fabrication_no_basis_in_corpus",
+    "query": "How is tritium flushed from the VoltCo DC-50 fuel cell?",
+    "answer_text": "Open tritium bypass petcock valve V-12 and flush with deuterated heavy water for 25 minutes [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v2:1:0",
+        "doc_id": "voltco_dc50_manual_v2",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 2.0)\nSafety Isolation (Updated): With active discharge resistors enabled, wait exactly 5 minutes for capacitor\ndischarge before opening enclosure.\nCurrent Limit (Updated): Upgraded busbars support maximum continuous DC output current of 150 A."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW28_hindi_wrong_current_shock",
+    "source": "real",
+    "failure_type": "hindi_wrong_answer",
+    "query": "5 मिलीएम्पियर करंट से शरीर पर क्या असर होता है?",
+    "answer_text": "5 मिलीएम्पियर करंट लगने पर तुरंत कार्डियक अरेस्ट और गंभीर रूप से जान जाने का खतरा होता है [1]।",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW29_hindi_wrong_led_halo",
+    "source": "real",
+    "failure_type": "hindi_wrong_answer",
+    "query": "पल्सर प्लस पर हरी बत्ती का क्या मतलब है?",
+    "answer_text": "हरी लाइट का मतलब है कि चार्जर में शॉर्ट सर्किट की गंभीर खराबी पाई गई है [1]।",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HW30_hindi_wrong_mounting_height",
+    "source": "real",
+    "failure_type": "hindi_wrong_answer",
+    "query": "चार्जर को जमीन से कितनी ऊंचाई पर लगाना चाहिए?",
+    "answer_text": "चार्जर को जमीन से कम से कम 15 मीटर की ऊंचाई पर स्थापित करने की सिफारिश की जाती है [1]।",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:9:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 9,
+        "text": "9\nDimensions and Positioning of the Device\nIn accordance with the product standards, the charging station must be located at height “y” (I-2) between \n1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m. \nRemember that local regulations may limit this height. It is mandatory to consider the following precautions:\n• The mounting area required for the Wallbox \ncharging station is at least 250x150 mm \n(height by width) (I-2).\n• When installing the Wallbox, the cable should \neasily reach the vehicle inlet.\n• For a safe operation of your charging station, \nyou must observe the minimum distances \nrecommended to other technical installations.\n• The plug holder (I-3) should be placed \nat a height between 0.50 m and 1.50 m \nabove ground level. Maintaining a square of \n400x400 mm around it to provide sufficient \nspace for the ergonomics is recommended.I-2: Mounting area\nI-3: Maintaining \ndistance around plug \nholder\n*between 1.30 m and 1.70 m above ground level\n250 mm\n400 mm400 mm250 mmy*150 mm 150 mm\nCorrect installation is absolutely essential and is outside the scope of the liability of Wallbox.\nInstallation video available at https://wallbox.com/\nI-4Drill\n• Use the drilling template as a guide to mark the place for the three anchor screws on the wall. Take special \ncare to keep the template level. The use of a spirit level is highly recommended.\n• Drill the anchor hole marks to the diameter specified for the selected equipment for the installation.  \nFor installation on wood, brick and concrete walls use the equipment delivered with the charger.\nMake sure the power supply is turned off during all mounting steps.\nMounting\n1. Opening the device (I-4)\nStep 1.1:  Remove the screw on the bottom side.\nStep 1.2:  Carefully open the cover with the opening \ntool included (I-1).\nStep 1.3.  Remove the ribbon cable from the cover."
+      }
+    ],
+    "expected_verified": false,
+    "expected_outcome": "B1"
+  },
+  {
+    "case_id": "HC01_yellow_halo_locked",
+    "source": "real",
+    "query": "What does a yellow halo mean on Pulsar Plus?",
+    "answer_text": "A yellow halo indicates the charger is locked and will not charge [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC02_green_halo_ready",
+    "source": "real",
+    "query": "What does a green halo light indicate on Pulsar Plus?",
+    "answer_text": "A green halo light indicates no EV is connected to the charger and the charger is ready to use [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC03_light_blue_halo",
+    "source": "real",
+    "query": "What does light blue halo light signify on Pulsar Plus?",
+    "answer_text": "Light blue halo indicates that an EV is connected to the charger and the charger is connecting [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC04_pulsing_dark_blue",
+    "source": "real",
+    "query": "What does pulsing dark blue LED mean on Pulsar Plus?",
+    "answer_text": "A dark blue pulsing halo light indicates that vehicle charging is currently in progress [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC05_red_error_detected",
+    "source": "real",
+    "query": "What does a red halo light signify on Pulsar Plus?",
+    "answer_text": "A red halo light indicates an error has been detected on the EV, the grid, or the charger [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC06_pulsing_purple_sync",
+    "source": "real",
+    "query": "What does pulsing purple halo light mean on Pulsar Plus?",
+    "answer_text": "A pulsing purple halo light indicates the charger is synchronizing with the Wallbox app [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC07_white_light_tracking",
+    "source": "real",
+    "query": "What does spinning white halo mean on Pulsar Plus?",
+    "answer_text": "A rotating white halo light indicates the charger is undergoing firmware update or initial setup [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC08_tingle_1ma",
+    "source": "real",
+    "query": "What bodily effect occurs at 1 milliampere current?",
+    "answer_text": "An electric current of 1 milliampere produces a faint tingling sensation in the body [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC09_shock_5ma_slight",
+    "source": "real",
+    "query": "What sensation does a 5 milliampere current cause?",
+    "answer_text": "At 5 milliamperes a slight shock is felt that is disturbing but the average individual can let go [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC10_men_letgo_range",
+    "source": "real",
+    "query": "What is the freezing current or let-go range for men?",
+    "answer_text": "The freezing current or let-go range for men is 9 to 30 milliamperes where the individual cannot let go [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC11_women_letgo_range",
+    "source": "real",
+    "query": "What is the painful shock range for women?",
+    "answer_text": "For women, painful shock and loss of muscular control occurs between 6 to 25 milliamperes [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC12_extreme_pain_current",
+    "source": "real",
+    "query": "What symptoms occur between 50 and 150 milliamperes current?",
+    "answer_text": "Currents between 50 and 150 milliamperes cause extreme pain, respiratory arrest, and severe muscular contractions [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC13_cardiac_arrest_current",
+    "source": "real",
+    "query": "What happens at 10,000 milliamperes electric current?",
+    "answer_text": "A current of 10,000 milliamperes causes cardiac arrest, severe burns, and probable death [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC14_mounting_height_rec",
+    "source": "real",
+    "query": "What mounting height does Wallbox recommend for Pulsar Plus?",
+    "answer_text": "Wallbox recommends mounting the charging station at a height of 1.40 m above ground level [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:9:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 9,
+        "text": "9\nDimensions and Positioning of the Device\nIn accordance with the product standards, the charging station must be located at height “y” (I-2) between \n1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m. \nRemember that local regulations may limit this height. It is mandatory to consider the following precautions:\n• The mounting area required for the Wallbox \ncharging station is at least 250x150 mm \n(height by width) (I-2).\n• When installing the Wallbox, the cable should \neasily reach the vehicle inlet.\n• For a safe operation of your charging station, \nyou must observe the minimum distances \nrecommended to other technical installations.\n• The plug holder (I-3) should be placed \nat a height between 0.50 m and 1.50 m \nabove ground level. Maintaining a square of \n400x400 mm around it to provide sufficient \nspace for the ergonomics is recommended.I-2: Mounting area\nI-3: Maintaining \ndistance around plug \nholder\n*between 1.30 m and 1.70 m above ground level\n250 mm\n400 mm400 mm250 mmy*150 mm 150 mm\nCorrect installation is absolutely essential and is outside the scope of the liability of Wallbox.\nInstallation video available at https://wallbox.com/\nI-4Drill\n• Use the drilling template as a guide to mark the place for the three anchor screws on the wall. Take special \ncare to keep the template level. The use of a spirit level is highly recommended.\n• Drill the anchor hole marks to the diameter specified for the selected equipment for the installation.  \nFor installation on wood, brick and concrete walls use the equipment delivered with the charger.\nMake sure the power supply is turned off during all mounting steps.\nMounting\n1. Opening the device (I-4)\nStep 1.1:  Remove the screw on the bottom side.\nStep 1.2:  Carefully open the cover with the opening \ntool included (I-1).\nStep 1.3.  Remove the ribbon cable from the cover."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC15_mounting_height_bounds",
+    "source": "real",
+    "query": "What is the permitted mounting height range for Pulsar Plus?",
+    "answer_text": "The mounting height y should be between 1.30 m and 1.70 m above ground level [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:9:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 9,
+        "text": "9\nDimensions and Positioning of the Device\nIn accordance with the product standards, the charging station must be located at height “y” (I-2) between \n1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m. \nRemember that local regulations may limit this height. It is mandatory to consider the following precautions:\n• The mounting area required for the Wallbox \ncharging station is at least 250x150 mm \n(height by width) (I-2).\n• When installing the Wallbox, the cable should \neasily reach the vehicle inlet.\n• For a safe operation of your charging station, \nyou must observe the minimum distances \nrecommended to other technical installations.\n• The plug holder (I-3) should be placed \nat a height between 0.50 m and 1.50 m \nabove ground level. Maintaining a square of \n400x400 mm around it to provide sufficient \nspace for the ergonomics is recommended.I-2: Mounting area\nI-3: Maintaining \ndistance around plug \nholder\n*between 1.30 m and 1.70 m above ground level\n250 mm\n400 mm400 mm250 mmy*150 mm 150 mm\nCorrect installation is absolutely essential and is outside the scope of the liability of Wallbox.\nInstallation video available at https://wallbox.com/\nI-4Drill\n• Use the drilling template as a guide to mark the place for the three anchor screws on the wall. Take special \ncare to keep the template level. The use of a spirit level is highly recommended.\n• Drill the anchor hole marks to the diameter specified for the selected equipment for the installation.  \nFor installation on wood, brick and concrete walls use the equipment delivered with the charger.\nMake sure the power supply is turned off during all mounting steps.\nMounting\n1. Opening the device (I-4)\nStep 1.1:  Remove the screw on the bottom side.\nStep 1.2:  Carefully open the cover with the opening \ntool included (I-1).\nStep 1.3.  Remove the ribbon cable from the cover."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC16_drill_hole_diameter",
+    "source": "real",
+    "query": "What drill hole diameter is required for Pulsar Plus wall anchors?",
+    "answer_text": "Install the wall anchors by drilling holes with a diameter of 8 mm [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:10:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 10,
+        "text": "10\nENAlways use standard cables that can drive the current that has been setup in the current \nselector. 2. Current selector\nUse the selector to select the maximum input \ncurrent of the device. Positions 0, 8 and 9 are \nreserved for the Power Sharing Smart feature (I-5).\n3. Electrical connection\n3-A. Rear connection\nStep 3-A.1: In the back of your Wallbox an area with a thinner wall can be found; use a cutter or any sharp \ntool and make an incision for entry of the cable.\nStep 3-A.2: Carefully and firmly insert the power cable through the board. The board has been designed \nso cables from 11 to 17 mm can pass through it, which is the standard for cables that can drive up to 22 kW.\nStep 3-A.3: Proceed to fix the charger to the wall. Insert the screws in the marked positions, starting at the top \nand following a clockwise direction (I-6.1). Check that your Wallbox Pulsar Plus is firmly fixed to the wall.\nStep 3-A.4: Make sure the previous steps have been completed correctly.\n3-B. Lower connection\nStep 3-B.1:  Proceed to fix the charger to the wall. Insert the screws in the marked positions, starting at the \ntop and following a clockwise direction (I-6.1). Check that your Wallbox Pulsar Plus is firmly fixed to the wall.\nStep 3-B.2: Insert the power supply cables through the cable connector (I-6.2, I-6.3).\nStep 3-B.3: Make sure the previous steps have been completed correctly.I-5: Current selector\nConnect the neutral and earth power lines to the terminal according to the supply configuration (I-6.2, I-6.3).CURRENT (A) R 13 32 6 16 R 10 2520 R0 3 7 1 4 8 2 65 9 POSITION\nIn the case that your Wallbox uses the rear input follow the steps in section 3-A. Otherwise go to section 3-B."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC17_ocpp_seqno_zero",
+    "source": "real",
+    "query": "What should the seqNo be when a transaction starts in OCPP 2.0.1?",
+    "answer_text": "When a transaction starts, the Charging Station SHOULD set the seqNo field for the TransactionEventRequest message to 0 [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:128:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 128,
+        "text": "1.3.2.1. Sequence number generation\nThis section is normative .\nWhen a transaction starts, the Charging Station SHOULD set the seqNo  field for the TransactionEventRequest  message to 0.\n(Implementations with a continuously increasing seqNo  are still allowed.)\nAfter each TransactionEventRequest  Charging Station SHALL increase the seqNo  by 1.\n1.4. Authorization\nTo simplify the use cases in this functional block, the way an EV Driver is authorized is not part of these use cases. It will simply be\ncalled something like: \"User authorization successful\" or \"The EV Driver is authorized by the Charging Station and/or CSMS.\". This\nmay be any way of authorizing an EV Driver. See functional block: C Authorization  for all the options and requirements for\nauthorization.\n1.5. Clarification for optional fields in TransactionEventRequest\nThis section is informative.\nThe TransactionEventRequest contains several optional fields. Some of these fields should only be sent once and should not be\nrepeated in every TransactionEventRequest. The following summary points to the requirements related to these optional fields.\nevse\n(E01.FR.16) The field evse  is only provided in the first TransactionEventRequest that occurs after the EV has connected. It is\nnot repeated in all future TransactionEventRequests.\nidToken\n(E03.FR.01) The field idToken  is provided once in the first TransactionEventRequest that occurs after the transaction has\nbeen authorized.\n(E07.FR.02) The field idToken  is provided once in the TransactionEventRequest that occurs when the authorization of the\ntransaction has been ended.\n(C12.FR.02) The above is also the case when authorization was granted because the idToken is present in the authorization\ncache with a Accepted status.\n(F02.FR.05): The above is also the case when the idToken is provided by a RequestStartTransactionRequest.\nreservationId\n(E03.FR.03/H01.FR.15) The field reservationId  is only provided in the first TransactionEventRequest that occurs when the\ntransaction has been authorized by the idToken for which a reservation existed in the charging station.\n(F02.FR.06) The above is also the case when the idToken is provided by a RequestStartTransactionRequest.\nmeterValue\n(E02.FR.09) The TransactionEventRequest( eventType =Started) must contain the meter values that have been configured\nin SampledDataCtrlr.TxStartedMeasurands.\n(E02.FR.10) A TransactionEventRequest( eventType =Updated) must be sent at every interval configured in\nSampledDataCtrlr.TxUpdatedInterval and contain the meter values that have been configured in\nSampledDataCtrlr.TxUpdatedMeasurands. If TxUpdatedMeasurands == 0, then no meter values are sent.\n(E06.FR.11) The TransactionEventRequest( eventType =Ended) must contain the meter values that have been configured in\nSampledDataCtrlr.TxEndedMeasurands. If SampledDataCtrlr.TxEndedInterval == 0, then only the values taken at start and\nend of the transaction are included.\ntransactionInfo.chargingState\n(E02.FR.13) Whenever the charging state changes, the Charging Station must send a TransactionEventRequest containing\nchargingState .\nA TransactionEventRequest with triggerReason  = ChargingStateChanged  must contain chargingState .\ntransactionInfo.stoppedReason\n(C15.FR.04, E05.FR.10, E05.FR.08/09, E07.FR.06) The stoppedReason  must be provided in the\nTransactionEventRequest( eventType =Ended), unless the value is Local, in which case it may be omitted.\n(F03.FR.03, F03.FR.10, F04.FR.03) The above also applies to transactions that are stopped by a\nRequestStopTransactionRequest, however in this case the stoppedReason  value must be Remote.\nEdition 2 FINAL, 2022-12-15 E. Transactions\nOCPP 2.0.1 Edition 2 - © Open Charge Alliance 2022 118/471 Part 2 - Specification"
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC18_ocpp_seqno_increment",
+    "source": "real",
+    "query": "How is the seqNo incremented after each TransactionEventRequest?",
+    "answer_text": "After each TransactionEventRequest the Charging Station SHALL increase the seqNo by 1 [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ocpp-2.0.1-spec:128:0",
+        "doc_id": "ocpp-2.0.1-spec",
+        "page_number": 128,
+        "text": "1.3.2.1. Sequence number generation\nThis section is normative .\nWhen a transaction starts, the Charging Station SHOULD set the seqNo  field for the TransactionEventRequest  message to 0.\n(Implementations with a continuously increasing seqNo  are still allowed.)\nAfter each TransactionEventRequest  Charging Station SHALL increase the seqNo  by 1.\n1.4. Authorization\nTo simplify the use cases in this functional block, the way an EV Driver is authorized is not part of these use cases. It will simply be\ncalled something like: \"User authorization successful\" or \"The EV Driver is authorized by the Charging Station and/or CSMS.\". This\nmay be any way of authorizing an EV Driver. See functional block: C Authorization  for all the options and requirements for\nauthorization.\n1.5. Clarification for optional fields in TransactionEventRequest\nThis section is informative.\nThe TransactionEventRequest contains several optional fields. Some of these fields should only be sent once and should not be\nrepeated in every TransactionEventRequest. The following summary points to the requirements related to these optional fields.\nevse\n(E01.FR.16) The field evse  is only provided in the first TransactionEventRequest that occurs after the EV has connected. It is\nnot repeated in all future TransactionEventRequests.\nidToken\n(E03.FR.01) The field idToken  is provided once in the first TransactionEventRequest that occurs after the transaction has\nbeen authorized.\n(E07.FR.02) The field idToken  is provided once in the TransactionEventRequest that occurs when the authorization of the\ntransaction has been ended.\n(C12.FR.02) The above is also the case when authorization was granted because the idToken is present in the authorization\ncache with a Accepted status.\n(F02.FR.05): The above is also the case when the idToken is provided by a RequestStartTransactionRequest.\nreservationId\n(E03.FR.03/H01.FR.15) The field reservationId  is only provided in the first TransactionEventRequest that occurs when the\ntransaction has been authorized by the idToken for which a reservation existed in the charging station.\n(F02.FR.06) The above is also the case when the idToken is provided by a RequestStartTransactionRequest.\nmeterValue\n(E02.FR.09) The TransactionEventRequest( eventType =Started) must contain the meter values that have been configured\nin SampledDataCtrlr.TxStartedMeasurands.\n(E02.FR.10) A TransactionEventRequest( eventType =Updated) must be sent at every interval configured in\nSampledDataCtrlr.TxUpdatedInterval and contain the meter values that have been configured in\nSampledDataCtrlr.TxUpdatedMeasurands. If TxUpdatedMeasurands == 0, then no meter values are sent.\n(E06.FR.11) The TransactionEventRequest( eventType =Ended) must contain the meter values that have been configured in\nSampledDataCtrlr.TxEndedMeasurands. If SampledDataCtrlr.TxEndedInterval == 0, then only the values taken at start and\nend of the transaction are included.\ntransactionInfo.chargingState\n(E02.FR.13) Whenever the charging state changes, the Charging Station must send a TransactionEventRequest containing\nchargingState .\nA TransactionEventRequest with triggerReason  = ChargingStateChanged  must contain chargingState .\ntransactionInfo.stoppedReason\n(C15.FR.04, E05.FR.10, E05.FR.08/09, E07.FR.06) The stoppedReason  must be provided in the\nTransactionEventRequest( eventType =Ended), unless the value is Local, in which case it may be omitted.\n(F03.FR.03, F03.FR.10, F04.FR.03) The above also applies to transactions that are stopped by a\nRequestStopTransactionRequest, however in this case the stoppedReason  value must be Remote.\nEdition 2 FINAL, 2022-12-15 E. Transactions\nOCPP 2.0.1 Edition 2 - © Open Charge Alliance 2022 118/471 Part 2 - Specification"
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC19_osha_design_standards",
+    "source": "real",
+    "query": "Which federal regulations publish OSHA general electrical design standards?",
+    "answer_text": "OSHA general industry electrical safety standards are published in Title 29 Code of Federal Regulations Part 1910.302 through 1910.308 [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:8:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 8,
+        "text": "3What OSHA standards\naddress electrical safety?\nOSHA standards cover many electrical hazards in many\ndifferent industries. OSHA’s general industry electrical\nsafety standards are published in Title 29 Code of Federal\nRegulations (CFR), Part 1910.302 through 1910.308 —\nDesign Safety Standards for Electrical Systems, and1910.331 through 1910.335 — Electrical Safety-RelatedWork Practices Standards.\nOSHA’s electrical standards are based on the\nNational Fire Protection Association Standards NFPA 70,\nNational Electric Code, and NFPA 70E,  Electrical\nSafety Requirements for Employee Workplace s.\nOSHA also has electrical safety standards for the\nconstruction industry, in 29 CFR  1926, Subpart K. OSHA’s\nstandards for marine terminals, in 29 CFR  1917, and for\nlongshoring, in 29 CFR  1918, reference the general industry\nelectrical standards in Subpart S of Part 1910. The shipyardstandards, in \n29 CFR  1915, cover limited electrical safety\nwork practices in 29 CFR  1915.181.\nAlthough OSHA operates a federal occupational safety\nand health program, 24 states and 2 territories operate\ntheir own OSHA-approved programs. In those states, the\nstandards and other procedures governing electrical safetymay not be identical to the federal requirements. They must,however, be at least as effective as the federal standards."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC20_circuit_continuous_load",
+    "source": "real",
+    "query": "What is the continuous circuit load percentage per NEC?",
+    "answer_text": "Neither the charger nor vehicle draws more than 80% of the connected circuit maximum rating per National Electrical Code [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "charger-error-codes:5:0",
+        "doc_id": "charger-error-codes",
+        "page_number": 5,
+        "text": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myWallbox app when your charger is selected:\nNote: The current status colors will also be visible on the charger screen in \nyour myWallbox app.No EV is \nconnected to \nthe charger. \nCharger is \nready to use.\nEV is connected to the \ncharger. Charger is \nconnecting.No EV is connected to \nthe charger. Charger \nis ready to use.Charger is connected. Charging is in \nprogress.Disconnected.Waiting for the EV to \nstart charging or the \ncar is fully charged. \nNote, it can take \nseveral seconds in \nwaiting mode before \ncharging starts.Scheduled charge. A \nschedule has been \nset by the user.Charging is in \nprocess.The charger is \nlocked and will not \ncharge.An error has \nbeen detected \non the EV, grid or \nthe charger. See \n“Troubleshooting”.Basics - UsageQUICK REFERENCE GUIDE\nAdjust the charging current \nThere are two ways to manage the charging current of your charger:\n1. During hardwire installation, your installer will have set the physical current selector switch inside the charger \nto the appropriate amperage suitable for the connected circuit. This is to ensure that neither the charger nor \nyour vehicle draws more than 80% of the connected circuit’s maximum rating (per the National Electrical Code).\n2. Using the myWallbox app.\nCircuit Breaker\nRating Amps\n16A 20A\n32A 40A20A 25A\n40A 50A24A 30A\n48A 60A\nWhen would I adjust the amperage?\nShared circuit. If your charger shares a high voltage \ncircuit with other appliances, you may want to temporarily \nreduce the amperage available to charge your vehicle \nwhen operating those other appliances to ensure you do \nnot overload the circuit."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC21_hindi_shock_1ma",
+    "source": "real",
+    "query": "1 मिलीएम्पियर करंट लगने पर शरीर पर क्या महसूस होता है?",
+    "answer_text": "1 मिलीएम्पियर करंट लगने पर शरीर में केवल हल्की झनझनाहट (faint tingle) महसूस होती है [1]।",
+    "cited_chunks": [
+      {
+        "chunk_id": "ev-safety-compliance:12:0",
+        "doc_id": "ev-safety-compliance",
+        "page_number": 12,
+        "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC22_hindi_mounting_height",
+    "source": "real",
+    "query": "पल्सर प्लस को कितनी ऊंचाई पर लगाने की सिफारिश की गई है?",
+    "answer_text": "चार्जिंग स्टेशन को जमीन से 1.40 m की ऊंचाई पर लगाने की सिफारिश की जाती है [1]।",
+    "cited_chunks": [
+      {
+        "chunk_id": "wallbox-pulsar-plus-install:9:0",
+        "doc_id": "wallbox-pulsar-plus-install",
+        "page_number": 9,
+        "text": "9\nDimensions and Positioning of the Device\nIn accordance with the product standards, the charging station must be located at height “y” (I-2) between \n1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m. \nRemember that local regulations may limit this height. It is mandatory to consider the following precautions:\n• The mounting area required for the Wallbox \ncharging station is at least 250x150 mm \n(height by width) (I-2).\n• When installing the Wallbox, the cable should \neasily reach the vehicle inlet.\n• For a safe operation of your charging station, \nyou must observe the minimum distances \nrecommended to other technical installations.\n• The plug holder (I-3) should be placed \nat a height between 0.50 m and 1.50 m \nabove ground level. Maintaining a square of \n400x400 mm around it to provide sufficient \nspace for the ergonomics is recommended.I-2: Mounting area\nI-3: Maintaining \ndistance around plug \nholder\n*between 1.30 m and 1.70 m above ground level\n250 mm\n400 mm400 mm250 mmy*150 mm 150 mm\nCorrect installation is absolutely essential and is outside the scope of the liability of Wallbox.\nInstallation video available at https://wallbox.com/\nI-4Drill\n• Use the drilling template as a guide to mark the place for the three anchor screws on the wall. Take special \ncare to keep the template level. The use of a spirit level is highly recommended.\n• Drill the anchor hole marks to the diameter specified for the selected equipment for the installation.  \nFor installation on wood, brick and concrete walls use the equipment delivered with the charger.\nMake sure the power supply is turned off during all mounting steps.\nMounting\n1. Opening the device (I-4)\nStep 1.1:  Remove the screw on the bottom side.\nStep 1.2:  Carefully open the cover with the opening \ntool included (I-1).\nStep 1.3.  Remove the ribbon cable from the cover."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC23_ac22_terminal_torque",
+    "source": "synthetic",
+    "query": "What torque is specified for VoltCo AC-22 terminal screws?",
+    "answer_text": "The terminal screw torque specification for VoltCo AC-22 is 2.8 Nm [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo AC-22 Commercial Hardware Specifications\nReference ratings for installation and periodic field maintenance:\nParameter\nSpecification\nTolerance / Unit\nTerminal Screw Torque\n2.8\nNm\nNominal AC Voltage\n400\nV AC (3-Phase)\nMaximum Continuous Current\n32\nA per phase\nInsulation Resistance Min\n50\nMOhm\nOperating Temperature\n-25 to +50\ndeg C"
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC24_ac22_nominal_voltage",
+    "source": "synthetic",
+    "query": "What is the nominal AC voltage for VoltCo AC-22?",
+    "answer_text": "The nominal AC voltage for the VoltCo AC-22 is 400 V AC [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo AC-22 Commercial Hardware Specifications\nReference ratings for installation and periodic field maintenance:\nParameter\nSpecification\nTolerance / Unit\nTerminal Screw Torque\n2.8\nNm\nNominal AC Voltage\n400\nV AC (3-Phase)\nMaximum Continuous Current\n32\nA per phase\nInsulation Resistance Min\n50\nMOhm\nOperating Temperature\n-25 to +50\ndeg C"
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC25_dc50_v1_wait_time",
+    "source": "synthetic",
+    "query": "How long must a technician wait on VoltCo DC-50 Rev 1 before opening cabinet?",
+    "answer_text": "Wait 10 minutes after isolating the DC bus before opening the power cabinet [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v1:1:0",
+        "doc_id": "voltco_dc50_manual_v1",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 1.0)\nSafety Isolation: After isolating AC mains supply, wait exactly 10 minutes for DC bus capacitors to discharge\nbelow 50 V before opening enclosure.\nCurrent Limit: Maximum continuous DC output current is 125 A."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC26_dc50_v2_wait_time",
+    "source": "synthetic",
+    "query": "What is the capacitor discharge wait time for VoltCo DC-50 Rev 2?",
+    "answer_text": "On VoltCo DC-50 Rev 2 wait 5 minutes after isolating the DC bus before opening the cabinet [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v2:1:0",
+        "doc_id": "voltco_dc50_manual_v2",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 2.0)\nSafety Isolation (Updated): With active discharge resistors enabled, wait exactly 5 minutes for capacitor\ndischarge before opening enclosure.\nCurrent Limit (Updated): Upgraded busbars support maximum continuous DC output current of 150 A."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC27_dc50_v1_continuous_current",
+    "source": "synthetic",
+    "query": "What is max continuous current for VoltCo DC-50 Rev 1?",
+    "answer_text": "Maximum continuous DC output current on VoltCo DC-50 Rev 1 is 125 A [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_dc50_manual_v1:1:0",
+        "doc_id": "voltco_dc50_manual_v1",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo DC-50 Charger Technical Manual (Revision 1.0)\nSafety Isolation: After isolating AC mains supply, wait exactly 10 minutes for DC bus capacitors to discharge\nbelow 50 V before opening enclosure.\nCurrent Limit: Maximum continuous DC output current is 125 A."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC28_e203_fault_meaning",
+    "source": "synthetic",
+    "query": "What does fault code E203 indicate on VoltCo chargers?",
+    "answer_text": "Fault Code E203 indicates a DC ground insulation fault detected on the power module [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_err_codes:1:0",
+        "doc_id": "voltco_err_codes",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo EV Charger Error Codes Reference\nFault Code E203: Indicates DC ground insulation fault detected on power module. Insulation resistance fell\nbelow 100 kohm.\nFault Code E208: Indicates output overcurrent condition where charging current exceeded 160 A for more than\n50 ms.\nTechnicians must isolate power before testing harness continuity for code E203."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC29_e208_overcurrent",
+    "source": "synthetic",
+    "query": "What does fault code E208 indicate on VoltCo chargers?",
+    "answer_text": "Fault Code E208 indicates output overcurrent detected on the DC charging bus [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_err_codes:1:0",
+        "doc_id": "voltco_err_codes",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo EV Charger Error Codes Reference\nFault Code E203: Indicates DC ground insulation fault detected on power module. Insulation resistance fell\nbelow 100 kohm.\nFault Code E208: Indicates output overcurrent condition where charging current exceeded 160 A for more than\n50 ms.\nTechnicians must isolate power before testing harness continuity for code E203."
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  },
+  {
+    "case_id": "HC30_ac22_insulation_resistance",
+    "source": "synthetic",
+    "query": "What is minimum insulation resistance for VoltCo AC-22?",
+    "answer_text": "Minimum insulation resistance specification for VoltCo AC-22 is 50 MOhm [1].",
+    "cited_chunks": [
+      {
+        "chunk_id": "voltco_ac22_specs:1:0",
+        "doc_id": "voltco_ac22_specs",
+        "page_number": 1,
+        "text": "SYNTHETIC TEST DOCUMENT - VoltCo Fictional Test Corpus\nVoltCo AC-22 Commercial Hardware Specifications\nReference ratings for installation and periodic field maintenance:\nParameter\nSpecification\nTolerance / Unit\nTerminal Screw Torque\n2.8\nNm\nNominal AC Voltage\n400\nV AC (3-Phase)\nMaximum Continuous Current\n32\nA per phase\nInsulation Resistance Min\n50\nMOhm\nOperating Temperature\n-25 to +50\ndeg C"
+      }
+    ],
+    "expected_verified": true,
+    "expected_outcome": "A"
+  }
+]
