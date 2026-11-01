@@ -56,3 +56,4 @@ To prevent gaming or overfitting to evaluation benchmarks:
 2. **End-to-End Pipeline Eval**:
    - Executes via `scripts/evaluate_retrieval.py` and `run_pipeline` when an LLM API key (`GEMINI_API_KEY` or `OPENAI_API_KEY`) is configured.
    - If no live key is present, deterministic eval is executed and reported without fabricated live metrics.
+

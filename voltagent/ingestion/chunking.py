@@ -1,10 +1,6 @@
 """Turn extracted pages into retrieval-sized chunks.
 
-Token-aware sliding window with overlap, per page (we don't merge across
-page boundaries — OCPP spec sections and error-code tables are usually
-self-contained per page, and keeping chunks page-scoped makes the citation
-story exact: "page 42 of the OCPP 2.0.1 spec" is a claim a technician can
-go check, "somewhere in the doc" is not).
+Token-aware sliding window with overlap, per page.
 """
 from __future__ import annotations
 
@@ -38,8 +34,9 @@ class Chunk:
         }
 
 
-def _chunk_id(doc_id: str, page_number: int, window_index: int) -> str:
-    raw = f"{doc_id}:{page_number}:{window_index}"
+def _chunk_id(doc_id: str, page_number: int, window_index: int, text: str = "") -> str:
+    content_sig = hashlib.sha1(text.encode("utf-8")).hexdigest()[:8] if text else ""
+    raw = f"{doc_id}:{page_number}:{window_index}:{content_sig}"
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
 
 
@@ -65,7 +62,7 @@ def chunk_page(
         text = _encoding.decode(window)
         chunks.append(
             Chunk(
-                chunk_id=_chunk_id(page.doc_id, page.page_number, window_index),
+                chunk_id=_chunk_id(page.doc_id, page.page_number, window_index, text=text),
                 doc_id=page.doc_id,
                 doc_title=page.doc_title,
                 page_number=page.page_number,

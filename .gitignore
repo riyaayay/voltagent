@@ -3,6 +3,8 @@ __pycache__/
 *.pyc
 .env
 data/raw/*.pdf
+data/raw/real/
+data/raw_malformed/
 observability/
 .pytest_cache/
 .ruff_cache/
@@ -34,9 +36,6 @@ build/
 # Testing
 .pytest_cache/
 .ruff_cache/
-
-# Data - adjust as needed
-# data/raw/*.pdf  # commented out if you want to track docs
 
 # OS
 .DS_Store

@@ -31,6 +31,7 @@ from dataclasses import dataclass, field
 from sentence_transformers import util
 
 from voltagent.agents.generation_agent import GenerationResult
+from voltagent.agents.numeric_gate import gate_claim
 from voltagent.config import settings
 from voltagent.insights.feedback_loop import get_threshold_override
 from voltagent.logging_utils import extract_error_code
@@ -43,6 +44,8 @@ class SentenceCheck:
     cited_chunk_id: str | None
     support_score: float | None    # None if uncited
     supported: bool
+    gate_missing: list[str] = field(default_factory=list)   # critical values not found in the cited chunks
+    negation_conflict: bool = False
 
 
 @dataclass
@@ -59,8 +62,13 @@ def _split_sentences(text: str) -> list[str]:
     # Good enough for technical prose with citation brackets; a real
     # deployment would swap in a proper sentence segmenter (e.g. spaCy)
     # if source docs turn out to have unusual punctuation patterns.
-    parts = re.split(r"(?<=[.!?])\s+", text.strip())
-    return [p for p in parts if p]
+    #
+    # A sentence ends at ./!/? followed by whitespace (so "5.5 kW" is not split),
+    # and any citation brackets right after the terminator belong to THAT sentence.
+    # This accepts both "sentence [1]." and "sentence. [1]" (F-020): splitting on
+    # the terminator alone turned the bare "[1]" into its own sentence.
+    parts = re.findall(r".+?[.!?](?:\s*\[\d+\])*(?=\s|$)|.+$", text.strip(), flags=re.S)
+    return [p.strip() for p in parts if p.strip()]
 
 
 def _cited_chunk_id_for_sentence(sentence: str, chunk_by_index: dict[int, str]) -> str | None:
@@ -70,11 +78,39 @@ def _cited_chunk_id_for_sentence(sentence: str, chunk_by_index: dict[int, str]) 
     return chunk_by_index.get(int(refs[0]))
 
 
+def check_negation_conflict(claim: str, source: str) -> bool:
+    """Deterministic check for negation flip (V4 in STATUS.md).
+
+    Detects when a claim affirms an action that the cited source explicitly negates
+    (e.g. 'will charge' vs 'will not charge') or vice-versa.
+    """
+    aux = r"(?:will|shall|can|could|should|must|may|might|do|does|did|is|are|was|were)"
+    negated_in_src = set(re.findall(rf"\b{aux}\s+(?:not|never)\s+([a-z]+)\b", source.lower()))
+    negated_in_claim = set(re.findall(rf"\b{aux}\s+(?:not|never)\s+([a-z]+)\b", claim.lower()))
+
+    # Also handle "cannot <verb>"
+    negated_in_src |= set(re.findall(r"\bcannot\s+([a-z]+)\b", source.lower()))
+    negated_in_claim |= set(re.findall(r"\bcannot\s+([a-z]+)\b", claim.lower()))
+
+    affirmed_in_src = set(re.findall(rf"\b{aux}\s+([a-z]+)\b", source.lower())) - negated_in_src
+    affirmed_in_claim = set(re.findall(rf"\b{aux}\s+([a-z]+)\b", claim.lower())) - negated_in_claim
+
+    conflict_1 = (negated_in_src & affirmed_in_claim) - {"be", "have"}
+    conflict_2 = (affirmed_in_src & negated_in_claim) - {"be", "have"}
+
+    return bool(conflict_1 or conflict_2)
+
+
 def run_verifier_agent(generation: GenerationResult, query_text: str | None = None) -> VerificationResult:
     if generation.is_insufficient:
-        # Model already declined to answer — nothing to verify, and this
-        # counts as an honest (non-hallucinated) outcome, not a failure.
-        return VerificationResult(verified=True, confidence=1.0, fallback=False)
+        # F-002: Model declined to answer (Outcome B4). Never report as verified.
+        return VerificationResult(
+            verified=False,
+            confidence=0.0,
+            sentence_checks=[],
+            fallback=True,
+            fallback_reason="Model declined to answer / insufficient documentation.",
+        )
 
     if not generation.used_chunks:
         return VerificationResult(
@@ -99,27 +135,51 @@ def run_verifier_agent(generation: GenerationResult, query_text: str | None = No
     checks: list[SentenceCheck] = []
 
     for sentence in sentences:
-        cited_id = _cited_chunk_id_for_sentence(sentence, chunk_by_index)
-
-        if cited_id is None or cited_id not in chunk_text_by_id:
-            # Uncited factual claim, or citation to a chunk that doesn't
-            # exist in what was actually retrieved. Treat as unsupported.
+        raw_refs = re.findall(r"\[(\d+)\]", sentence)
+        if not raw_refs:
+            # Uncited factual claim
             checks.append(
-                SentenceCheck(sentence=sentence, cited_chunk_id=cited_id, support_score=None, supported=False)
+                SentenceCheck(sentence=sentence, cited_chunk_id=None, support_score=None, supported=False)
             )
             continue
 
-        source_text = chunk_text_by_id[cited_id]
+        cited_ids = [chunk_by_index.get(int(ref)) for ref in raw_refs]
+        # F-003: If any reference cited a chunk number that doesn't exist in what was retrieved
+        if any(cid is None or cid not in chunk_text_by_id for cid in cited_ids):
+            checks.append(
+                SentenceCheck(sentence=sentence, cited_chunk_id=cited_ids[0], support_score=None, supported=False)
+            )
+            continue
+
         sentence_clean = re.sub(r"\[\d+\]", "", sentence).strip()
-
         sent_emb = embedder.encode(sentence_clean, convert_to_tensor=True)
-        src_emb = embedder.encode(source_text, convert_to_tensor=True)
-        similarity = float(util.cos_sim(sent_emb, src_emb)[0][0])
 
-        supported = similarity >= threshold
+        # F-003: Check semantic support against EVERY chunk this sentence cites
+        chunk_sims: list[float] = []
+        for cid in cited_ids:
+            src_text = chunk_text_by_id[cid]
+            src_emb = embedder.encode(src_text, convert_to_tensor=True)
+            chunk_sims.append(float(util.cos_sim(sent_emb, src_emb)[0][0]))
+
+        min_sim = min(chunk_sims)
+
+        # Deterministic gate on the FULL text of every chunk this sentence cites. Cosine alone
+        # accepted a wrong number or unit (F-001) and cannot see past the embedder window (F-022).
+        cited_texts = [chunk_text_by_id[cid] for cid in cited_ids]
+        gate = gate_claim(sentence_clean, cited_texts)
+
+        # Deterministic negation conflict check (V4 in STATUS.md)
+        negation_conflict = check_negation_conflict(sentence_clean, " ".join(cited_texts))
+
+        supported = min_sim >= threshold and gate.passed and not negation_conflict
         checks.append(
             SentenceCheck(
-                sentence=sentence, cited_chunk_id=cited_id, support_score=similarity, supported=supported
+                sentence=sentence,
+                cited_chunk_id=cited_ids[0],
+                support_score=min_sim,
+                supported=supported,
+                gate_missing=gate.missing,
+                negation_conflict=negation_conflict,
             )
         )
 

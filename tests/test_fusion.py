@@ -1,5 +1,9 @@
+import pytest
+
 from voltagent.retrieval.fusion import reciprocal_rank_fusion
 from voltagent.retrieval.types import DenseHit, SparseHit
+
+pytestmark = pytest.mark.unit
 
 
 def _payload(chunk_id: str) -> dict:

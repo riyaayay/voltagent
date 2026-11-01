@@ -1,0 +1,135 @@
+[
+  {
+    "doc_id": "charger-error-codes",
+    "pdf_name": "charger-error-codes.pdf",
+    "page": 5,
+    "query": "Green",
+    "snippet": "5Understanding the Pulsar Plus Status Colors Green Light blue Light blue  (pulsing)Dark blue  (pulsing)Yellow RedWhen powered on, you can check t"
+  },
+  {
+    "doc_id": "charger-error-codes",
+    "pdf_name": "charger-error-codes.pdf",
+    "page": 5,
+    "query": "Light blue",
+    "snippet": "Understanding the Pulsar Plus Status Colors Green Light blue Light blue  (pulsing)Dark blue  (pulsing)Yellow RedWhen powered on, you can check the sta"
+  },
+  {
+    "doc_id": "charger-error-codes",
+    "pdf_name": "charger-error-codes.pdf",
+    "page": 5,
+    "query": "Yellow",
+    "snippet": "ght blue Light blue  (pulsing)Dark blue  (pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily b"
+  },
+  {
+    "doc_id": "charger-error-codes",
+    "pdf_name": "charger-error-codes.pdf",
+    "page": 2,
+    "query": "Red",
+    "snippet": "ting your myWallbox accountOnce installed and powered on following the instructions in the installation guide, your Pulsar Plus is ready to  charge yo"
+  },
+  {
+    "doc_id": "charger-error-codes",
+    "pdf_name": "charger-error-codes.pdf",
+    "page": 5,
+    "query": "halo",
+    "snippet": "arger quickly and easily by the color of the LED  halo on the front of the charger and from the colors displayed in the myWallbox app when your charge"
+  },
+  {
+    "doc_id": "wallbox-pulsar-plus-install",
+    "pdf_name": "wallbox-pulsar-plus-install.pdf",
+    "page": 50,
+    "query": "NEMA",
+    "snippet": "89870290 +49 303 11 99629 +34 930181668Danmark/Danemark Deutschland/AllemagneFrance +33 186260541 +39 694804494 +31 202410845 Espa\u00f1a/EspagneItalia/It"
+  },
+  {
+    "doc_id": "wallbox-pulsar-plus-install",
+    "pdf_name": "wallbox-pulsar-plus-install.pdf",
+    "page": 9,
+    "query": "ground",
+    "snippet": "height \u201cy\u201d (I-2) between  1.30 m and 1.70 m above ground level. We recommend mounting the charging station at a height of 1.40 m.  Remember that local"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "pdf_name": "ev-safety-compliance.pdf",
+    "page": 12,
+    "query": "let-go",
+    "snippet": "9\u201330 milliamperes (men) The freezing current or \u201clet-go\u201d range.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "pdf_name": "ev-safety-compliance.pdf",
+    "page": 12,
+    "query": "5 milliampere",
+    "snippet": "nerally not perceptible 1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but disturbing. Average individual canlet go. Strong i"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "pdf_name": "ev-safety-compliance.pdf",
+    "page": 3,
+    "query": "static electricity",
+    "snippet": "......................... 9 What is the danger of static electricity? ...................... 10 Protection Against Electrical Hazards ................"
+  },
+  {
+    "doc_id": "ocpp-2.0.1-spec",
+    "pdf_name": "ocpp-2.0.1-spec.pdf",
+    "page": 54,
+    "query": "StatusNotificationRequest",
+    "snippet": "cepted . 4. Optional:  The Charging Station sends StatusNotificationRequest  with status Unavailable  to the CSMS for each Connector. 5. The Charging"
+  },
+  {
+    "doc_id": "ocpp-2.0.1-spec",
+    "pdf_name": "ocpp-2.0.1-spec.pdf",
+    "page": 3,
+    "query": "TransactionEventRequest",
+    "snippet": ". \u00a0118 1.5. Clarification for optional fields in TransactionEventRequest . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+  },
+  {
+    "doc_id": "ocpp-2.0.1-spec",
+    "pdf_name": "ocpp-2.0.1-spec.pdf",
+    "page": 7,
+    "query": "RequestStopTransaction",
+    "snippet": ". . . . . . . . . . . . . . . . . . . \u00a0373 1.45. RequestStopTransaction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+  },
+  {
+    "doc_id": "ocpp-2.0.1-spec",
+    "pdf_name": "ocpp-2.0.1-spec.pdf",
+    "page": 77,
+    "query": "eventType",
+    "snippet": "ns are finished and all TransactionEventRequest  (eventType = Ended ) messages are sent. 3b. On receipt of an Immediate reset, the Charging Station re"
+  },
+  {
+    "doc_id": "ocpp-2.0.1-spec",
+    "pdf_name": "ocpp-2.0.1-spec.pdf",
+    "page": 68,
+    "query": "seqNo",
+    "snippet": "s. B07.FR.10 The sequence number contained in the seqNo field of the NotifyReportRequest  is incremental per report. So the NotifyReportRequest  messa"
+  },
+  {
+    "doc_id": "ocpp-2.0.1-appendices",
+    "pdf_name": "ocpp-2.0.1-appendices.pdf",
+    "page": 16,
+    "query": "AirCoolingSystem",
+    "snippet": "scription Active Non-Default Problem State 3.2.5. AirCoolingSystem Description Fans (or equivalent devices) used to provide cooling. Typically used va"
+  },
+  {
+    "doc_id": "ocpp-2.0.1-appendices",
+    "pdf_name": "ocpp-2.0.1-appendices.pdf",
+    "page": 4,
+    "query": "ISO15118",
+    "snippet": "ndix 3: Added ConnectedEV component for info from ISO15118 and CHAdeMO. Appendix 5: Added reason MissingDeviceModelInfo 1.1 2020-03-23 OCPP 2.0.1 Upda"
+  },
+  {
+    "doc_id": "ocpp-2.0.1-appendices",
+    "pdf_name": "ocpp-2.0.1-appendices.pdf",
+    "page": 15,
+    "query": "FanSpeed",
+    "snippet": "asured power Temperature temperature of converter FanSpeed Speed of cooling fan(s) 3.2.3. AcPhaseSelector Description Allows a specific AC phase to be"
+  },
+  {
+    "doc_id": "ocpp-2.0.1-appendices",
+    "pdf_name": "ocpp-2.0.1-appendices.pdf",
+    "page": 27,
+    "query": "Recloser",
+    "snippet": "current [per phase] 3.2.43. OverCurrentProtectionRecloser Appendix 3. Standardized Components OCPP 2.0.1 - \u00a9 Open Charge Alliance 2022 25/37 Part 2 -"
+  }
+]

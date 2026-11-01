@@ -1,0 +1,91 @@
+﻿================================================================================
+VOLTAGENT VERIFIER BENCHMARK EVALUATION (CLAIM C)
+================================================================================
+Timestamp: 2026-11-01T03:39:17Z
+Confidence Threshold: 0.55
+--------------------------------------------------------------------------------
+
+Evaluating test_wrong_10.json (Frozen 10 Deliberately Wrong Cases)...
+[W01_wrong_error_code_meaning] MISSED (Verified) - type: wrong_error_code_meaning
+    Confidence: 0.706 | Missing: []
+[W02_swapped_numeric_value] MISSED (Verified) - type: swapped_numeric_value
+    Confidence: 0.735 | Missing: []
+[W03_wrong_unit] FLAGGED (Unverified) - type: wrong_unit
+    Confidence: 0.872 | Missing: ['1.4 in']
+    Reason: One or more claims were uncited or not well-supported by the retrieved sources.
+[W04_negation_flip] MISSED (Verified) - type: negation_flip
+    Confidence: 0.691 | Missing: []
+[W05_wrong_ocpp_field_message] FLAGGED (Unverified) - type: wrong_ocpp_field_message
+    Confidence: 0.862 | Missing: ['BootNotificationRequest']
+    Reason: One or more claims were uncited or not well-supported by the retrieved sources.
+[W06_citation_real_wrong_chunk] FLAGGED (Unverified) - type: citation_pointing_to_real_but_wrong_chunk
+    Confidence: 0.237 | Missing: []
+    Reason: One or more claims were uncited or not well-supported by the retrieved sources.
+[W07_citation_nonexistent_chunk] FLAGGED (Unverified) - type: citation_to_nonexistent_chunk
+    Confidence: 0.000 | Missing: []
+    Reason: One or more claims were uncited or not well-supported by the retrieved sources.
+[W08_uncited_claim] FLAGGED (Unverified) - type: uncited_claim
+    Confidence: 0.000 | Missing: []
+    Reason: One or more claims were uncited or not well-supported by the retrieved sources.
+[W09_fluent_fabrication] FLAGGED (Unverified) - type: fluent_fabrication_no_basis_in_corpus
+    Confidence: 0.239 | Missing: ['45 psi']
+    Reason: One or more claims were uncited or not well-supported by the retrieved sources.
+[W10_hindi_wrong_answer] FLAGGED (Unverified) - type: hindi_wrong_answer
+    Confidence: 0.513 | Missing: []
+    Reason: One or more claims were uncited or not well-supported by the retrieved sources.
+
+--------------------------------------------------------------------------------
+Evaluating test_correct.json (Frozen >=20 Correct Cases)...
+[C01_green_led] PASSED (Verified)
+    Confidence: 0.856
+[C02_light_blue_led] PASSED (Verified)
+    Confidence: 0.843
+[C03_yellow_led] PASSED (Verified)
+    Confidence: 0.753
+[C04_red_led] PASSED (Verified)
+    Confidence: 0.778
+[C05_pulsing_blue_led] PASSED (Verified)
+    Confidence: 0.800
+[C06_shock_1ma] PASSED (Verified)
+    Confidence: 0.705
+[C07_shock_5ma] PASSED (Verified)
+    Confidence: 0.844
+[C08_shock_men_letgo] PASSED (Verified)
+    Confidence: 0.709
+[C09_shock_cardiac] PASSED (Verified)
+    Confidence: 0.797
+[C10_mounting_height] PASSED (Verified)
+    Confidence: 0.894
+[C11_ocpp_seqno_init] PASSED (Verified)
+    Confidence: 0.954
+[C12_ocpp_seqno_step] PASSED (Verified)
+    Confidence: 0.885
+[C13_air_cooling] PASSED (Verified)
+    Confidence: 0.828
+[C14_fan_speed_var] PASSED (Verified)
+    Confidence: 0.740
+[C15_e203_meaning] PASSED (Verified)
+    Confidence: 0.912
+[C16_e208_meaning] PASSED (Verified)
+    Confidence: 0.995
+[C17_dc50_v1_wait] PASSED (Verified)
+    Confidence: 0.957
+[C18_dc50_v2_wait] PASSED (Verified)
+    Confidence: 0.926
+[C19_ac22_torque] PASSED (Verified)
+    Confidence: 0.908
+[C20_hindi_correct] PASSED (Verified)
+    Confidence: 0.769
+
+================================================================================
+BENCHMARK SUMMARY (CLAIM C METRICS)
+================================================================================
+Wrong cases tested:          10
+Wrong cases flagged:         7 / 10 (70.0%)
+Target wrong flag rate:      >= 8 / 10 (>= 80.0%)
+Correct cases tested:        20
+False flags on correct:      0 / 20 (0.0%)
+Target false-flag rate:      <= 20.0%
+Threshold applied:           0.55
+Claim C Success Criteria:   FAILED
+================================================================================

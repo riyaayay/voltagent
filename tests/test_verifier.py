@@ -6,12 +6,16 @@ the two early-exit branches) so the test suite runs fast and offline.
 Semantic-similarity scoring itself is exercised in an integration test
 outside this repo scaffold, once a real embedding model is available.
 """
+import pytest
+
 from voltagent.agents.generation_agent import GenerationResult
 from voltagent.agents.verifier_agent import (
     _cited_chunk_id_for_sentence,
     _split_sentences,
     run_verifier_agent,
 )
+
+pytestmark = pytest.mark.unit
 
 
 def test_split_sentences_basic():
@@ -34,7 +38,7 @@ def test_cited_chunk_id_for_sentence_returns_none_when_uncited():
     assert _cited_chunk_id_for_sentence(sentence, {1: "chunk-a"}) is None
 
 
-def test_verifier_passes_through_insufficient_answers_as_verified():
+def test_verifier_marks_insufficient_answers_as_unverified_fallback():
     generation = GenerationResult(
         answer_text="I don't have enough information in the available documents to answer that confidently.",
         cited_chunk_ids=[],
@@ -42,8 +46,8 @@ def test_verifier_passes_through_insufficient_answers_as_verified():
         is_insufficient=True,
     )
     result = run_verifier_agent(generation)
-    assert result.verified is True
-    assert result.fallback is False
+    assert result.verified is False
+    assert result.fallback is True
 
 
 def test_verifier_falls_back_when_no_chunks_were_used():

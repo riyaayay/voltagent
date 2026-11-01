@@ -1,6 +1,10 @@
 import json
 
+import pytest
+
 from voltagent.insights import feedback_loop
+
+pytestmark = pytest.mark.unit
 
 
 def _write_flags(path, doc_ids=None, error_codes=None):
@@ -52,7 +56,13 @@ def test_flagged_error_code_tightens_threshold(tmp_path, monkeypatch):
     assert threshold > 0.55
 
 
-def test_threshold_override_is_capped():
-    # even a base threshold already near the ceiling shouldn't push past 0.95
-    capped = min(0.90 + 0.15, 0.95)
-    assert capped == 0.95
+def test_threshold_override_is_capped(tmp_path, monkeypatch):
+    # F-019: this used to assert on a local arithmetic expression and never called the function.
+    # Even a base threshold already near the ceiling must not be pushed past 0.95.
+    flags_path = tmp_path / "priority_flags.json"
+    _write_flags(flags_path, doc_ids=["ocpp-2.0.1-spec"])
+    monkeypatch.setattr(feedback_loop.settings, "priority_flags_path", str(flags_path))
+    feedback_loop._cached = None
+
+    threshold = feedback_loop.get_threshold_override(doc_ids=["ocpp-2.0.1-spec"], base_threshold=0.90)
+    assert threshold == 0.95

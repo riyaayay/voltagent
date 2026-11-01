@@ -32,7 +32,29 @@ services:
     container_name: voltagent-redis
     ports:
       - "6379:6379"
-    profiles: ["cache"]   # `docker compose --profile cache up -d` to include
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: voltagent-api
+    ports:
+      - "8000:8000"
+    environment:
+      - SPARSE_BACKEND=elasticsearch
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - QDRANT_URL=http://qdrant:6333
+      - CACHE_BACKEND=redis
+      - REDIS_URL=redis://redis:6379/0
+      - LLM_PROVIDER=${LLM_PROVIDER:-gemini}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+      redis:
+        condition: service_started
 
 volumes:
   es_data:

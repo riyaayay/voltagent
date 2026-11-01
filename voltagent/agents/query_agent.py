@@ -1,13 +1,7 @@
 """Query Agent: the first hop in the graph.
 
-Two jobs:
-1. Detect language (Hindi vs English) so the rest of the pipeline knows what
-   to respond in — technicians may mix languages mid-sentence, so this is a
-   best-effort classification, not a hard gate.
-2. Reformulate the raw (possibly transcribed-with-errors, possibly
-   code-switched) query into a clean retrieval query. Voice transcription of
-   technical terms is noisy ("oh see pee pee" → "OCPP"), so this step also
-   does light technical-term normalization.
+1. Detect language (Hindi vs English).
+2. Reformulate query while preserving exact critical error codes, models, and numbers.
 """
 from __future__ import annotations
 
@@ -18,9 +12,6 @@ from langdetect import LangDetectException, detect
 
 from voltagent.llm import get_llm_client
 
-# Common ASR mis-transcriptions of technical terms this domain cares about.
-# Extend this table as you observe real Web Speech API output — it will be
-# wrong in idiosyncratic ways.
 _TERM_CORRECTIONS = {
     r"\bo\s*c\s*p\s*p\b": "OCPP",
     r"\boh see pee pee\b": "OCPP",
@@ -48,11 +39,13 @@ class QueryAgentResult:
 
 
 def _detect_language(text: str) -> str:
+    # Heuristic for Devanagari Unicode block
+    if any(0x0900 <= ord(ch) <= 0x097F for ch in text):
+        return "hi"
     try:
         code = detect(text)
     except LangDetectException:
         return "en"
-    # langdetect returns fine-grained codes; we only route en/hi today.
     return "hi" if code == "hi" else "en"
 
 
@@ -61,6 +54,17 @@ def _apply_term_corrections(text: str) -> str:
     for pattern, replacement in _TERM_CORRECTIONS.items():
         corrected = re.sub(pattern, replacement, corrected, flags=re.IGNORECASE)
     return corrected
+
+
+def _check_critical_tokens_survive(original: str, rewritten: str) -> bool:
+    """Ensure critical codes, models, or alphanumeric IDs from the original query are preserved."""
+    # Find codes like E203, DC-60, AC-7, CT4021
+    tokens = re.findall(r"\b[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)*\b", original)
+    critical = [t for t in tokens if len(t) >= 3 and any(ch.isdigit() for ch in t)]
+    for crit in critical:
+        if crit.lower() not in rewritten.lower():
+            return False
+    return True
 
 
 def run_query_agent(raw_query: str) -> QueryAgentResult:
@@ -72,8 +76,8 @@ def run_query_agent(raw_query: str) -> QueryAgentResult:
         _REFORMULATION_PROMPT.format(language=language, query=pre_cleaned)
     ).strip()
 
-    # Guard against the LLM returning nothing usable (e.g. transient API issue).
-    if not reformulated:
+    # Guard against LLM failure or dropping critical tokens (F-006)
+    if not reformulated or not _check_critical_tokens_survive(pre_cleaned, reformulated):
         reformulated = pre_cleaned
 
     return QueryAgentResult(

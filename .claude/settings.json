@@ -3,23 +3,48 @@
     "permissions": {
         "deny": [
             "Bash(rm -rf *)",
-            "Bash(git push --force *)",
+            "Bash(git push *)",
+            "Bash(git reset --hard *)",
             "Read(//**/.env)",
             "Read(//**/.env.*)",
             "Edit(//**/.claude/settings.json)",
             "Write(//**/.claude/settings.json)"
         ],
         "allow": [
+            "Edit(/docs/**)",
+            "Write(/docs/**)",
+            "Edit(/tests/**)",
+            "Write(/tests/**)",
+            "Edit(/scripts/**)",
+            "Write(/scripts/**)",
+            "Edit(/data/**)",
+            "Write(/data/**)",
+            "Edit(/voltagent/**)",
+            "Write(/voltagent/**)",
+            "Edit(/frontend/**)",
+            "Write(/frontend/**)",
+            "Edit(/Makefile)",
+            "Write(/Makefile)",
+            "Edit(/CLAUDE.md)",
+            "Write(/CLAUDE.md)",
+            "Edit(/AGENTS.md)",
+            "Write(/AGENTS.md)",
+            "Edit(/pytest.ini)",
+            "Write(/pytest.ini)",
+            "Edit(/requirements-dev.txt)",
+            "Write(/requirements-dev.txt)",
             "Bash(pytest *)",
             "Bash(make *)",
             "Bash(docker compose *)",
-            "Bash(python scripts/*)"
+            "Bash(python scripts/*)",
+            "Bash(python -m venv *)",
+            "Bash(.venv/Scripts/python *)",
+            "Bash(.venv/Scripts/pip *)",
+            "Bash(git status*)",
+            "Bash(git diff*)",
+            "Bash(git log*)",
+            "Bash(git ls-files*)"
         ],
         "defaultMode": "dontAsk"
-    },
-    "attribution": {
-        "commit": "",
-        "pr": "",
-        "sessionUrl": false
     }
 }

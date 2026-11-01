@@ -1,0 +1,269 @@
+[
+  {
+    "filename": "charger-error-codes.pdf",
+    "doc_id": "charger-error-codes",
+    "title": "EVBox BusinessLine / Elvi LED Status & Error Code Manual",
+    "publisher": "EVBox",
+    "url": "https://help.evbox.com/",
+    "page_count": 8,
+    "extractable_pages": 8,
+    "skipped_pages": 0,
+    "pct_extractable": 100.0,
+    "is_scan": false,
+    "total_chunks": 12,
+    "samples": [
+      {
+        "page": 1,
+        "text_snippet": "Pulsar Plus N.A.QUICK START GUIDE\nTM"
+      },
+      {
+        "page": 2,
+        "text_snippet": "2Basics - Setup\nDownloading the myWallbox appGet to know your Wallbox Pulsar Plus \nCreating your myWallbox accountOnce installed and powered on following the instructions in the installation guide, your Pulsar Plus is ready to \ncharge your vehicle. If this is your first Wallbox charger, you will wan"
+      },
+      {
+        "page": 3,
+        "text_snippet": "3\nLocating your serial number and UID \nYour charger serial number and UID are \nlocated on the product label placed on the \nside of your charger.\nThe charger will now appear \nin your charger list.Basics - SetupQUICK REFERENCE GUIDE\n3. On the \u201cAdd Charger\u201d screen, add the serial number and UID \nnumber"
+      },
+      {
+        "page": 4,
+        "text_snippet": "4\nConnecting your charger to a Wi-Fi network\nBefore you can add and connect to your charger via your Wi-Fi network you must first connect to your charger \nvia Bluetooth.\n1. Tap the gear icon in the top right \ncorner to go to Configuration.2. On the Configuration screen, \ntap the \u201cConnectivity\u201d icon "
+      },
+      {
+        "page": 5,
+        "text_snippet": "5Understanding the Pulsar Plus Status Colors\nGreen Light blue Light blue \n(pulsing)Dark blue \n(pulsing)Yellow RedWhen powered on, you can check the status of your Pulsar Plus charger quickly and easily by the color of the LED \nhalo on the front of the charger and from the colors displayed in the myW"
+      },
+      {
+        "page": 6,
+        "text_snippet": "6Start/pause the charging \nWhen the EV connector is plugged into the vehicle, charging starts automatically. There are some exceptions, for \nexample when there is a scheduled charge, or when the connected vehicle is fully charged (see \u201cunderstanding \nPulsar Plus LED lights\u201d).\nWhen your charger is co"
+      },
+      {
+        "page": 7,
+        "text_snippet": "7Schedule charging sessions\nTo set a charging schedule, launch and log into the myWallbox app on your mobile device and select your \nconnected charger. \nOn the charger app screen, below the charger controls and charger name, is the charger schedule.\n1. Tap the clock icon on the charger app screen.\u00a0\n"
+      },
+      {
+        "page": 8,
+        "text_snippet": "8If the resolution requires the support of our service department, \nplease address your issue to:\nPhone: (888) 787-5780 Mail: service.na@wallbox.comhttps://support.wallbox.com/na/knowledge-base/reviewing-and-\npersonalizing-charger-and-charging-sessions/\nFor more information on additional functionali"
+      }
+    ]
+  },
+  {
+    "filename": "ev-safety-compliance.pdf",
+    "doc_id": "ev-safety-compliance",
+    "title": "OSHA 3075 Controlling Electrical Hazards & EV Safety Compliance",
+    "publisher": "OSHA / NFPA",
+    "url": "https://www.osha.gov/publications/osha3075",
+    "page_count": 71,
+    "extractable_pages": 71,
+    "skipped_pages": 0,
+    "pct_extractable": 100.0,
+    "is_scan": false,
+    "total_chunks": 88,
+    "samples": [
+      {
+        "page": 1,
+        "text_snippet": "U.S. Department of Labor\nOccupational Safety and Health Administration\nOSHA 3075\n2002 (Revised)"
+      },
+      {
+        "page": 8,
+        "text_snippet": "3What OSHA standards\naddress electrical safety?\nOSHA standards cover many electrical hazards in many\ndifferent industries. OSHA\u2019s general industry electrical\nsafety standards are published in Title 29 Code of Federal\nRegulations (CFR), Part 1910.302 through 1910.308 \u2014\nDesign Safety Standards for Ele"
+      },
+      {
+        "page": 15,
+        "text_snippet": "10What is the danger of static electricity?\nStatic electricity also can cause a shock, though in a\ndifferent way and generally not as potentially severe as\nthe type of shock described previously. Static electricity canbuild up on the surface of an object and, under the rightconditions, can discharge"
+      },
+      {
+        "page": 22,
+        "text_snippet": "17How can you protect yourself from\noverhead power lines?\nBefore working under or near overhead power lines,\nensure that you maintain a safe distance to the lines and,for very high-voltage lines, ground any equipment such ascranes that can become energized. If working on power lines,ensure that the "
+      },
+      {
+        "page": 29,
+        "text_snippet": "24How does the Voluntary Protection\nProgram work?\nThere are three levels of VPPs:  Star , Merit, and\nDemonstration. All are designed to do the following:\n\u007frecognize employers who have successfully developed\nand implemented effective and comprehensive safetyand health management systems;\n\u007fencourage t"
+      },
+      {
+        "page": 36,
+        "text_snippet": "31OSHA Offices\nOSHA Regional Offices\nRegion I\n(CT ,* ME, MA, NH, RI, VT*)JFK Federal Building, Room E340Boston, MA 02203(617) 565-9860\nRegion II\n(NJ,* NY ,* PR,* VI*)\n201 Varick Street, Room 670\nNew Y ork, NY 10014(212) 337-2378\nRegion III\n(DE, DC, MD,* PA,* VA,* WV)The Curtis Center170 S. Independe"
+      },
+      {
+        "page": 43,
+        "text_snippet": "38Maryland\nU.S. Department of Labor\u2014OSHA\n1099 Winterson Road, Suite 140Linthicum, MD  21090-2218(410) 865-2055/2056\nMassachusetts\nU.S. Department of Labor\u2014OSHA\n639 Granite Street, 4th FloorBraintree, MA  02184(617) 565-6924\nU.S. Department of Labor\u2014OSHA\nValley Office Park\n13 Branch Street\nMethuen, M"
+      },
+      {
+        "page": 50,
+        "text_snippet": "45U.S. Department of Labor\u2014OSHA\nWilson Plaza606 N. Carancahua, Suite 700Corpus Christi, TX  78476(361) 888-3420\nU.S. Department of Labor\u2014OSHA\n8344 East R.L. Thornton Freeway, Suite 420Dallas, TX  75228\n(214) 320-2400 (2558)\nU.S. Department of Labor\u2014OSHA\n700 E San Antonio St.\nRoom C-408El Paso, TX  7"
+      },
+      {
+        "page": 57,
+        "text_snippet": "52Utah\nCommissioner\nLabor Commission of Utah\n160 East 300 South Street, 3rd floor\nP .O. Box 146650\nSalt Lake City, UT  84111\n(801) 530-6901\nVermont\nCommissioner\nVermont Department of Labor and Industry\nNational Life Building, Drawer 20\n120 State Street\nMontpelier VT  05620-3401\n(802) 828-2288\nVirgin"
+      },
+      {
+        "page": 64,
+        "text_snippet": "59Mississippi\nMississippi State University\nCenter for Safety and Health\n106 Crosspark Drive, Suite C\nPearl, MS  39216\n(601) 939-2047\nMissouri\nOnsite Consultation Program\nDivision of Labor Standards\nDepartment of Labor and Industrial Relations\n3315 West T ruman Boulevard, Room 205\nPost Office Box 449"
+      }
+    ]
+  },
+  {
+    "filename": "ocpp-2.0.1-appendices.pdf",
+    "doc_id": "ocpp-2.0.1-appendices",
+    "title": "OCPP 2.0.1 Specification Part 2 - Appendices",
+    "publisher": "Open Charge Alliance (OCA)",
+    "url": "https://www.openchargealliance.org/protocols/ocpp-201/",
+    "page_count": 39,
+    "extractable_pages": 39,
+    "skipped_pages": 0,
+    "pct_extractable": 100.0,
+    "is_scan": false,
+    "total_chunks": 98,
+    "samples": [
+      {
+        "page": 1,
+        "text_snippet": "OCPP 2.0.1\nPart 2 - Appendices\nv1.3 FINAL, 2022-12-15"
+      },
+      {
+        "page": 4,
+        "text_snippet": "Version History\nAppendix version Date OCPP Version Description\n1.3 2022-12-15 OCPP 2.0.1 Appendix version for Errata 2 (2022)\nUpdated parts are marked with \" (Updated in v1.3) \".\n1.2 2021-10-01 OCPP 2.0.1 Appendix version for Errata 1 (2021)\nAppendix 3: Updated components are marked with \" (Updated "
+      },
+      {
+        "page": 7,
+        "text_snippet": "Appendix 3. Standardized Components\nThis appendix provides a list of all standardized component names for OCPP 2.0.1 for controller components and for physical\ncomponents. A summary table listing just all components without variables is provided at the end of this appendix in Summary List\nof Standar"
+      },
+      {
+        "page": 10,
+        "text_snippet": "Description\nCommunicates with an EV to exchange information and control charging using the ISO 15118 protocol.\nVariables Type Description\nEnabled boolean ISO15118 controller enabled\nActive boolean Connected\nTripped boolean ISO15118 communication session aborted\nComplete boolean ISO15118 communicatio"
+      },
+      {
+        "page": 13,
+        "text_snippet": "Description\nRegisterValuesWithoutPhases boolean If this variable reports a value of true, then meter values of measurand\nEnergy.Active.Import.Register will only report the total energy over all phases\nwithout reporting the individual phase values.\nIf this variable is absent or false , then the value"
+      },
+      {
+        "page": 16,
+        "text_snippet": "Description\nActive Non-Default\nProblem\nState\n3.2.5. AirCoolingSystem\nDescription\nFans (or equivalent devices) used to provide cooling.\nTypically used variables Description\nEnabled Cooling system enabled to run\nActive Cooling\nProblem fault: e.g. fan stalled/slow\nFanSpeed Speed of cooling fan(s)\n3.2.6"
+      },
+      {
+        "page": 19,
+        "text_snippet": "Variable Unit ISO 15118-2 value CHAdeMO value\nPower.maxSet W EVMaximumPowerLimit -\nEnergyCapacity Wh EVEnergyCapacity Total capacity of traction battery * 100\n(H'101.5,6)\nEnergyImport.target Wh EVEnergyRequest (DC)\nEAmount (AC)-\nDepartureTime dateTime DepartureTime\nProvided as seconds since message\n"
+      },
+      {
+        "page": 22,
+        "text_snippet": "Description\nNetworkAddress Current network address\nSignalStrength Data signal strength/quality\n3.2.23. Display\nDescription\nProvides information and feedback to the user.\nTypically used variables Description\nEnabled Display configured to show information\nProblem Display fault\nColor Display color (mon"
+      },
+      {
+        "page": 25,
+        "text_snippet": "Description\nModel[CT] CT model number\nECVariant Meter engineering change variant\nSerialNumber[Meter] Meter serial number\nSerialNumber[CT] CT serial number(s)\nCertificate\nOptionsSet [MeterValueAlignedData] Set of measurands to read and report at clock-aligned time intervals while charging.\nOptionsSet"
+      },
+      {
+        "page": 28,
+        "text_snippet": "Description\nRecloser mechanism of an OverCurrentProtection to perform re-arm retries after a trip, or may be set for remotely controlled re-\narming on command.\nTypically used variables Description\nEnabled Auto reclosing enabled\nActive Reclosing\nActive(Set) Initiate manual reclose\nComplete Reclose cy"
+      }
+    ]
+  },
+  {
+    "filename": "ocpp-2.0.1-spec.pdf",
+    "doc_id": "ocpp-2.0.1-spec",
+    "title": "OCPP 2.0.1 Specification Part 2 - Specification Edition 2",
+    "publisher": "Open Charge Alliance (OCA)",
+    "url": "https://www.openchargealliance.org/protocols/ocpp-201/",
+    "page_count": 481,
+    "extractable_pages": 481,
+    "skipped_pages": 0,
+    "pct_extractable": 100.0,
+    "is_scan": false,
+    "total_chunks": 1192,
+    "samples": [
+      {
+        "page": 1,
+        "text_snippet": "OCPP 2.0.1\nPart 2 - Specification\nEdition 2 FINAL, 2022-12-15"
+      },
+      {
+        "page": 49,
+        "text_snippet": "A04 - Security Event Notification\nTable 31. A04 - Security Event Notification\nNo. Type Description\n1 Name Security Event Notification\n2 ID A04\nFunctional block A. Security\n3 Objective(s) To inform the CSMS of critical security events.\n4 Description This use case allows the Charging Station to immedi"
+      },
+      {
+        "page": 97,
+        "text_snippet": "EV DriverPayment Terminal Charging Station CSMS\nPlugin cable\nStatusNotificationRequest(Occupied)\nStatusNotificationResponse()\nTransactionEventRequest(eventType = Started, ...)\nTransactionEventResponse(...)\npresent parking ticket(1234)\nAuthorizeRequest(idToken(id = 1234, type = Local))\nAuthorizeRespo"
+      },
+      {
+        "page": 145,
+        "text_snippet": "E04 - Transaction started while Charging Station is offline\nTable 102. E04 - Transaction started while Charging Station is offline\nNo. Type Description\n1 Name Transaction started while Charging Station is offline\n2 ID E04\nFunctional block E. Transactions\n3 Objective(s) To enable the EV Driver to sta"
+      },
+      {
+        "page": 193,
+        "text_snippet": "EV Charging Station CSMS\nRequestStopTransactionRequest(transactionId)\nRequestStopTransactionResponse(Accepted)\nalt[if AC Charging]\nChargingStatusReq()\nChargingStatusRes(EVSENotification=StopCharging)\n[if DC Charging]\nCurrentDemandReq()\nCurrentDemandRes(EVSENotification=StopCharging)\nFigure 70. Charg"
+      },
+      {
+        "page": 241,
+        "text_snippet": "ID Precondition Requirement definition Note\nJ02.FR.17 For improved auditability, \".Register\" values\nSHOULD be reported exactly as they are directly\nread from a non-volatile register in the electrical\nmetering hardware, and SHOULD NOT be re-based\nto zero at the start of transactionsThis allows any \"m"
+      },
+      {
+        "page": 289,
+        "text_snippet": "ID Precondition Requirements NOTE\nK16.FR.07K16.FR.05\nAND\nEV charging profile is\nNOT within limits of\nCSMS\nChargingScheduleCSMS responds with\nNotifyEVChargingScheduleResponse  with\nstatus  Rejected to Charging Station.\nK16.FR.08 K16.FR.07 CSMS starts new renegotiation as per use\ncase K16.\nK16.FR.09 W"
+      },
+      {
+        "page": 337,
+        "text_snippet": "8 Remark(s) Requirement N07.FR.04 states that events with a severity equal or less than\nOfflineMonitoringEventQueuingSeverity shall be queued while the charging station is offline, and\ndelivered once online. This implies that events with a severity greater than\nOfflineMonitoringEventQueuingSeverity "
+      },
+      {
+        "page": 385,
+        "text_snippet": "Field Name Field Type Card. Description\nstatus ReserveNowStatusEnumType 1..1 Required. This indicates the success or failure of the\nreservation.\nstatusInfo StatusInfoType 0..1 Optional. Detailed status information.\n1.48. Reset\n1.48.1. ResetRequest\nThis contains the field definition of the ResetReque"
+      },
+      {
+        "page": 433,
+        "text_snippet": "Value Description\nSignCombinedCertif\nicateTo trigger a SignCertificate with certificateType: ChargingStationCertificate AND V2GCertificate\nPublishFirmwareSta\ntusNotificationTo trigger PublishFirmwareStatusNotification .\n3.55. MonitorEnumType\nEnumeration\nMonitorEnumType is used by: Common:VariableMon"
+      }
+    ]
+  },
+  {
+    "filename": "wallbox-pulsar-plus-install.pdf",
+    "doc_id": "wallbox-pulsar-plus-install",
+    "title": "Wallbox Pulsar Plus Installation Guide",
+    "publisher": "Wallbox",
+    "url": "https://support.wallbox.com/",
+    "page_count": 112,
+    "extractable_pages": 111,
+    "skipped_pages": 1,
+    "pct_extractable": 99.11,
+    "is_scan": false,
+    "total_chunks": 244,
+    "samples": [
+      {
+        "page": 1,
+        "text_snippet": "Installation Guide\nGu\u00eda de instalaci\u00f3n\nInstallationsanleitung\nGuide d\u2019installation\nInstallatiegids\nGuida per I\u2019installazione\nInstallasjonsveiledning\nInstallationsguide\nManual de instala\u00e7\u00e3oPULSAR PLUS"
+      },
+      {
+        "page": 12,
+        "text_snippet": "12\nEN5. Plug holder\nStep 5.1:  Mark the position for the securing screws on the wall.\nStep 5.2:  Drill the marked holes.\nStep 5.3:  Fix the anchor to the wall. Insert the screws in the marked positions.\n In case it is needed to reopen the device, use only the tool (I-1) provided for this procedure \n"
+      },
+      {
+        "page": 23,
+        "text_snippet": "23\nI-6.1\nI-6.3: Configuraci\u00f3n trif\u00e1sica (3P)I-6.2: Configuraci\u00f3n  \nmonof\u00e1sica (1P)Los colores mostrados no est\u00e1n sujetos a las normas \ninternacionales. Comprueba siempre que est\u00e9n bien \nconectados.\nL1 (cable de corriente)\nN (cable neutro)\nN (cable neutro)Toma de tierra de \nprotecci\u00f3n\nToma de tierra "
+      },
+      {
+        "page": 34,
+        "text_snippet": "34\nDE\nVerwenden Sie immer Standardkabel, die den im Stromwahlschalter eingestellten Strom  \nf\u00fchren k\u00f6nnen. 2. Stromwahlschalter\nW\u00e4hlen Sie mit dem Wahlschalter den maximalen \nEingangsstrom des Ger\u00e4tes. Die Positionen 0, 8 und 9 sind \nf\u00fcr die Power-Sharing-Smart-Funktion reserviert (I-5).\n3. Stromans"
+      },
+      {
+        "page": 45,
+        "text_snippet": "45\nDimensions et positionnement du dispositif\nConform\u00e9ment aux normes du produit, la borne de recharge doit \u00eatre situ\u00e9e \u00e0 une hauteur \u00ab\u00a0y\u00a0\u00bb (I-2) comprise \nentre 1,30\u00a0m et 1,70\u00a0m au-dessus du niveau du sol. Nous vous recommandons de monter la borne de recharge \u00e0 \nune hauteur de 1,40\u00a0m. N'oubliez pas"
+      },
+      {
+        "page": 56,
+        "text_snippet": "56\nNL\n\u2022 De stroomtoevoerleiding moet worden aangesloten op een bestaande installatie en in overeenstemming \nzijn met plaatselijke voorschriften.\n\u2022 De lader moet elektrisch worden beveiligd door de externe aansluiting van een leidingbeveiligingsschakelaar \n(MCB) en een aardlekschakelaar (RCCB).Elektr"
+      },
+      {
+        "page": 67,
+        "text_snippet": "67\nInformazioni sul prodotto\nNumero ricambio\nNumero di serieCodice EAN\nConfigurazione alimentazione elettricaCodice di identificazione univoco\nPaese di produzione1\n42\n53\n6\nLa Wallbox deve contenere quanto segue:Famiglia Potenza Modello Versione Cavo Personalizzazione EVC Revisione\nPL P1 0 - 5m  \nM -"
+      },
+      {
+        "page": 78,
+        "text_snippet": "78\nNO\nGenerelle spesifikasjoner\nElektriske spesifikasjoner\nBrukergrensesnitt og kommunikasjonMaksimal utgangseffekt\nTilkobling\nBrukeridentifikasjon7,4 kW (1P) / 22 kW (3P)[2]\nWi-Fi / BluetoothMaksimal str\u00f8mstyrke\nBrukergrensesnitt32 A, 5 x 6 mm\u00b2 ledning\nWallbox App / myWallbox PortalNominell frekven"
+      },
+      {
+        "page": 89,
+        "text_snippet": "89\nViktig information f\u00f6r att sl\u00e4nga produkten p\u00e5 r\u00e4tt s\u00e4tt i enlighet med direktiv 2012/19/EG. N\u00e4r produktens \nlivsl\u00e4ngd \u00e4r slut ska produkten inte sl\u00e4ngas som hush\u00e5llsavfall. Den m\u00e5ste l\u00e4mnas till en uppsamlingscentral \nf\u00f6r s\u00e4rskilt och sorterat avfall eller till en distribut\u00f6r som tillhandah\u00e5ller"
+      },
+      {
+        "page": 100,
+        "text_snippet": "100\nPT\nO desrespeito ou a\u00e7\u00f5es contr\u00e1rias \u00e0s informa\u00e7\u00f5es e instru\u00e7\u00f5es de seguran\u00e7a contidas neste manual e \nimpressas no dispositivo podem levar a choque el\u00e9trico, inc\u00eandio e/ou ferimentos graves e danos ao ve\u00edculo ou \nao dispositivo Wallbox. Quaisquer danos resultantes de tais a\u00e7\u00f5es s\u00e3o exclu\u00eddos da"
+      }
+    ]
+  }
+]

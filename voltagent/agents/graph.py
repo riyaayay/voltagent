@@ -36,11 +36,10 @@ class GraphState(TypedDict, total=False):
 _retriever = HybridRetriever()
 
 
-def _node_check_cache(state: GraphState) -> GraphState:
-    # Cache is only checked AFTER language detection, since the cache key is
-    # language-scoped — but we don't know the query's language before running
-    # the query agent, so this graph runs query agent first, then checks
-    # cache before paying for retrieval+generation. See node ordering below.
+def _node_respond_from_cache(state: GraphState) -> GraphState:
+    trace = state["trace"]
+    resp = state.get("final_response", {})
+    trace.finalize(final_verified=resp.get("verified", True))
     return state
 
 
@@ -157,6 +156,7 @@ def build_graph() -> Any:
 
     graph.add_node("query_agent", _node_query_agent)
     graph.add_node("cache_lookup", _node_cache_lookup)
+    graph.add_node("respond_from_cache", _node_respond_from_cache)
     graph.add_node("retrieve", _node_retrieve)
     graph.add_node("generate", _node_generate)
     graph.add_node("verify", _node_verify)
@@ -165,8 +165,9 @@ def build_graph() -> Any:
     graph.set_entry_point("query_agent")
     graph.add_edge("query_agent", "cache_lookup")
     graph.add_conditional_edges(
-        "cache_lookup", _route_after_cache, {"respond_from_cache": END, "retrieve": "retrieve"}
+        "cache_lookup", _route_after_cache, {"respond_from_cache": "respond_from_cache", "retrieve": "retrieve"}
     )
+    graph.add_edge("respond_from_cache", END)
     graph.add_edge("retrieve", "generate")
     graph.add_edge("generate", "verify")
     graph.add_edge("verify", "build_response")
@@ -190,7 +191,27 @@ def run_pipeline(
     """
     trace = QueryTrace(query_text=raw_query, station_id=station_id, charger_model=charger_model)
     initial_state: GraphState = {"raw_query": raw_query, "trace": trace}
-    final_state = _compiled_graph.invoke(initial_state)
-    response = final_state["final_response"]
-    response["query_id"] = trace.query_id
-    return response
+    try:
+        final_state = _compiled_graph.invoke(initial_state)
+        response = final_state["final_response"]
+        response["query_id"] = trace.query_id
+        if "outcome" not in response:
+            response["outcome"] = "A" if response.get("verified") else "B1"
+        return response
+    except Exception as exc:
+        trace.record(error=str(exc))
+        trace.finalize(final_verified=False)
+        return {
+            "outcome": "C",
+            "query_id": trace.query_id,
+            "answer": "The system encountered an error and cannot answer this query reliably.",
+            "language": getattr(trace, "language", "en") or "en",
+            "verified": False,
+            "confidence": 0.0,
+            "fallback": True,
+            "fallback_reason": f"System degradation: {type(exc).__name__}",
+            "degraded_stages": ["pipeline"],
+            "cache_hit": False,
+            "citations": [],
+            "raw_source": None,
+        }

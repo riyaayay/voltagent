@@ -1,0 +1,8 @@
+-r requirements.txt
+
+# Phase 1 corpus generation (dev only)
+reportlab==4.2.5
+PyMuPDF==1.24.11
+
+# Playwright (Phase 3 frontend tests) is intentionally NOT listed yet:
+# it downloads browsers, so it is added only after explicit approval.

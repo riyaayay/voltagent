@@ -1,0 +1,5 @@
+# Offline batch analytics layer (Spark / HDFS)
+pyspark==3.5.3
+pandas==2.2.3
+pyarrow==17.0.0
+

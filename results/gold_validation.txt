@@ -1,0 +1,14 @@
+=== GOLD DATASET INTEGRITY VALIDATION ===
+Loaded 62 gold queries.
+Loaded 5 dev queries.
+Loaded 10 test_wrong_10 cases.
+Loaded 20 test_correct cases.
+
+[Check 1] Verbatim Evidence Quotes: 48/48 verified.
+
+[Check 2] Checking that no gold query appears verbatim in any source text...
+Verbatim query leaks detected: 0 (Target: 0)
+
+[Check 3] Overlap between dev and test queries: 0
+
+ALL DATA-INTEGRITY CHECKS PASSED.

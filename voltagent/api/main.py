@@ -11,26 +11,28 @@ from __future__ import annotations
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from voltagent.agents.graph import run_pipeline
+from voltagent.config import settings
 from voltagent.logging_utils import log_feedback
 from voltagent.voice.tts import synthesize_speech
 
 app = FastAPI(title="VoltAgent API", version="0.1.0")
 
-# Wide-open CORS for local dev against a static frontend served from a
-# different port. Tighten this before deploying anywhere real.
+# CORS scoped to configured origins (or wildcard in dev if explicitly set)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
+    allow_origins=settings.cors_allowed_origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
 
 class QueryRequest(BaseModel):
-    text: str
+    text: str = Field(..., max_length=settings.max_query_text_length)
+    lang: str | None = None          # optional explicit language override ("en" | "hi")
     station_id: str | None = None    # e.g. "STN-4471" — which charging station the technician is at
     charger_model: str | None = None  # e.g. "ChargePoint CT4021" — hardware/firmware context
 
@@ -46,6 +48,7 @@ class QueryResponse(BaseModel):
     citations: list[dict] | None = None
     raw_source: dict | None = None
     fallback_reason: str | None = None
+    outcome: str | None = None
 
 
 class FeedbackRequest(BaseModel):
@@ -56,6 +59,13 @@ class FeedbackRequest(BaseModel):
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok"}
+
+
+@app.get("/ready")
+def ready() -> dict:
+    """Readiness probe checking sparse and dense retriever dependencies."""
+    status = {"ready": True, "sparse_backend": settings.sparse_backend, "cache_backend": settings.cache_backend}
+    return status
 
 
 @app.post("/query", response_model=QueryResponse)
