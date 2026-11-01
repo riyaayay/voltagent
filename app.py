@@ -11,7 +11,17 @@ import uvicorn
 from fastapi.staticfiles import StaticFiles
 
 from voltagent.api.main import app
+try:
+    import spaces
 
+    @spaces.GPU
+    def _zerogpu_startup_marker() -> str:
+        return "ok"
+
+    print("ZeroGPU marker registered", flush=True)
+except ImportError as e:
+    print(f"spaces import failed: {e}", flush=True)
+    
 # Mount frontend/ static files at "/"
 frontend_dir = Path(__file__).resolve().parent / "frontend"
 if frontend_dir.exists():
