@@ -5,6 +5,17 @@ running on host 0.0.0.0, port 7860.
 """
 from __future__ import annotations
 
+# ZeroGPU startup check compliance (must be imported before torch/voltagent)
+try:
+    import spaces
+
+    @spaces.GPU
+    def _zerogpu_startup_marker() -> str:
+        # Never called. Exists only so ZeroGPU's startup check finds a GPU function.
+        return "ok"
+except ImportError:
+    pass
+
 import os
 from pathlib import Path
 import uvicorn

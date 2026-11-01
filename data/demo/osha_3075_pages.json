@@ -1,0 +1,428 @@
+[
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 1,
+    "text": "U.S. Department of Labor\nOccupational Safety and Health Administration\nOSHA 3075\n2002 (Revised)"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 2,
+    "text": "This booklet provides a generic overview of a\nstandards-related topic. This publication does not alter ordetermine compliance responsibilities, which are describedin the OSHA standards and the \nOccupational Safety\nand Health Act . Because interpretations and enforcement\npolicy may change over time, the best sources for additional\nguidance on OSHA compliance requirements are currentadministrative interpretations and decisions by theOccupational Safety and Health Review Commission andthe courts. This publication is in the public domain andmay be reproduced fully or partially without permission.\nSource credit is requested but not required.\nOSHA will make this information available to sensory\nimpaired individuals upon request. Call (202) 693 –1999.The teletypewriter (TTY) number is (877) 889–5627.U.S. Department of Labor\nElaine L. Chao, Secretary\nOccupational Safety and Health Administration\nJohn L. Henshaw, Assistant Secretary\nOSHA 3075\n2002 (Revised)\nT o report an emergency, file a complaint, or seek OSHA\nadvice, assistance, or products, call (800) 321-OSHAor contact your nearest OSHA regional or area office.The teletypewriter (TTY) number is (877) 889-5627."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 3,
+    "text": "iContents\nIntroduction .............................................................. 1\nWhy should you be concerned about\nelectrical hazards? ........................................................... 2\nWhat OSHA standards address electrical safety? .............. 3\nHow do OSHA’s standards minimize\nelectrical hazards? ........................................................... 4\nElectricity: The Basics .............................................. 5\nWhat affects the flow of electricity? ... .......................... 5\nHow does water affect the flow of electricity? ............... 5\nWhat causes shocks? ................................................. 5\nWhat effect do shocks have on the body? .................... 6\nWhat kind of burns can a shock cause? ....................... 8\nWhy do people sometimes “freeze” when\nthey are shocked? ...................................................... 8\nWhat should you do if someone “freezes”\nto a live electri cal contact ? .......................................... 9\nHow can you tell if a shock is serious? ......................... 9\nWhat is the danger of static electricity? ...................... 10\nProtection Against Electrical Hazards ..................... 11\nWhat is the best way to protect yourself\nagainst electrical hazards? ........................................ 11\nWhat protection does insulation provide? .................. 11\nHow do you identify different types of insul ation? ....... 11\nWhat is guarding and what protection\ndoes it offer? ........................................................... 12\nWhat is grounding and what protection\ndoes it offer? ........................................................... 13"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 4,
+    "text": "iiWhat are circuit protection devices and\nhow do they work? ................................................... 14\nWhat work practices help protect you\nagainst electrical hazards? ........................................ 15\nHow can you protect yourself against\nmetal parts that become energized? .......................... 15\nHow can you prevent an accidental or\nunexpected equipment startup? ................................ 16\nHow can you protect yourself from\noverhead power li nes? ............................................. 17\nWhat protection does personal equipment offer? ....... 18\nWhat role do tools play? ........................................... 18\nWhat special training do employees need? ................ 18\nWhat’s the value of a safety and health program\nin controlling electrical hazards? ................................ 19\nHow Can OSHA Help Me? ...................................... 20\nHow does safety and health program management\nassistance help employers and employees? ............... 20\nWhat are stat e plans? .............................................. 21\nHow can consultation assist ance help empl oyers? ....... 21\nWho can get consultation assistance\nand what does it cost? .............................................. 22\nCan OSHA assure privacy to an employer\nwho asks for consultation assistance? ........................ 22\nCan an employer be cited for violations\nafter receiving consultation assistance? ...................... 22\nDoes OSHA provide any incentives for\nseeking consultation assistance? ................................ 23\nWhat is the Voluntar y Protection Pr ogram? ................ 23"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 5,
+    "text": "iiiHow does the Voluntary Protection Program work? .... 24\nHow does VPP help employers and employees? ........ 24\nHow does OSHA monitor VPP sites? ........................ 25\nCan OSHA inspect an employer who\nis participating in the VPP? ....................................... 25\nHow can a partnership with OSHA improve\nworker safety and health? ......................................... 25\nWhat is OSHA’s Strategic Partnership\nProgram (OSPP)? ................................................... 26\nWhat do OSPPs do? ............................................... 26\nAre there different  kinds of  OSPPs? ......................... 26\nWhat are the benefits of participation in\nthe OSPP? .............................................................. 27\nDoes OSHA have occupational safety and\nhealth training for employ ers and empl oyees? ............ 28\nDoes OSHA give money to organizations\nfor training and education? ....................................... 29\nDoes OSHA have other assistance\nmaterials avail able? .................................................. 30\nWhat do I do in case of an emergency?\nOr if I need to file a complaint? ................................. 30\nOSHA O ffices ......................................................... 31\nRegional Offices ....................................................... 31\nArea Offices ............................................................ 33\nState and T erritories with\nOSHA-Approved Safety and Health Plans ................ 48\nOSHA Onsite Consulta tion Offi ces ............................ 54"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 6,
+    "text": "1Introduction\nThis booklet provides an overview of basic electrical\nsafety on the job.\nElectricity is essential to modern life, both at\nhome and on the job. Some employees — engineers,\nelectricians, electronic technicians, and power line\nworkers, among them — work with electricity directly.\nOthers, such as office workers and sales people, work\nwith it indirectly. Perhaps because it has become such\na familiar part of our daily life, many of us don’t give\nmuch thought to how much our work depends on a\nreliable source of electricity. More importantly, we\ntend to overlook the hazards electricity poses and fail\nto treat it with the respect it deserves."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 7,
+    "text": "2Why should you be concerned\nabout electrical hazards?\nElectricity has long been recognized as a serious\nworkplace hazard, exposing employees to electric shock,electrocution, burns, fires, and explosions. In 1999, forexample, 278 workers died from electrocutions at work,accounting for almost 5 percent of all on-the-job fatalities\nthat year , according to the Bureau of Labor Statistics.\nWhat makes these statistics more tragic is that most ofthese fatalities could have been easily avoided."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 8,
+    "text": "3What OSHA standards\naddress electrical safety?\nOSHA standards cover many electrical hazards in many\ndifferent industries. OSHA’s general industry electrical\nsafety standards are published in Title 29 Code of Federal\nRegulations (CFR), Part 1910.302 through 1910.308 —\nDesign Safety Standards for Electrical Systems, and1910.331 through 1910.335 — Electrical Safety-RelatedWork Practices Standards.\nOSHA’s electrical standards are based on the\nNational Fire Protection Association Standards NFPA 70,\nNational Electric Code, and NFPA 70E,  Electrical\nSafety Requirements for Employee Workplace s.\nOSHA also has electrical safety standards for the\nconstruction industry, in 29 CFR  1926, Subpart K. OSHA’s\nstandards for marine terminals, in 29 CFR  1917, and for\nlongshoring, in 29 CFR  1918, reference the general industry\nelectrical standards in Subpart S of Part 1910. The shipyardstandards, in \n29 CFR  1915, cover limited electrical safety\nwork practices in 29 CFR  1915.181.\nAlthough OSHA operates a federal occupational safety\nand health program, 24 states and 2 territories operate\ntheir own OSHA-approved programs. In those states, the\nstandards and other procedures governing electrical safetymay not be identical to the federal requirements. They must,however, be at least as effective as the federal standards."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 9,
+    "text": "4How do OSHA’s standards\nminimize electrical hazards?\nOSHA standards focus on the design and use of electrical\nequipment and systems. The standards cover only theexposed or operating elements of an electrical installation\nsuch as lighting, equipment, motors, machines, appliances,\nswitches, controls, and enclosures, requiring that they beconstructed and installed to minimize workplace electricaldangers. Also, the standards require that certain approvedtesting organizations test and certify electrical equipmentbefore use in the workplace to ensure it is safe."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 10,
+    "text": "5Electricity:  The Basics\nWhat affects the flow of electricity?\nElectricity flows more easily through some materials than\nothers. Some substances such as metals generally offer very\nlittle resistance to the flow of electric current and are called“conductors.” A common but perhaps overlooked conductoris the surface or subsurface of the earth. Glass, plastic,porcelain, clay, pottery, dry wood, and similar substancesgenerally slow or stop the flow of electricity. They are called\n“insulators.” Even air , normally an insulator , can become a\nconductor, as occurs during an arc or lightning stroke.\nHow does water affect the\nflow of electricity?\nPure water is a poor conductor. But small amounts of\nimpurities in water like salt, acid, solvents, or other materials\ncan turn water itself and substances that generally act asinsulators into conductors or better conductors. Dry wood,for example, generally slows or stops the flow of electricity.But when saturated with water , wood turns into a conductor .The same is true of human skin. Dry skin has a fairly high\nresistance to electric current. But when skin is moist or wet,\nit acts as a conductor . This means that anyone working withelectricity in a damp or wet environment needs to exerciseextra caution to prevent electrical hazards.\nWhat causes shocks?\nElectricity travels in closed circuits, normally through a\nconductor. But sometimes a person’s body — an efficientconductor of electricity — mistakenly becomes part of the"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 11,
+    "text": "6electric circuit. This can cause an electrical shock. Shocks\noccur when a person’s body completes the current path with:\nboth wires of an electric circuit;\none wire of an energized circuit and the ground;\na metal part that accidentally becomes energized due,\nfor example, to a break in its insulation; or\nanother “conductor” that is carrying a current.\nWhen a person receives a shock, electricity flows between\nparts of the body or through the body to a ground or theearth.\nWhat effect do shocks have\non the body?\nAn electric shock can result in anything from a slight\ntingling sensation to immediate cardiac arrest. The severity\ndepends on the following:\nthe amount of current flowing through the body,\nthe current’s path through the body,\nthe length of time the body remains in the circuit, and\nthe current’s frequency.\nThis table shows the general relationship between the\namount of current received and the reaction when current\nflows from the hand to the foot for just 1 second."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 12,
+    "text": "7Effects of Electric Current in the Human Body\nCurrent Reaction\nBelow 1 milliampere Generally not perceptible\n1 milliampere Faint tingle5 milliamperes Slight shock felt; not painful but\ndisturbing. Average individual canlet go. Strong involuntary reactionscan lead to other injuries.\n6–25 milliamperes (women) Painful shock, loss of muscular\ncontrol*\n9–30 milliamperes (men) The freezing current or “let-go”\nrange.*  Individual cannot let go,but can be thrown away from thecircuit if extensor muscles arestimulated.\n50–150 milliamperes Extreme pain, respiratory arrest,\nsevere muscular contractions.Death is possible.\n1,000–4,300 milliamperes Rhythmic pumping action of\nthe heart ceases. Muscularcontraction and nerve damageoccur; death likely.\n10,000 milliamperes Cardiac arrest, severe burns; death\nprobable\n* If the extensor muscles are excited by the shock, the person\nmay be thrown away from the power source.\nSource: W .B. Kouw enhoven, “Human Safety and Electric Shock,”\nElectrical Safety Practice s, Monograph, 112, Instrument\nSociety of America, p. 93. November 1968."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 13,
+    "text": "8What kind of burns can a shock cause?\nBurns are the most common shock-related injury.\nAn electrical accident can result in an electrical burn,arc burn, thermal contact burn, or a combination of burns.\nElectrical burns  are among the most serious burns and\nrequire immediate medical attention. They occur whenelectric current flows through tissues or bone, generating\nheat that causes tissue damage.\nArc or flash burns  result from high temperatures caused\nby an electric arc or explosion near the body. These burnsshould be treated promptly.\nThermal contact burns  are caused when the skin touches\nhot surfaces of overheated electric conductors, conduits,\nor other energized equipment. Thermal burns also can be\ncaused when clothing catches on fire, as may occur whenan electric arc is produced.\nIn addition to shock and burn hazards, electricity poses\nother dangers. For example, arcs that result from shortcircuits can cause injury or start a fire. Extremely high-energy\narcs can damage equipment, causing fragmented metal to\nfly in all directions. Even low-energy arcs can cause violentexplosions in atmospheres that contain flammable gases,vapors, or combustible dusts.\nWhy do people sometimes “freeze”\nwhen they are shocked?\nWhen a person receives an electrical shock, sometimes\nthe electrical stimulation causes the muscles to contract.\nThis “freezing” effect makes the person unable to pull free\nof the circuit. It is extremely dangerous because it increasesthe length of exposure to electricity and because the currentcauses blisters, which reduce the body’s resistance andincreases the current."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 14,
+    "text": "9The longer the exposure, the greater the risk of serious\ninjury. Longer exposures at even relatively low voltages canbe just as dangerous as short exposures at higher voltages.Low voltage does not imply low hazard.\nIn addition to muscle contractions that cause “freezing,”\nelectrical shocks also can cause involuntary muscle reactions.\nThese reactions can result in a wide range of other injuries\nfrom collisions or falls, including bruises, bone fractures, andeven death.\nWhat should you do if someone\n“freezes” to a live electrical contact?\nIf a person is “frozen” to a live electrical contact, shut off\nthe current immediately . If this is not possible, use boards,\npoles, or sticks made of wood or any other nonconducting\nmaterials and safely push or pull the person away from thecontact. It’s important to act quickly, but remember to protectyourself as well from electrocution or shock.\nHow can you tell if a shock is serious?\nA severe shock can cause considerably more damage than\nmeets the eye. A victim may suffer internal hemorrhages and\ndestruction of tissues, nerves, and muscles that aren’t readily\nvisible. Renal damage also can occur . If you or a coworkerreceives a shock, seek emergency medical help immediately."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 15,
+    "text": "10What is the danger of static electricity?\nStatic electricity also can cause a shock, though in a\ndifferent way and generally not as potentially severe as\nthe type of shock described previously. Static electricity canbuild up on the surface of an object and, under the rightconditions, can discharge to a person, causing a shock.The most familiar example of this is when a person reachesfor a door knob or other metal object on a cold, relatively\ndry day and receives a shock.\nHowever , static electricity also can cause shocks or can just\ndischarge to an object with much more serious consequences,as when friction causes a high level of static electricity tobuild up at a specific spot on an object. This can happensimply through handling plastic pipes and materials or\nduring normal operation of rubberized drive or machine belts\nfound in many worksites. In these cases, for example, staticelectricity can potentially discharge when sufficient amountsof flammable or combustible substances are located nearbyand cause an explosion. Grounding or other measures maybe necessary to prevent this static electricity buildup andthe results."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 16,
+    "text": "11Protection Against\nElectrical Hazards\nWhat is the best way to protect\nyourself against electrical hazards?\nMost electrical accidents result from one of the following\nthree factors:\nunsafe equipment or installation,\nunsafe environment, or\nunsafe work practices.\nSome ways to prevent these accidents are through the\nuse of insulation, guarding, grounding, electrical protective\ndevices, and safe work practices.\nWhat protection does insulation\nprovide?\nInsulators such as glass, mica, rubber , or plastic used to\ncoat metals and other conductors help stop or reduce theflow of electrical current. This helps prevent shock, fires, andshort circuits. T o be effective, the insulation must be suitable\nfor the voltage used and conditions such as temperature\nand other environmental factors like moisture, oil, gasoline,corrosive fumes, or other substances that could cause theinsulator to fail.\nHow do you identify different\ntypes of insulation?\nInsulation on conductors is often color coded. Insulated\nequipment grounding conductors usually are either solid\ngreen or green with yellow stripes. Insulation coveringgrounded conductors is generally white or gray. Ungroundedconductors, or “hot wires,” often are black or red, althoughthey may be any color other than green, white, or gray."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 17,
+    "text": "12Before connecting electrical equipment to a power source,\nit’s a good idea to check the insulation for any exposed wiresfor possible defects. Insulation covering flexible cords suchas extension cords is particularly vulnerable to damage.\nThe insulation that covers conductors in non-construction\napplications is regulated by Subpart S of \n29 CFR 1910.302\nthrough 1910.308, Wiring Design and Protection .\nSubpart S generally requires insulation on circuit conductors.It also specifies that the insulation used should be suitablefor the voltage and conditions. Conductors used inconstruction applications are regulated by Subpart K of\n29 CFR 1926.402 through 1926.408.\nWhat is guarding and what\nprotection does it offer?\nGuarding involves locating or enclosing electric equipment\nto make sure people don’t accidentally come into contactwith its live parts. Effective guarding requires equipmentwith exposed parts operating at 50 volts or more to beplaced where it is accessible only to authorized peoplequalified to work with it. Recommended locations are a\nroom, vault, or similar enclosure; a balcony, gallery, or\nelevated platform; or a site elevated 8 feet (2.44 meters)or more above the floor . Sturdy, permanent screens alsocan serve as effective guards.\nConspicuous signs must be posted at the entrances to\nelectrical rooms and similarly guarded locations to alert\npeople to the electrical hazard and to forbid entry to\nunauthorized people. Signs may contain the word “Danger,”“Warning,” or “Caution,” and beneath that, appropriateconcise wording that alerts people to the hazard or givesan instruction, such as “Danger/High Voltage/Keep Out.”"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 18,
+    "text": "13What is grounding and what\nprotection does it offer?\n“Grounding” a tool or electrical system means intentionally\ncreating a low-resistance path that connects to the earth.This prevents the buildup of voltages that could cause anelectrical accident.\nGrounding is normally a secondary protective measure\nto protect against electric shock. It does not guarantee thatyou won’t get a shock or be injured or killed by an electricalcurrent. It will, however , substantially reduce the risk,especially when used in combination with other safetymeasures discussed in this booklet.\n29 CFR, Part 1910.304, Subpart S, Wiring Design\nand Protection, requires at times a service or system ground\nand an equipment ground in non-construction applications.\nA service or system ground  is designed primarily to\nprotect machines, tools, and insulation against damage.One wire, called the “neutral” or “grounded” conductor,is grounded. In an ordinary low-voltage circuit, the white\nor gray wire is grounded at the generator or transformer\nand at the building’s service entrance.\nAn \nequipment ground  helps protect the equipment\noperator . It furnishes a second path for the current topass through from the tool or machine to the ground.This additional ground safeguards the operator if a\nmalfunction causes the tool’s metal frame to become\nenergized. The resulting flow of current may activate thecircuit protection devices."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 19,
+    "text": "14What are circuit protection devices\nand how do they work?\nCircuit protection devices limit or stop the flow of current\nautomatically in the event of a ground fault, overload, or shortcircuit in the wiring system. Well-known examples of thesedevices are fuses, circuit breakers, ground-fault circuit\ninterrupters, and arc-fault circuit interrupters.\nFuses and circuit breakers  open or break the circuit\nautomatically when too much current flows through them.When that happens, fuses melt and circuit breakers tripthe circuit open. Fuses and circuit breakers are designed toprotect conductors and equipment. They prevent wires and\nother components from overheating and open the circuit\nwhen there is a risk of a ground fault.\nG\nround-fault circuit interrupters , or GFCIs, are used in\nwet locations, construction sites, and other high-risk areas.These devices interrupt the flow of electricity within aslittle as 1/40 of a second to prevent electrocution. GFCIscompare the amount of current going into electric equipment\nwith the amount of current returning from it along the circuit\nconductors. If the difference exceeds 5 milliamperes, thedevice automatically shuts off the electric power .\nArc-fault devices  provide protection from the effects of\narc-faults by recognizing characteristics unique to arcing andby functioning to deenergize the circuit when an arc-fault\nis detected."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 20,
+    "text": "15What work practices help protect\nyou against electrical hazards?\nElectrical accidents are largely preventable through\nsafe work practices. Examples of these practices include\nthe following:\ndeenergizing electric equipment before inspection\nor repair ,\nkeeping electric tools properly maintained,\nexercising caution when working near energized lines,\nand\nusing appropriate protective equipment.\nElectrical safety-related work practice requirements\nfor general industry are detailed in Subpart S of 29 CFR\nPart 1910, in Sections 1910.331–1910.335. Forconstruction applications, electrical safety-related workpractice requirements are detailed in Subpart K of\n29 CFR  Part 1926.416 to 1926.417.\nHow can you protect yourself against\nmetal parts that become energized?\nA break in an electric tool’s or machine’s insulation can\ncause its metal parts to become “hot” or energized, meaningthat they conduct electricity. T ouching these energized partscan result in an electrical shock, burn, or electrocution. Thebest way to protect yourself when using electrical tools ormachines is to establish a low-resistance path from the device’s\nmetallic case to the ground. This requires an equipment\ngrounding conductor , a low-resistance wire that directsunwanted current directly to the ground. A properly installedgrounding conductor has a low resistance to ground and greatlyreduces the amount of current that passes through your body.Cord and plug equipment with a three-prong plug is a common\nexample of equipment incorporating this ground conductor ."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 21,
+    "text": "16Another form of protection is to use listed or labeled\nportable tools and appliances protected by an approvedsystem of double insulation or its equivalent. Where sucha system is employed, it must be marked distinctively toindicate that the tool or appliance uses an approved doubleinsulation system.\nHow can you prevent an accidental\nor unexpected equipment startup?\nProper lockout/tagout procedures protect you from the\ndangers of the accidental or unexpected startup of electricalequipment and are required for general industry by OSHAStandard 1910.333, \nSelection and Use of Work Practices .\nRequirements for construction applications are in 29 CFR\n1926.417, Lockout and T agging of Circuits . These procedures\nensure that electrical equipment is deenergized before it isrepaired or inspected and protects you against electrocutionor shock.\nThe first step before beginning any inspection or repair job\nis to turn the current off at the switch box and padlock theswitch in the OFF position. This applies even on so-called\nlow-voltage circuits. Securely tagging the switch or controls\nof the machine or equipment being locked out of serviceclarifies to everyone in the area which equipment or circuitsare being inspected or repaired.\nOnly qualified electricians who have been trained in safe\nlockout procedures should maintain electrical equipment.\nNo two of the locks used should match, and each key should\nfit just one lock. In addition, one individual lock and keyshould be issued to each maintenance worker authorized tolock out and tag the equipment. All employees who repair agiven piece of equipment should lock out its switch with anindividual lock. Only authorized workers should be permitted\nto remove it."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 22,
+    "text": "17How can you protect yourself from\noverhead power lines?\nBefore working under or near overhead power lines,\nensure that you maintain a safe distance to the lines and,for very high-voltage lines, ground any equipment such ascranes that can become energized. If working on power lines,ensure that the lines have been deenergized and groundedby the owner or operator of the lines. Other protective\nmeasures like guarding or insulating the lines help prevent\naccidental contact.\nEmployees unqualified to work with electricity, as well\nas mechanical equipment, should remain at least 10 feet(3.05 meters) away from overhead power lines. If the voltageis more than 50,000 volts, the clearance increases by 4 inches\n(10 centimeters) for each additional 10,000 volts.\nWhen mechanical equipment is operated near overhead\nlines, employees standing on the ground should avoid contactwith the equipment unless it is located outside the dangerzone. When factoring the safe standoff distance, be sure toconsider the equipment’s maximum reach."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 23,
+    "text": "18What protection does personal\nequipment offer?\nEmployees who work directly with electricity should use\nthe personal protective equipment required for the jobs they\nperform. This equipment may include rubber insulatinggloves, hoods, sleeves, matting, blankets, line hose, andindustrial protective helmets designed to reduce electricshock hazard. All help reduce the risk of electrical accidents.\nWhat role do tools play?\nAppropriate and properly maintained tools help protect\nworkers against electric hazards. It’s important to maintaintools regularly because it prevents them from deterioratingand becoming dangerous. Check each tool before using it. Ifyou find a defect, immediately remove it from service and tagit so no one will use it until it has been repaired or replaced.\nWhen using a tool to handle energized conductors, check\nto make sure it is designed and constructed to withstand the\nvoltages and stresses to which it has been exposed.\nWhat special training do\nemployees need?\nAll employees should be trained to be thoroughly familiar\nwith the safety procedures for their particular jobs.  Moreover,\ngood judgment and common sense are integral to preventing\nelectrical accidents. When working on electrical equipment,\nfor example, some basic procedures to follow are to:\ndeenergize the equipment,\nuse lockout and tag procedures to ensure that the\nequipment remains deenergized,\nuse insulating protective equipment, and\nmaintain a safe distance from energized parts."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 24,
+    "text": "19What’s the value of a safety and health\nprogram in controlling electrical hazards?\nEvery good safety and health program provides measures\nto control electrical hazards. The measures suggested in thisbooklet should be helpful in establishing such a program.The responsibility for this program should be delegated tosomeone with a complete knowledge of electricity, electricalwork practices, and the appropriate OSHA standards for\ninstallation and performance.\nEveryone has the right to work in a safe environment.\nSafety and health add value to your business and yourworkplace. Through cooperative efforts, employers andemployees can learn to identify and eliminate or controlelectrical hazards."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 25,
+    "text": "20How Can OSHA Help Me?\nOSHA can provide extensive help through a variety of\nprograms, including assistance about safety and healthprograms, state plans, workplace consultations, voluntaryprotection programs, strategic partnerships, training andeducation, and more.\nHow does safety and health program\nmanagement assistance help employersand employees?\nWorking in a safe and healthful environment can stimulate\ninnovation and creativity and result in increased performanceand higher productivity.\nT o assist employers and employees in developing effective\nsafety and health programs, OSHA published recommended\nSafety and Health Program Management Guidelines\n(Federal Register 54(18):3904–3916, January 26, 1989).\nThese voluntary guidelines can be applied to all worksites\ncovered by OSHA.\nThe guidelines identify four general elements that are\ncritical to the development of a successful safety and healthmanagement system:\nmanagement leadership and employee involvement,\nworksite analysis,\nhazard prevention and control, and\nsafety and health training.\nThe guidelines recommend specific actions under each\nof these general elements to achieve an effective safety andhealth program. The \nFederal Register  notice is available\nonline at www.osha.gov."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 26,
+    "text": "21What are state plans?\nState plans are OSHA-approved job safety and health\nprograms operated by individual states or territories instead\nof Federal OSHA. The Occupational Safety and Health\nAct of 1970  (OSH Act ) encourages states to develop and\noperate their own job safety and health plans and permitsstate enforcement of OSHA standards if the state has anapproved plan. Once OSHA approves a state plan, it funds\n50 percent of the program’s operating costs. State plans\nmust provide standards and enforcement programs, aswell as voluntary compliance activities, that are at least aseffective as those of Federal OSHA.\nThere are 26 state plans:  23 cover both private and\npublic (state and local government) employment, and 3\n(Connecticut, New Jersey, and New Y ork) cover only the\npublic sector . For more information on state plans, see thelisting at the end of this publication, or visit OSHA’s websiteat www.osha.gov.\nHow can consultation assistance\nhelp employers?\nIn addition to helping employers identify and correct\nspecific hazards, OSHA’s consultation service provides free,\nonsite assistance in developing and implementing effective\nworkplace safety and health management systems thatemphasize the prevention of worker injuries and illnesses.\nComprehensive consultation assistance provided by\nOSHA includes a hazard survey of the worksite and anappraisal of all aspects of the employer’s existing safety and\nhealth management system. In addition, the service offers\nassistance to employers in developing and implementing aneffective safety and health management system. Employersalso may receive training and education services, as well aslimited assistance away from the worksite."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 27,
+    "text": "22Who can get consultation assistance\nand what does it cost?\nConsultation assistance is available to small employers\n(with fewer than 250 employees at a fixed site and no morethan 500 corporatewide) who want help in establishingand maintaining a safe and healthful workplace.\nFunded largely by OSHA, the service is provided at\nno cost to the employer . Primarily developed for smaller\nemployers with more hazardous operations, the consultation\nservice is delivered by state governments employingprofessional safety and health consultants. No penaltiesare proposed or citations issued for hazards identified bythe consultant. The employer’s only obligation is to correct allidentified serious hazards within the agreed-upon correction\ntime frame.\nCan OSHA assure privacy to an employer\nwho asks for consultation assistance?\nOSHA provides consultation assistance to the employer\nwith the assurance that his or her name and firm and anyinformation about the workplace will not be routinelyreported to OSHA enforcement staff.\nCan an employer be cited for violations\nafter receiving consultation assistance?\nIf an employer fails to eliminate or control a serious hazard\nwithin the agreed-upon time frame, the consultation project\nmanager must refer the situation to the OSHA enforcementoffice for appropriate action. This is a rare occurrence,however, because employers request the service for theexpressed purpose of identifying and fixing hazards intheir workplaces."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 28,
+    "text": "23Does OSHA provide any incentives\nfor seeking consultation assistance?\nY es. Under the consultation program, certain exemplary\nemployers may request participation in OSHA’s Safety\nand Health Achievement Recognition Program (SHARP).Eligibility for participation in SHARP includes, but is notlimited to, receiving a full-service, comprehensive consultationvisit, correcting all identified hazards, and developing aneffective safety and health management system.\nEmployers accepted into SHARP may receive an\nexemption from programmed inspections (not complaintor accident investigation inspections) for a period of 1 yearinitially, or 2 years upon renewal. For more informationconcerning consultation assistance, see the consultationdirectory at the end of this publication, contact your regional\nor area OSHA office, or visit OSHA’s website at www.osha.gov.\nWhat is the Voluntary Protection Program?\nVoluntary Protection Programs (VPPs) represent one\npart of OSHA’s effort to extend worker protection beyondthe minimum required by OSHA standards. VPP — alongwith onsite consultation services, full-service area offices,and OSHA’s Strategic Partnership Program (OSPP) —\nrepresents a cooperative approach which, when coupled\nwith an effective enforcement program, expands workerprotection to help meet the goals of the \nOSH Act ."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 29,
+    "text": "24How does the Voluntary Protection\nProgram work?\nThere are three levels of VPPs:  Star , Merit, and\nDemonstration. All are designed to do the following:\nrecognize employers who have successfully developed\nand implemented effective and comprehensive safetyand health management systems;\nencourage these employers to continuously improve\ntheir safety and health management systems;\nmotivate other employers to achieve excellent safety\nand health results in the same outstanding way; and\nestablish a relationship between employers, employees,\nand OSHA that is based on cooperation.\nHow does VPP help employers\nand employees?\nVPP participation can mean the following:\nreduced numbers of worker fatalities, injuries, and\nillnesses;\nlost-workday case rates generally 50 percent below\nindustry averages;\nlower workers’ compensation and other injury- and\nillness-related costs;\nimproved employee motivation to work safely, leading\nto a better quality of life at work;\npositive community recognition and interaction;\nfurther improvement and revitalization of already good\nsafety and health programs; and\na positive relationship with OSHA."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 30,
+    "text": "25How does OSHA monitor VPP sites?\nOSHA reviews an employer’s VPP application and\nconducts a VPP onsite evaluation to verify that the safety\nand health management systems described are operatingeffectively at the site. OSHA conducts onsite evaluations on aregular basis, annually for participants at the Demonstrationlevel, every 18 months for Merit, and every 3 to 5 years forStar . Each February, all participants must send a copy of\ntheir most recent annual evaluation to their OSHA regional\noffice. This evaluation must include the worksite’s recordof injuries and illnesses for the past year .\nCan OSHA inspect an employer\nwho is participating in the VPP?\nSites participating in VPP are not scheduled for regular ,\nprogrammed inspections. OSHA handles any employeecomplaints, serious accidents, or significant chemical\nreleases that may occur at VPP sites according to routine\nenforcement procedures.\nAdditional information on VPP is available from OSHA\nnational, regional, and area offices, listed at the end of\nthis booklet. Also, see Outreach  on OSHA’s website at\nwww.osha.gov.\nHow can a partnership with OSHA\nimprove worker safety and health?\nOSHA has learned firsthand that voluntary, cooperative\npartnerships with employers, employees, and unions can\nbe a useful alternative to traditional enforcement and aneffective way to reduce worker deaths, injuries, andillnesses. This is especially true when a partnership leadsto the development and implementation of comprehensiveworkplace safety and health management system."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 31,
+    "text": "26What is OSHA’s Strategic Partnership\nProgram (OSPP)?\nOSHA Strategic Partnerships are alliances among labor ,\nmanagement, and government to foster improvements inworkplace safety and health. These partnerships are\nvoluntary, cooperative relationships between OSHA,\nemployers, employee representatives, and others suchas trade unions, trade and professional associations,universities, and other government agencies. OSPPs are thenewest member of OSHA’s family of cooperative programs.\nWhat do OSPPs do?\nThese partnerships encourage, assist, and recognize\nthe efforts of the partners to eliminate serious workplace\nhazards and achieve a high level of worker safety and health.\nWhereas OSHA’s Consultation Program and VPP entailone-on-one relationships between OSHA and individualworksites, most strategic partnerships seek to have abroader impact by building cooperative relationships with\ngroups of employers and employees.\nAre there different kinds of OSPPs?\nThere are two major types:\ncomprehensive, which focus on establishing\ncomprehensive safety and health managementsystems at partnering worksites; and\nlimited, which help identify and eliminate hazards\nassociated with worker deaths, injuries, and illnesses,or have goals other than establishing comprehensiveworksite safety and health programs."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 32,
+    "text": "27OSHA is interested in creating new OSPPs at the\nnational, regional, and local levels. OSHA also has found\nlimited partnerships to be valuable. Limited partnershipsmight address the elimination or control of a specificindustry hazard.\nWhat are the benefits of participation\nin the OSPP?\nLike VPP , OSPP can mean the following:\nfewer worker fatalities, injuries, and illnesses;\nlower workers’ compensation and other injury- and\nillness-related costs;\nimproved employee motivation to work safely, leading\nto a better quality of life at work and enhancedproductivity;\npositive community recognition and interaction;\ndevelopment of or improvement in safety and health\nmanagement systems; and\npositive interaction with OSHA.\nFor more information about this program, contact your\nnearest OSHA office or go to the agency website atwww.osha.gov."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 33,
+    "text": "28Does OSHA have occupational safety and\nhealth training for employers and employees?\nY es. The OSHA T raining Institute in Des Plaines, IL,\nprovides basic and advanced training and education in safety\nand health for federal and state compliance officers, stateconsultants, other federal agency personnel, and private-sector employers, employees, and their representatives.\nInstitute courses cover diverse safety and health topics\nincluding electrical hazards, machine guarding, personal\nprotective equipment, ventilation, and ergonomics. The\nfacility includes classrooms, laboratories, a library, andan audiovisual unit. The laboratories contain variousdemonstrations and equipment, such as power presses,woodworking and welding shops, a complete industrialventilation unit, and a sound demonstration laboratory.More than 57 courses dealing with subjects such as safety\nand health in the construction industry and methods of\ncompliance with OSHA standards are available forpersonnel in the private sector.\nIn addition, OSHA’s 73 area offices are full-service\ncenters offering a variety of informational services suchas personnel for speaking engagements, publications,\naudiovisual aids on workplace hazards, and technical advice.\nFor more information on grants, training, and education,\nwrite:  OSHA T raining Institute, Office of T raining andEducation, 1555 Times Drive, Des Plaines, IL 60018;call (847) 297–4810; or see Outreach\n on OSHA’s website\nat www.osha.gov."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 34,
+    "text": "29Does OSHA give money to organizations\nfor training and education?\nOSHA awards grants through its Susan Harwood T raining\nGrant Program to nonprofit organizations to provide safety\nand health training and education to employers and workers\nin the workplace. The grants focus on programs that willeducate workers and employers in small business (fewerthan 250 employees), training workers and employers aboutnew OSHA standards or about high-risk activities or\nhazards. Grants are awarded for 1 year and may be\nrenewed for an additional 12 months depending on whetherthe grantee has performed satisfactorily.\nOSHA expects each organization awarded a grant to\ndevelop a training and/or education program that addresses\na safety and health topic named by OSHA, recruit workers\nand employers for the training, and conduct the training.\nGrantees are also expected to follow up with people who\nhave been trained to find out what changes were made toreduce the hazards in their workplaces as a result of thetraining.\nEach year OSHA has a national competition that is\nannounced in the \nFederal Register  and on the Internet at\nwww.osha.gov/dte/sharwood/index.html.\nIf you do not have access to the Internet, you can contact the\nOSHA Office of T raining and Education, 1555 Times Drive,\nDes Plaines, Illinois 60018, (847) 297–4810, for moreinformation."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 35,
+    "text": "30Does OSHA have other assistance\nmaterials available?\nOSHA has a variety of materials and tools available on\nits website at www.osha.gov. These include e-T ools such\nas Expert Advisors and Electronic Compliance AssistanceT ools (e-CAT s), T echnical Links, regulations, directives,publications, videos, and other information for employersand employees. OSHA’s software programs and complianceassistance tools walk you through challenging safety and\nhealth issues and common problems to find the best solutions\nfor your workplace. OSHA’s comprehensive publicationsprogram includes more than 100 titles to help youunderstand OSHA requirements and programs.\nOSHA’s CD-ROM includes standards, interpretations,\ndirectives, and more and can be purchased on CD-ROM\nfrom the U.S. Government Printing Office. T o order , write to\nthe Superintendent of Documents, U.S. Government PrintingOffice, Washington, DC 20402, or phone (202) 512–1800.Specify OSHA Regulations, Documents and T echnicalInformation on CD-ROM (ORDT), GPO Order No.S/N 729-013-00000-5.\nWhat do I do in case of an emergency?\nOr if I need to file a complaint?\nT o report an emergency, file a complaint, or seek OSHA\nadvice, assistance, or products, call (800) 321–OSHA orcontact your nearest OSHA regional or area office listed atthe end of this publication. The teletypewriter (TTY) numberis (877) 889–5627.\nY ou can also file a complaint online and obtain more\ninformation on OSHA federal and state programs by visiting\nOSHA’s website at www.osha.gov."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 36,
+    "text": "31OSHA Offices\nOSHA Regional Offices\nRegion I\n(CT ,* ME, MA, NH, RI, VT*)JFK Federal Building, Room E340Boston, MA 02203(617) 565-9860\nRegion II\n(NJ,* NY ,* PR,* VI*)\n201 Varick Street, Room 670\nNew Y ork, NY 10014(212) 337-2378\nRegion III\n(DE, DC, MD,* PA,* VA,* WV)The Curtis Center170 S. Independence Mall WestSuite 740 WestPhiladelphia, PA 19106-3309\n(215) 861-4900\nRegion IV\n(AL, FL, GA, KY ,* MS, NC,* SC,* TN*)\nSNAF61 Forsyth Street SW , Room 6T50Atlanta, GA 30303(404) 562-2300\nRegion V\n(IL, IN,* MI,* MN,* OH, WI)230 South Dearborn Street, Room 3244\nChicago, IL 60604\n(312) 353-2220"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 37,
+    "text": "32Region VI\n(AR, LA, NM,* OK, TX)525 Griffin Street, Room 602Dallas, TX 75202(214) 767-4731 or 4736 x224\nRegion VII\n(IA,* KS, MO, NE)City Center Square1100 Main Street, Suite 800Kansas City, MO 64105(816) 426-5861\nRegion VIII\n(CO, MT , ND, SD, UT ,* WY*)1999 Broadway, Suite 1690PO Box 46550Denver , CO 80202-5716\n(303) 844-1600\nRegion IX\n(American Samoa, AZ,* CA,* HI, NV ,* Northern MarianaIslands)71 Stevenson Street, Room 420\nSan Francisco, CA 94105\n(415) 975-4310\nRegion X\n(AK,* ID, OR,* WA*)1111 Third Avenue, Suite 715\nSeattle, WA 98101-3212\n(206) 553-5930\n* These states and territories operate their own OSHA-approved\njob safety and health programs. (Connecticut, New Jersey andNew Y ork plans cover public employees only.) States with\napproved programs must have a standard that is identical to,\nor at least as effective as, the federal standard."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 38,
+    "text": "33OSHA Area Offices\nAlabama\nU.S. Department of Labor—OSHA\nVestavia Village, 2047 Canyon Road\nBirmingham, AL  35216–1981\n(205) 731-1534\nU.S. Department of Labor—OSHA\n3737 Government Boulevard, Suite 100\nMobile, AL  36693-4309(251) 441-6131\nAlaska\nU.S. Department of Labor—OSHA\n301 W . Northern Lights Blvd, Suite 407\nAnchorage, AK  99503\n(907) 271-5152\nArizona\nU.S. Department of Labor—OSHA\n3221 North 16th Street, Suite 100\nPhoenix, AZ  85016(602) 640-2348\nArkansas\nU.S. Department of Labor—OSHA\nTCBY Building, Suite 450\n425 West Capitol AvenueLittle Rock, AR  72201(501) 324-6291(5818)\nCalifornia\nU.S. Department of Labor—OSHA\n5675 Ruffin Road, Suite 330\nSan Diego, CA  92123(619) 557-5909"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 39,
+    "text": "34U.S. Department of Labor—OSHA\n101 El Camino Plaza, Suite 105\nSacramento, CA  95815(916) 566-7471\nColorado\nU.S. Department of Labor—OSHA\n1391 Speer Boulevard, Suite 210\nDenver , CO  80204-2552(303) 844-5285\nU.S. Department of Labor—OSHA\n7935 East Prentice Avenue, Suite 209Greenwood Village, CO  80111-2714(303) 843-4500\nConnecticut\nU.S. Department of Labor—OSHA\n1057 Broad Street, Fourth FloorBridgeport, CT  06604(203) 579-5581\nU.S. Department of Labor—OSHA\nFederal Building450 Main Street, Room 613\nHartford, CT  06103\n(860) 240-3152\nDelaware\nU.S. Department of Labor—OSHA\nCaleb Boggs Federal Building\n844 N King Street, Room 2209\nWilmington, DE  19801-3319(302) 573-6518"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 40,
+    "text": "35Florida\nU.S. Department of Labor—OSHA\n8040 Peters Road, Building H-100Fort Lauderdale, FL  33324\n(954) 424-0242\nU.S. Department of Labor—OSHA\nRibault Building, Suite 227\n1851 Executive Center DriveJacksonville, FL  32207(904) 232-2895\nU.S. Department of Labor—OSHA\n5807 Breckenridge Parkway, Suite AT ampa, FL  33610-4249(813) 626-1177\nGeorgia\nU.S. Department of Labor—OSHA\n450 Mall Boulevard, Suite JSavannah, GA  31406(912) 652-4393\nU.S. Department of Labor—OSHA\n2400 Herodian Way, Suite 250Smyrna, GA  30080-2968\n(770) 984-8700\nU.S. Department of Labor—OSHA\nLaVista Perimeter Office Park\n2183 N. Lake ParkwayBuilding 7, Suite 110T ucker, GA  30084-4154(770) 493-6644/6742/8419"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 41,
+    "text": "36Idaho\nU.S. Department of Labor—OSHA\n1150 North Curtis Road, Suite 201Boise, ID  83706(208) 321-2960\nIllinois\nU.S. Department of Labor—OSHA\n1600 167th Street, Suite 9Calumet City, IL  60409(708) 891-3800\nU.S. Department of Labor—OSHA\nO’hara Plaza701 Lee Street, Suite #950\nDes Plaines, IL  60016\n(847) 803-4800\nU.S. Department of Labor—OSHA\n11 Executive Drive, Suite 11Fairview Heights, IL  62208(618) 632-8612\nU.S. Department of Labor—OSHA\n365 Smoke T ree Business ParkNorth Aurora, IL  60542(630) 896-8700\nU.S. Department of Labor—OSHA\n2918 West Willow Knolls Road\nPeoria, IL  61614\n(309) 671-7033\nIndiana\nU.S. Department of Labor—OSHA\n46 East Ohio Street, Room 453\nIndianapolis, IN  46204\n(317) 226-7290"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 42,
+    "text": "37Iowa\nU.S. Department of Labor—OSHA\n210 Walnut Street, Room 815Des Moines, IA  50309\n(515) 284-4794\nKansas\nU.S. Department of Labor—OSHA\n217 W . 3rd Street NorthRoom #400Wichita, KS  67202\n(316) 269-6644\nKentucky\nU.S. Department of Labor—OSHA\nJohn C. Watts Federal Building330 W . Broadway, Room 108\nFrankfort, KY  40601-1922\n(502) 227-7024\nLouisiana\nU.S. Department of Labor—OSHA\n9100 Bluebonnet Centre BoulevardSuite 201\nBaton Rouge, LA  70809\n(225) 389-0474 (0431)\nMaine\nU.S. Department of Labor—OSHA\n202 Harlow Street, Room 211Bangor , ME  04401\n(207) 941-8177\nU.S. Department of Labor—OSHA\nWest T ower100 Middle Street, Suite 410 WestPortland, ME  04101\n(207) 780-3178"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 43,
+    "text": "38Maryland\nU.S. Department of Labor—OSHA\n1099 Winterson Road, Suite 140Linthicum, MD  21090-2218(410) 865-2055/2056\nMassachusetts\nU.S. Department of Labor—OSHA\n639 Granite Street, 4th FloorBraintree, MA  02184(617) 565-6924\nU.S. Department of Labor—OSHA\nValley Office Park\n13 Branch Street\nMethuen, MA  01844(617) 565-8110\nU.S. Department of Labor—OSHA\n1441 Main Street, Room 550Springfield, MA  01103-1493(413) 785-0123\nMichigan\nU.S. Department of Labor—OSHA\n801 South Waverly Road, Suite 306Lansing, MI  48917-4200(517) 322-1814\nMinnesota\nU.S. Department of Labor—OSHA\n300 South 4th Street, Room 1205Minneapolis, MN  55415(612) 664-5460"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 44,
+    "text": "39Mississippi\nU.S. Department of Labor—OSHA\n3780 I-55 North, Suite 210Jackson, MS  39211-6323(601) 965-4606\nMissouri\nU.S. Department of Labor—OSHA\n6200 Connecticut Avenue, Suite 100Kansas City, MO  64120(816) 483-9531\nU.S. Department of Labor—OSHA\n911 Washington Avenue, Room 420St. Louis, MO  63101\n(314) 425-4249\nMontana\nU.S. Department of Labor—OSHA\n2900 4th Avenue North, Suite 303Billings, MT  59101\n(406) 247-7494\nNebraska\nU.S. Department of Labor—OSHA\nOverland–Wolf Building6910 Pacific Street, Room 100\nOmaha, NE  68106\n(402) 221-3182\nNevada\nU.S. Department of Labor—OSHA\n705 North Plaza, Room 204\nCarson City, NV  89701\n(775) 885-6963"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 45,
+    "text": "40New Hampshire\nU.S. Department of Labor—OSHA\n279 Pleasant Street, Suite 201\nConcord, NH  03301\n(603) 225-1629\nNew Jersey\nU.S. Department of Labor—OSHA\n1030 St. Georges Avenue\nPlaza 35, Suite 205\nAvenel, NJ  07001(732) 750-3270\nU.S. Department of Labor—OSHA\n500 Route 17 South, 2nd FloorHasbrouck Heights, NJ  07604(201) 288-1700\nU.S. Department of Labor—OSHA\nMarlton Executive Park, Building 2701 Route 73 South, Suite 120Marlton, NJ  08053\n(856) 757-5181\nU.S. Department of Labor—OSHA\n299 Cherry Hill Road, Suite 304\nParsippany, NJ  07054(973) 263-1003\nNew York\nU.S. Department of Labor—OSHA\n401 New Karner Road, Suite 300\nAlbany, NY  12205-3809\n(518) 464-4338\nU.S. Department of Labor—OSHA\n42-40 Bell BoulevardBayside, NY  11361(718) 279–9060"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 46,
+    "text": "41U.S. Department of Labor—OSHA\n5360 Genesee Street\nBowmansville, NY  14026(716) 684-3891\nU.S. Department of Labor—OSHA\n201 Varick Street, Room #646New Y ork, NY  10014(212) 337-2636\nU.S. Department of Labor—OSHA\n3300 Vickery RoadNorth Syracuse, NY  13212\n(315) 451-0808\nU.S. Department of Labor—OSHA\n660 White Plains Road, 4th Floor\nT arrytown, NY  10591-5107(914) 524-7510\nU.S. Department of Labor—OSHA\n1400 Old Country Road, Room 208Westbury, NY  11590(516) 334-3344\nNorth Carolina\nU.S. Department of Labor—OSHA\nCentury Station Federal Office Building300 Fayetteville Street Mall, Room 438Raleigh, NC  27601-9998(919) 856-4770\nNorth Dakota\nU.S. Department of Labor—OSHA\n1640 East Capitol AvenueBismark, ND  58501(701) 250-4521"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 47,
+    "text": "42Ohio\nU.S. Department of Labor—OSHA\n36 T riangle Park DriveCincinnati, OH  45246(513) 841-4132\nU.S. Department of Labor—OSHA\nFederal Office Building\n1240 East 9th Street, Room 899\nCleveland, OH  44199(216) 522-3818\nU.S. Department of Labor—OSHA\nFederal Office Building200 North High Street, Room 620Columbus, OH  43215(614) 469-5582\nU.S. Department of Labor—OSHA\n420 Madison AvenueSuite 600\nT oledo, OH  43604\n(419) 259-7542\nOklahoma\nU.S. Department of Labor—OSHA\n55 North Robinson, Suite 315Oklahoma City, OK  73102-9237\n(405) 278-9560\nOregon\nU.S. Department of Labor, OSHA\nFederal Office Building1220 Southwest 3rd Avenue, Room 640Portland, OR  97204\n(503) 326-2251"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 48,
+    "text": "43Pennsylvania\nU.S. Department of Labor—OSHA\n850 North 5th StreetAllentown, PA  18102\n(610) 776-0592\nU.S. Department of Labor—OSHA\n3939 West Ridge Road, Suite B12\nErie, PA  16506-1887(814) 833-5758\nU.S. Department of Labor—OSHA\nProgress Plaza49 North Progress AvenueHarrisburg, PA  17109(717) 782-3902\nU.S. Department of Labor—OSHA\nU.S. Custom House, Room 242Second and Chestnut Streets\nPhiladelphia, PA  19106-2902\n(215) 597-4955\nU.S. Department of Labor—OSHA\nFederal Office Building1000 Liberty Avenue, Room 1428Pittsburgh, PA  15222-4101(412) 395-4903\nU.S. Department of Labor—OSHA\nSteigmaier7 North Wilkes-Barre Boulevard, Suite 410\nWilkes-Barre, PA  18702-350\n(570) 826-6538"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 49,
+    "text": "44Puerto Rico\nU.S. Department of Labor—OSHA\nT riple SSS Plaza Building1510 F . D. Roosevelt Avenue, Suite 5B\nGuaynabo, PR  00968\n(787) 277-1560\nRhode Island\nU.S. Department of Labor—OSHA\nFederal Office Building380 Westminster Mall, Room 543\nProvidence, RI  02903\n(401) 528-4669\nSouth Carolina\nU.S. Department of Labor—OSHA\n1835 Assembly Street, Room 1468Columbia, SC  29201-2453(803) 765-5904\nT ennessee\nU.S. Department of Labor—OSHA\n2002 Richard Jones Road, Suite C-205Nashville, TN  37215-2809(615) 781-5423\nT exas\nU.S. Department of Labor—OSHA\n903 San Jacinto Boulevard, Suite 319Austin, TX  78701(512) 916-5783 (5788)"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 50,
+    "text": "45U.S. Department of Labor—OSHA\nWilson Plaza606 N. Carancahua, Suite 700Corpus Christi, TX  78476(361) 888-3420\nU.S. Department of Labor—OSHA\n8344 East R.L. Thornton Freeway, Suite 420Dallas, TX  75228\n(214) 320-2400 (2558)\nU.S. Department of Labor—OSHA\n700 E San Antonio St.\nRoom C-408El Paso, TX  79901(915) 534-6251\nU.S. Department of Labor—OSHA\nNorth Starr II, Suite 3028713 Airport FreewayFort Worth, TX  76180-7610(817) 428-2470 (485-7647)\nU.S. Department of Labor—OSHA\n507 N. Sam Houston Parkway, Suite 400\nHouston, TX  77060\n(281) 591-2438 (2787)\nU.S. Department of Labor—OSHA\n17625 El Camino Real, Suite 400Houston, TX  77058(281) 286-0583/0584 (5922)\nU.S. Department of Labor—OSHA\nFederal Office Building1205 T exas Avenue, Room 806Lubbock, TX  79401\n(806) 472-7681 (7685)"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 51,
+    "text": "46Utah\nU.S. Depaartment of Labor—OSHA\n160 E 300 South\nHeber-Wells Building\nP . O. Box 146650Salt Lake City, UT  84114-6650(801) 530-6901\nVirginia\nU.S. Department of Labor—OSHA\nFederal Office Building\n200 Granby Street, Room 614Norfolk, VA  23510(757) 441-3820\nWashington\nU.S. Department of Labor—OSHA\n505 106th Avenue, NE, Suite 302\nBellevue, WA  98004\n(206) 553-7520\nWest Virginia\nU.S. Department of Labor—OSHA\n405 Capitol StreetSuite 407Charleston, WV  25301\n(304) 347-5937\nWisconsin\nU.S. Department of Labor—OSHA\n1648 T ri ParkwayAppleton, WI  54914(920) 734-4521"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 52,
+    "text": "47U.S. Department of Labor—OSHA\n1310 West Clairmont AvenueEau Claire, WI  54701(715) 832-9019\nU.S. Department of Labor—OSHA\n4802 E. BroadwayMadison, WI  53716(608) 264-5388\nU.S. Department of Labor—OSHA\nHenry S. Reuss Building\n310 W . Wisconsin Ave, Suite 1180\nMilwaukee, WI  53203(414) 297-3315\n* For issues involving federal agencies or private companies\nworking for federal agencies in Arizona, California, Guam,Hawaii, and Nevada, call the numbers listed. For issues\ninvolving private or state government employers in these\nstates, refer to the appropriate state office in Arizona,California, Hawaii, and Nevada."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 53,
+    "text": "48States and Territories with OSHA-\nApproved Safety and Health Plans\nAlaska\nCommissioner\nAlaska Department of Labor1111 W . 8th Street, Room 308P .O. Box 21149Juneau, AK  99802-1149(907) 465-2700\nArizona\nDirector\nIndustrial Commission of Arizona800 W . WashingtonPhoenix, AZ  85007(602) 542-5795\nCalifornia\nDirector\nCalifornia Department of Industrial Relations455 Golden Gate Avenue, 10th floorSan Francisco, CA  94102(415) 703-5050\nConnecticut\nCommissioner\nConnecticut Department of Labor200 Folly Brook BoulevardWethersfield, CT  06109(860) 263-6505\nHawaii\nDirector\nHawaii Department of Labor and Industrial Relations830 Punchbowl StreetHonolulu, HI  96831(808) 586-8844"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 54,
+    "text": "49Indiana\nCommissioner\nIndiana Department of Labor\nState Office Building\n402 West Washington Street, Room W195\nIndianapolis, IN  46204(317) 232-2378\nIowa\nCommissioner\nIowa Division of Labor\n1000 E. Grand Avenue\nDes Moines, IA  50319(515) 281-3447\nKentucky\nSecretary\nKentucky Labor Cabinet\n1047 U.S. Highway 127 South, Suite 4\nFrankfort, KY  40601(502) 564-3070\nMaryland\nCommissioner\nMaryland Division of Labor and Industry\nDepartment of Labor Licensing and Regulation\nMOSH\n1100 N. Eutaw Street, Room 613\nBaltimore, MD  21201-2206(410) 767-2215\nMichigan\nDirector\nMichigan Department of Consumer and Industry Services\nP .O. Box 30643\n7150 Harris Drive\nLansing, MI  48909\n(517) 373-7230"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 55,
+    "text": "50Minnesota\nCommissioner\nMinnesota Department of Labor and Industry\n443 Lafayette Road\nSt. Paul, MN  55155\n(651) 284-5010\nNevada\nAdministrator\nNevada Division of Industrial Relations\n400 West King Street, Suite 400\nCarson City, NV  89703\n(775) 684-7260\nNew Jersey\nCommissioner\nNew Jersey Department of LaborJohn Fitch Plaza — Labor Building\nMarket and Warren Streets\nP .O. Box 110\nT renton, NJ  08625-0110\n(609) 292-2975\nNew Mexico\nSecretary\nNew Mexico Environment Department\n1190 St. Francis Drive\nP .O. Box 26110\nSanta Fe, NM  87502\n(505) 827-2850\nNew York\nCommissioner\nNew Y ork Department of Labor\nW . Averell Harriman State Office\nBuilding-12, Room 500\nAlbany, NY  12240\n(518) 457-2741"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 56,
+    "text": "51North Carolina\nCommissioner\nNorth Carolina Department of Labor\n4 West Edenton Street\nRaleigh, NC  27601-1092\n(919) 807-2900\nOregon\nAdministrator\nOregon Department of Consumer and Business Services\nOccupational Safety and Health Division (OR-OSHA)\n350 Winter Street, N.E. Room 430\nSalem, OR  97310-3882(503) 378-3272\nPuerto Rico\nSecretary\nPuerto Rico Department of Labor and Human Resources\nPrudencio Rivera Martinez Building\n505 Munoz Rivera Avenue\nHato Rey, PR  00918\n(787) 754-2119\nSouth Carolina\nSouth Carolina Department of Labor , Licensing and Regulation\nKoger Office Park, Kingstree Building\n110 Centerview Drive\nP .O. Box 11329\nColumbia, SC  29211\n(803) 896-4300\nT ennessee\nCommissioner\nT ennessee Department of Labor and Workforce Development\n710 James Robertson Parkway\nAndrew Johnson T ower\nNashville, TN  37243-0659\n(615) 741-2582"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 57,
+    "text": "52Utah\nCommissioner\nLabor Commission of Utah\n160 East 300 South Street, 3rd floor\nP .O. Box 146650\nSalt Lake City, UT  84111\n(801) 530-6901\nVermont\nCommissioner\nVermont Department of Labor and Industry\nNational Life Building, Drawer 20\n120 State Street\nMontpelier VT  05620-3401\n(802) 828-2288\nVirgin Islands\nCommissioner\nVirgin Islands Department of Labor\n2203 Church Street\nChristiansted, St. Croix, VI  00820-4660\n(340) 773-1990\nVirginia\nCommissioner\nVirginia Department of Labor and Industry\nPowers–T aylor Building\n13 South, 13th Street\nRichmond, VA  23219\n(804) 786-2377\nWashington\nDirector\nWashington Department of Labor and Industries\nP .O. Box 44001\nOlympia, WA  98504-4001\n(360) 902-4200 (5430)"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 58,
+    "text": "53Wyoming\nAdministrator\nWorker’s Safety and Compensation Division (WSC)Wyoming Department of EmploymentHerschler Building, 2nd Floor East122 West 25th Street\nCheyenne, WY  82002\n(307) 777-7786"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 59,
+    "text": "54OSHA Onsite Consultation Offices\nAlabama\nSafety State Program University of Alabama\n432 Martha Parham West\nPost Office Box 870388\nT uscaloosa, AL  35487(205) 348-3033\nAlaska\nConsultation Section\nADOL/AKOSH\n3301 Eagle Street\nPost Office Box 107022Anchorage, AK  99510-7022(907) 269-4957\nArizona\nConsultation and T raining\nDivision of Occupational Safety & Health\nIndustrial Commission of Arizona\n800 West WashingtonPhoenix, AZ  85007-9070(602) 542-1695\nArkansas\nOSHA Consultation\nArkansas Department of Labor\n10421 West MarkhamLittle Rock, AR  72205(501) 682-4522\nCalifornia\nCAL/OSHA Consultation Service\n2424 Arden Way, Suite 410\nSacramento, CA  95825(916) 263-2856"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 60,
+    "text": "55Colorado\nOccupational Safety and Health Section\nColorado State University\n133 Environmental Health BuildingFort Collins, CO  80523(970) 491-6151\nConnecticut\nDivision of Occupational Safety and Health\nConnecticut Department of Labor\n38 Wolcott Hill RoadWethersfield, CT  06109(860) 566-4550\nDelaware\nOccupational Safety and Health\nDivision of Industrial Affairs\nDelaware Department of Labor4425 North Market StreetWilmington, DE  19802(302) 761-8219\nDistrict of Columbia\nOffice of Occupational Safety and Health\nD.C. Dept of Employment Services950 Upshur Street, N.W .Washington, DC  20011(202) 541-3727\nFlorida\nDirector of Environmental Safety and Health\nEnvironmental and Occupational HealthCollege of Public Health4003 East Fowler AvenueT ampa, FL  33617(813) 974-9962"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 61,
+    "text": "56Georgia\nOnsite Consultation Program\nGeorgia Institute of T echnology\nO’Keefe Building, Room 22\n151 6th Street, N.W .\nAtlanta, GA  30332-0837\n(404) 894-2643\nGuam\nOSHA Onsite Consultation\nDept. of Labor , Government of Guam\n107 F Street\nTiyam, GU  96931\n9-1-(671) 475-1101\nHawaii\nConsultation and T raining Branch\nDept of Labor and Industrial Relations\n830 Punchbowl Street\nHonolulu, HI  96813\n(808) 586-9100\nIdaho\nSafety and Health Consultation Program\nBoise State University\nSafety & Health Consultation Department\n1910 University Drive\nBoise, ID  83725\n(208) 426-3283\nIllinois\nIllinois Onsite Consultation\nIndustrial Service Division\nDepartment of Commerce and Community Affairs\nState of Illinois Center , Suite 3-400\n100 West Randolph Street\nChicago, IL  60601\n(312) 814-2337"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 62,
+    "text": "57Indiana\nDivision of Labor\nBureau of Safety, Education and T rainingRoom W195402 West WashingtonIndianapolis, IN  46204-2287(317) 232-2688\nIowa\nIowa Workforce Development Labor Services\nBureau of Consultation and Education1000 East Grand AvenueDes Moines, IA  50319(515) 281-7629\nKansas\n21D Consultation Program\nKansas Department of Human Resources512 South West 6th StreetT opeka, KS  66603-3150(785) 296-2551\nKentucky\nDivision of Education and T raining\nKentucky Labor Cabinet1047 U.S. Highway 127, SouthFrankfort, KY  40601(502) 564-6895\nLouisiana\n7(c)(1) Consultation Program\nLouisiana Department of Labor1001 N. 23rd Street, Room 421Post Office Box 94040Baton Rouge, LA  70804-9094(225) 342-9601"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 63,
+    "text": "58Maine\nDivision of Industrial Safety\nMaine Bureau of Labor StandardsWorkplace Safety and Health DivisionState House Station #45Augusta, ME  04333-0045(207) 624-6400\nMaryland\nMOSH Consultation Services\nAttention:  Ms. Colleen Ridler312 Marshall Avenue Rm 600Laurel, MD  20707(410) 880-4970\nMassachusetts\nDivision of Occupational Safety and Health\nDepartment of Workforce Development1001 Watertown StreetWest Newton, MA  02165(617) 727-3982\nMichigan\nConsultation Education and T raining Division\nBureau of Safety and RegulationMichigan Department of Consumer and Industry Services7150 Harris Drive, Post Office Box 30643Lansing, MI  48909-8143\n(517) 322-1809\nMinnesota\nDepartment of Labor and Industry\nConsultation Division443 LaFayette Road NorthSaint Paul, MN  55155\n(651) 284-5060"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 64,
+    "text": "59Mississippi\nMississippi State University\nCenter for Safety and Health\n106 Crosspark Drive, Suite C\nPearl, MS  39216\n(601) 939-2047\nMissouri\nOnsite Consultation Program\nDivision of Labor Standards\nDepartment of Labor and Industrial Relations\n3315 West T ruman Boulevard, Room 205\nPost Office Box 449\nJefferson City, MO  65109\n(573) 751-3403\nMontana\nDepartment of Labor and Industry\nBureau of Safety\nPost Office Box 1728\nHelena, MT  59624-1728\n(406) 444-6418\nNebraska\nDivision of Safety and Labor Standards\nNebraska Department of Labor\nState Office Building, Lower Level\n301 Centennial Mall, South\nLincoln, NE  68509-5024\n(402) 471-4717\nNevada\nSafety Consultation and T raining Section\nDivision of Industrial Relations\nDepartment of Business and Industry\n1301 North Green Valley Parkway\nHenderson, NV  89074\n(702) 486-9140"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 65,
+    "text": "60New Hampshire\nNew Hampshire\nDepartment of Health and Human Services\nOffice of Community & Public Health\n6 Hazen Drive\nConcord, NH  03301-6527\n(603) 271-2024\nNew Jersey\nNew Jersey Department of Labor\nDivision of Public Safety and\nOccupational Safety and Health\n225 E. State Street, 8th Floor West\nP .O. Box 953\nT renton, NJ  08625-0953\n(609) 292-3923\nNew Mexico\nNew Mexico Environment Dept\nOccupational Health & Safety Bureau\n525 Camino de los Marquez, Suite 3\nPost Office Box 26110\nSanta Fe, NM  87502\n(505) 827-4230\nNew York\nDivision of Safety and Health\nState Office Campus\nBuilding 12, Room 168\nAlbany, NY  12240\n(518) 457-2238\nNorth Carolina\nBureau of Consultative Services\nNC Department of Labor — OSHA Division\n4 West Edenton Street\nRaleigh, NC  27601-1092\n(919) 807-2905"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 66,
+    "text": "61North Dakota\nDivision of Environmental Engineering\nRoom 304\n1200 Missouri AvenueBismarck, ND  58504(701) 328-5188\nOhio\nOn-Site Consultation Program\nBureau of Occupational Safety and Health\nLAWS Division/Ohio Department of Commerce50 W . Broad Street, Suite 2900Columbus, OH  43215(614) 644-2631\nOklahoma\nOklahoma Department of Labor\nOSHA Division4001 North Lincoln BoulevardOklahoma City, OK  73105-5212(405) 528-1500\nOregon\nOregon OSHA\nDepartment of Consumer and Business Services350 Winter Street, N.E., Room 430Salem, OR  97301-3882(503) 378-3272\nPennsylvania\nIndiana University of Pennsylvania\nRoom 210, Walsh Hall302 E. WalkIndiana, PA  15705-1087(724) 357-2396"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 67,
+    "text": "62Puerto Rico\nOccupational Safety and Health Office\nDepartment of Labor and Human Resources\n21st Floor\n505 Munoz Rivera Avenue\nHato Rey, PR  00918\n(787) 754-2171\nRhode Island\nOSHA Consultation Program\nDivision of Occupational Health and Radiation Control\nRhode Island Department of Health\n3 Capital Hill, Room 206\nProvidence, RI  02908\n(401) 222-2438\nSouth Carolina\nSouth Carolina Department of Labor , Licensing and Regulation\n3600 Forest Drive\nPost Office Box 11329\nColumbia, SC  29204\n(803) 734-9614\nSouth Dakota\nEngineering Extension\nOnsite T echnical Division\nSD State University, West Hall\nBox 510, 907 Harvey Dunn Street\nBrookings, SD  57007\n(605) 688-4101\nT ennessee\nOSHA Consultative Services Division\nT ennessee Department of Labor\n3rd Floor\n710 James Robertson Parkway\nNashville, TN  37243-0659\n(615) 741-7036"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 68,
+    "text": "63T exas\nWorkers’ Health and Safety Division\nWorkers’ Compensation Commission\nSouthfield Building4000 South I H 35Austin, TX  78704(512) 804-4640\nUtah\nState of Utah Labor Commission\nWorkplace Safety and HealthConsultation Services160 East 300 SouthSalt Lake City, UT  84111(801) 530-6901\nVermont\nDivision of Occupational Safety and Health\nVermont Department of Labor and IndustryNational Life Building, Drawer #20Montepilier , VT  05620-3401(802) 828-2765\nVirginia\nVirginia Department of Labor and Industry\nOccupational Safety and HealthT raining and Consultation13 South 13th StreetRichmond, VA  23219\n(804) 786-6359\nVirgin Islands\nDivision of Occupational Safety and Health\nVirgin Islands Department of Labor3021 Golden RockChristiansted St. Croix, VI  00840\n(809) 772-1315"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 69,
+    "text": "64Washington\nWashington Dept of Labor and Industries\nDivision of Industrial Safety and Health\nPost Office Box 44643Olympia, WA  98504(360) 902-5638\nWest Virginia\nWest Virginia Department of Labor\nCapitol Complex Building #6\nRoom 319Charleston, WV  25305(304) 558-7890\nWisconsin (Health)\nWisconsin Department of Health and Family Services\nDivision of Health\nBureau of Occupational Health1 West Wilson Street, Room B157PO Box 2659Madison, WI  53701-2659(608) 266-9383\nWisconsin (Safety)\nWisconsin Safety Consultation\nN14W23833 Stone Ridge Drive, Suite B100Waukesha, WI  53188-1125(262) 523-3044\nWyoming\nWyoming Department of Employment\nWorkers’ Safety and Compensation DivisionHerschler Building, 2 East122 West 25th StreetCheyenne, WY  82002(307) 777-7786"
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 70,
+    "text": "This booklet provides a generic overview of a\nstandards-related topic. This publication does not alter ordetermine compliance responsibilities, which are describedin the OSHA standards and the \nOccupational Safety\nand Health Act . Because interpretations and enforcement\npolicy may change over time, the best sources for additional\nguidance on OSHA compliance requirements are currentadministrative interpretations and decisions by theOccupational Safety and Health Review Commission andthe courts. This publication is in the public domain andmay be reproduced fully or partially without permission.\nSource credit is requested but not required.\nOSHA will make this information available to sensory\nimpaired individuals upon request. Call (202) 693 –1999.The teletypewriter (TTY) number is (877) 889–5627.U.S. Department of Labor\nElaine L. Chao, Secretary\nOccupational Safety and Health Administration\nJohn L. Henshaw, Assistant Secretary\nOSHA 3075\n2002 (Revised)\nT o report an emergency, file a complaint, or seek OSHA\nadvice, assistance, or products, call (800) 321-OSHAor contact your nearest OSHA regional or area office.The teletypewriter (TTY) number is (877) 889-5627."
+  },
+  {
+    "doc_id": "ev-safety-compliance",
+    "doc_title": "OSHA 3075 Controlling Electrical Hazards",
+    "page_number": 71,
+    "text": "U.S. Department of Labor\nOccupational Safety and Health Administration\nOSHA 3075\n2002 (Revised)"
+  }
+]

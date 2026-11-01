@@ -86,12 +86,28 @@ def _warmup_backend():
             pages = []
             if Path("data/raw/synthetic").exists():
                 pages.extend(load_directory("data/raw/synthetic"))
-            osha_path = Path("data/raw/real/ev-safety-compliance.pdf")
-            if osha_path.exists():
-                pages.extend(load_pdf(str(osha_path)))
+
+            # Load OSHA 3075 standard pages (from JSON text fixture or raw PDF)
+            osha_json = Path("data/demo/osha_3075_pages.json")
+            if osha_json.exists():
+                import json
+                with open(osha_json, encoding="utf-8") as f:
+                    raw_p = json.load(f)
+                from voltagent.ingestion.loaders import SourcePage
+                pages.extend([
+                    SourcePage(doc_id=r["doc_id"], doc_title=r["doc_title"], page_number=r["page_number"], text=r["text"])
+                    for r in raw_p
+                ])
+                logger.info("Loaded %d OSHA 3075 pages from %s", len(raw_p), osha_json)
+            else:
+                for osha_path in [Path("data/raw/real/ev-safety-compliance.pdf"), Path("data/raw/ev-safety-compliance.pdf")]:
+                    if osha_path.exists():
+                        logger.info("Loading OSHA 3075 safety manual from %s", osha_path)
+                        pages.extend(load_pdf(str(osha_path)))
+                        break
 
             if pages:
-                chunks = chunk_pages(pages)
+                chunks = chunk_pages(pages, chunk_size_tokens=100, overlap_tokens=20)
                 ElasticsearchRetriever().index_chunks(chunks)
                 QdrantRetriever().index_chunks(chunks)
                 logger.info("Demo index built with %d chunks.", len(chunks))
