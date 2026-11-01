@@ -4,6 +4,7 @@ sdk: gradio
 sdk_version: 5.49.1
 python_version: "3.11"
 app_file: app.py
+suggested_hardware: cpu-basic
 ---
 
 # VoltAgent: Voice-First Verified RAG Copilot for EV Charger Technicians
