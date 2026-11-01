@@ -86,12 +86,21 @@ def _warmup_backend():
             pages = []
             if Path("data/raw/synthetic").exists():
                 pages.extend(load_directory("data/raw/synthetic"))
-            osha_path = Path("data/raw/real/ev-safety-compliance.pdf")
-            if osha_path.exists():
-                pages.extend(load_pdf(str(osha_path)))
+            
+            # Look for OSHA 3075 standard manual in demo or real directories
+            osha_candidates = [
+                Path("data/demo/ev-safety-compliance.pdf"),
+                Path("data/raw/real/ev-safety-compliance.pdf"),
+                Path("data/raw/ev-safety-compliance.pdf"),
+            ]
+            for osha_path in osha_candidates:
+                if osha_path.exists():
+                    logger.info("Loading OSHA 3075 safety manual from %s", osha_path)
+                    pages.extend(load_pdf(str(osha_path)))
+                    break
 
             if pages:
-                chunks = chunk_pages(pages)
+                chunks = chunk_pages(pages, chunk_size_tokens=100, overlap_tokens=20)
                 ElasticsearchRetriever().index_chunks(chunks)
                 QdrantRetriever().index_chunks(chunks)
                 logger.info("Demo index built with %d chunks.", len(chunks))
