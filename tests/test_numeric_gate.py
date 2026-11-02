@@ -40,6 +40,11 @@ PASS_CASES = [
      ["wait 10 minutes", "bus voltage below 50 V"]),
     ("kv-stated-in-source", "The output is up to 0.5 kV", ["up to 0.5 kV, which is 500 V"]),
     ("degrees-celsius-symbol", "Shutdown at 85 °C", ["shutdown temperature is 85 °C (185 °F)"]),
+    ("mass-kilograms-abbr", "Weighs 15 kg", ["weight is 15 kilograms"]),
+    ("torque-nm-word", "Tighten to 2.8 newton-meters", ["tighten screws to 2.8 Nm"]),
+    ("length-hindi-meter", "माउंटिंग ऊंचाई 1.5 मीटर", ["mounting height 1.5 m"]),
+    ("hindi-torque", "टॉर्क 2.8 न्यूटन-मीटर", ["torque 2.8 Nm"]),
+    ("hindi-mass", "वजन 15 किलोग्राम", ["weight 15 kg"]),
 ]
 
 FAIL_CASES = [
@@ -55,6 +60,9 @@ FAIL_CASES = [
     ("number-exists-with-another-unit", "Wait 50 minutes", ["wait 10 minutes", "below 50 V"], ["50 min"]),
     ("one-of-two-values-wrong", "Trip at 30 mA after 100 s", ["trip 30 mA, delay 100 ms"], ["100 s"]),
     ("absent-from-chunks", "Torque is 15 Nm", ["no torque information here"], ["15 Nm"]),
+    ("torque-unit-mismatch-kg-vs-nm", "Tighten to 2.8 kilograms", ["tighten to 2.8 Nm"], ["2.8 kg"]),
+    ("hindi-mounting-height-wrong-number", "माउंटिंग ऊंचाई 15 मीटर", ["mounting height 1.30 m to 1.70 m"], ["15 m"]),
+    ("length-mm-vs-cm", "Clearance is 50 cm", ["Clearance is 50 mm"], ["50 cm"]),
     ("code-absent", "Code E-102 applies", ["E-101 GroundFailure"], ["E102"]),
     ("code-0140-is-not-014", "Error E-0140", ["E-014 relay stuck closed"], ["E0140"]),
     ("code-letter-O-is-not-zero", "Error E-O14", ["E-014 relay stuck closed"], ["EO14"]),

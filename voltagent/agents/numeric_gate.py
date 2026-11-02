@@ -29,11 +29,13 @@ _DEVANAGARI_DIGITS = str.maketrans("०१२३४५६७८९", "0123456789
 
 # Latin symbols are matched case-sensitively (mA is not MA).
 _SYMBOLS = {
-    "kWh": "kWh", "kW": "kW", "kV": "kV", "mA": "mA", "ms": "ms", "Nm": "Nm", "N·m": "Nm",
+    "kWh": "kWh", "kW": "kW", "kV": "kV", "mA": "mA", "ms": "ms", "Nm": "Nm", "N·m": "Nm", "N-m": "Nm", "N.m": "Nm",
     "°C": "degC", "°F": "degF", "kOhm": "kohm", "kohm": "kohm", "Ohm": "ohm", "ohm": "ohm",
     "Hz": "Hz", "V": "V", "A": "A", "W": "W", "s": "s", "h": "h",
     "kVA": "kVA", "VA": "VA", "MVA": "MVA",
-    "m": "m", "cm": "cm", "mm": "mm", "in": "in", "ft": "ft",
+    "m": "m", "cm": "cm", "mm": "mm", "km": "km", "in": "in", "ft": "ft",
+    "kg": "kg", "g": "g", "lb": "lb", "lbs": "lb",
+    "ft-lb": "ft-lb", "ft-lbs": "ft-lb", "ft·lb": "ft-lb",
     "psi": "psi", "PSI": "psi", "bar": "bar",
     "%": "%",
 }
@@ -49,7 +51,17 @@ _WORDS = {
     "hours": "h", "hour": "h",
     "degrees celsius": "degC", "degree celsius": "degC", "degc": "degC",
     "degrees fahrenheit": "degF", "degree fahrenheit": "degF", "degf": "degF",
-    "inches": "in", "inch": "in", "meters": "m", "meter": "m", "feet": "ft", "foot": "ft",
+    "inches": "in", "inch": "in", "meters": "m", "meter": "m", "metres": "m", "metre": "m",
+    "millimeters": "mm", "millimeter": "mm", "millimetres": "mm", "millimetre": "mm",
+    "centimeters": "cm", "centimeter": "cm", "centimetres": "cm", "centimetre": "cm",
+    "kilometers": "km", "kilometer": "km", "kilometres": "km", "kilometre": "km",
+    "feet": "ft", "foot": "ft",
+    "kilograms": "kg", "kilogram": "kg", "kgs": "kg",
+    "grams": "g", "gram": "g",
+    "pounds": "lb", "pound": "lb",
+    "newton-meters": "Nm", "newton-meter": "Nm", "newton meters": "Nm", "newton meter": "Nm",
+    "newton-metres": "Nm", "newton-metre": "Nm", "newton metres": "Nm", "newton metre": "Nm",
+    "foot-pounds": "ft-lb", "foot-pound": "ft-lb", "foot pounds": "ft-lb", "foot pound": "ft-lb",
     "percent": "%",
 }
 # Hindi unit words: UNREVIEWED by a native speaker.
@@ -61,7 +73,16 @@ _HINDI = {
     "मिलीएम्पियर": "mA", "मिलीऐम्पियर": "mA", "एम्पियर": "A", "ऐम्पियर": "A", "एम्प": "A",
     "किलोवोल्ट": "kV", "वोल्ट": "V", "किलोवाट": "kW", "वाट": "W",
     "किलोओम": "kohm", "ओम": "ohm",
+    "मीटर": "m", "मी": "m",
+    "मिलीमीटर": "mm", "मिमी": "mm",
+    "सेंटीमीटर": "cm", "सेमी": "cm",
+    "किलोमीटर": "km", "किमी": "km",
+    "इंच": "in", "फीट": "ft", "फुट": "ft",
+    "किलोग्राम": "kg", "किलो": "kg", "किग्रा": "kg",
+    "ग्राम": "g", "पाउंड": "lb",
+    "न्यूटन-मीटर": "Nm", "न्यूटन मीटर": "Nm", "न्यूटन-मी": "Nm",
     "डिग्री सेल्सियस": "degC",
+    "प्रतिशत": "%",
 }
 
 
@@ -126,6 +147,9 @@ def extract_critical_values(text: str) -> set[str]:
         n = _number(m.group("n"))
         if n is not None:
             values.add(f"{n} {_unit(m.group('u'))}")
+        n2 = _number(m.group("n2"))
+        if n2 is not None:
+            values.add(f"{n2} {_unit(m.group('u'))}")
     for m in _CODE.finditer(text):
         code = re.sub(r"[-\s]", "", m.group(0))
         values.add("E" + code[1:])
