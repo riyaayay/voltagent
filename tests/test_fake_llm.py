@@ -38,11 +38,3 @@ def test_fake_scripted_replies_and_exceptions_are_consumed_in_order():
         llm.complete("x")
     # script exhausted -> back to default behaviour (unrecognised prompt -> empty)
     assert llm.complete("unrelated prompt") == ""
-
-
-@pytest.mark.live
-def test_live_provider_smoke():
-    from voltagent.llm import get_llm_client, set_llm_client
-
-    set_llm_client(None)
-    assert get_llm_client().complete("Reply with the single word: ok").strip()

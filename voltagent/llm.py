@@ -7,6 +7,7 @@ turn a prompt into text) so it stays a five-minute read.
 """
 from __future__ import annotations
 
+import time
 from abc import ABC, abstractmethod
 
 from voltagent.config import settings
@@ -22,6 +23,10 @@ class GeminiClient(LLMClient):
     def __init__(self) -> None:
         import google.generativeai as genai
 
+        if not settings.gemini_api_key:
+            raise ValueError(
+                "GEMINI_API_KEY is not set in environment or .env. Please configure a valid API key."
+            )
         genai.configure(api_key=settings.gemini_api_key)
         model_name = settings.generation_model
         if model_name in ("gemini-1.5-flash", "models/gemini-1.5-flash"):
@@ -31,16 +36,36 @@ class GeminiClient(LLMClient):
         self._model = genai.GenerativeModel(model_name)
 
     def complete(self, prompt: str, temperature: float = 0.2) -> str:
-        response = self._model.generate_content(
-            prompt, generation_config={"temperature": temperature}
-        )
-        return response.text or ""
+        max_retries = 5
+        base_delay = 2.0
+        for attempt in range(max_retries):
+            try:
+                response = self._model.generate_content(
+                    prompt, generation_config={"temperature": temperature}
+                )
+                return response.text or ""
+            except Exception as e:
+                err_str = str(e).lower()
+                if (
+                    "429" in err_str
+                    or "quota" in err_str
+                    or "resource_exhausted" in err_str
+                    or "rate limit" in err_str
+                ) and attempt < max_retries - 1:
+                    sleep_sec = base_delay * (2 ** attempt)
+                    time.sleep(sleep_sec)
+                    continue
+                raise
 
 
 class OpenAIClient(LLMClient):
     def __init__(self) -> None:
         from openai import OpenAI
 
+        if not settings.openai_api_key:
+            raise ValueError(
+                "OPENAI_API_KEY is not set in environment or .env. Please configure a valid API key."
+            )
         self._client = OpenAI(api_key=settings.openai_api_key)
 
     def complete(self, prompt: str, temperature: float = 0.2) -> str:
