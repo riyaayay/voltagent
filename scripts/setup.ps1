@@ -44,7 +44,11 @@ $VenvPython = Join-Path $VenvPath "Scripts\python.exe"
 
 if (-not (Test-Path $VenvPython)) {
     Write-Host "Creating virtual environment at $VenvPath..."
-    & $PythonCmd -m venv $VenvPath
+    if ($PythonCmd.Count -gt 1) {
+        & $PythonCmd[0] $PythonCmd[1] -m venv $VenvPath
+    } else {
+        & $PythonCmd[0] -m venv $VenvPath
+    }
 } else {
     Write-Host "Virtual environment already exists at $VenvPath."
 }
