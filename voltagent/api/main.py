@@ -19,6 +19,7 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, Response
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from voltagent.agents.graph import run_pipeline
@@ -77,55 +78,23 @@ def _warmup_backend():
 
         if not bm25_cache.exists() or not dense_cache.exists():
             _ready_status = "building_index"
-            logger.info("Index cache missing. Building demo index from synthetic + OSHA 3075...")
+            logger.info("Index cache missing. Building index from raw corpus...")
             from voltagent.ingestion.chunking import chunk_pages
-            from voltagent.ingestion.loaders import load_directory, load_pdf
+            from voltagent.ingestion.loaders import load_directory
             from voltagent.retrieval.dense_qdrant import QdrantRetriever
             from voltagent.retrieval.sparse_es import ElasticsearchRetriever
 
             pages = []
             if Path("data/raw/synthetic").exists():
                 pages.extend(load_directory("data/raw/synthetic"))
-<<<<<<< HEAD
-
-            # Load OSHA 3075 standard pages (from JSON text fixture or raw PDF)
-            osha_json = Path("data/demo/osha_3075_pages.json")
-            if osha_json.exists():
-                import json
-                with open(osha_json, encoding="utf-8") as f:
-                    raw_p = json.load(f)
-                from voltagent.ingestion.loaders import SourcePage
-                pages.extend([
-                    SourcePage(doc_id=r["doc_id"], doc_title=r["doc_title"], page_number=r["page_number"], text=r["text"])
-                    for r in raw_p
-                ])
-                logger.info("Loaded %d OSHA 3075 pages from %s", len(raw_p), osha_json)
-            else:
-                for osha_path in [Path("data/raw/real/ev-safety-compliance.pdf"), Path("data/raw/ev-safety-compliance.pdf")]:
-                    if osha_path.exists():
-                        logger.info("Loading OSHA 3075 safety manual from %s", osha_path)
-                        pages.extend(load_pdf(str(osha_path)))
-                        break
-=======
-            
-            # Look for OSHA 3075 standard manual in demo or real directories
-            osha_candidates = [
-                Path("data/demo/ev-safety-compliance.pdf"),
-                Path("data/raw/real/ev-safety-compliance.pdf"),
-                Path("data/raw/ev-safety-compliance.pdf"),
-            ]
-            for osha_path in osha_candidates:
-                if osha_path.exists():
-                    logger.info("Loading OSHA 3075 safety manual from %s", osha_path)
-                    pages.extend(load_pdf(str(osha_path)))
-                    break
->>>>>>> 77da7954d301318847f56ca27fcfcfacf7b7afb9
+            if Path("data/raw/real").exists():
+                pages.extend(load_directory("data/raw/real"))
 
             if pages:
                 chunks = chunk_pages(pages, chunk_size_tokens=100, overlap_tokens=20)
                 ElasticsearchRetriever().index_chunks(chunks)
                 QdrantRetriever().index_chunks(chunks)
-                logger.info("Demo index built with %d chunks.", len(chunks))
+                logger.info("Index built with %d chunks.", len(chunks))
 
         _ready_status = "warming_embedder"
         from voltagent.retrieval.dense_qdrant import get_embedder
@@ -232,3 +201,9 @@ def query_with_speech(request: QueryRequest, http_request: Request) -> Response:
     result = run_pipeline(request.text, station_id=request.station_id, charger_model=request.charger_model)
     audio_bytes = synthesize_speech(result["answer"], result["language"])
     return Response(content=audio_bytes, media_type="audio/mpeg")
+
+
+# Mount frontend/ static files at "/" so API and UI share the same origin
+frontend_dir = Path(__file__).resolve().parent.parent.parent / "frontend"
+if frontend_dir.exists():
+    app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
