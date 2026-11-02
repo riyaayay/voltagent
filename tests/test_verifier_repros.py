@@ -74,3 +74,29 @@ def test_citation_to_unrelated_chunk_is_not_verified(style):
     answer = _cite("Wait 10 minutes after isolating the DC bus before opening the cabinet", "[1][2]", style)
     gen = _generation(answer, [_chunk("c1", DISCHARGE_CHUNK), _chunk("c2", HVAC_CHUNK)])
     assert run_verifier_agent(gen).verified is False
+
+
+MULTI_CODE_CHUNK = (
+    "VoltCo EV Charger Error Codes Reference\n"
+    "Fault Code E203: Indicates DC ground insulation fault detected on power module.\n"
+    "Fault Code E208: Indicates output overcurrent condition where charging current exceeded 160 A for more than 50 ms.\n"
+    "Technicians must isolate power before testing harness continuity for code E203."
+)
+
+
+@pytest.mark.slow
+def test_error_code_meaning_mismatch_is_rejected_despite_code_presence():
+    """HW03 regression: chunk contains E208, but describes overcurrent, not humidity sensor."""
+    wrong_answer = "Fault Code E208 indicates an ambient humidity sensor failure in the subassembly [1]."
+    gen = _generation(wrong_answer, [_chunk("c1", MULTI_CODE_CHUNK)])
+    result = run_verifier_agent(gen)
+    assert result.verified is False
+
+
+@pytest.mark.slow
+def test_error_code_correct_meaning_is_verified():
+    """Control: correct error code meaning passes verification."""
+    correct_answer = "Fault Code E208 indicates an output overcurrent condition where current exceeded 160 A for more than 50 ms [1]."
+    gen = _generation(correct_answer, [_chunk("c1", MULTI_CODE_CHUNK)])
+    result = run_verifier_agent(gen)
+    assert result.verified is True

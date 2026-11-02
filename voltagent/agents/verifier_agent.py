@@ -78,6 +78,33 @@ def _cited_chunk_id_for_sentence(sentence: str, chunk_by_index: dict[int, str]) 
     return chunk_by_index.get(int(refs[0]))
 
 
+_CODE_PATTERN = re.compile(r"(?<![A-Za-z0-9])[Eeई](?:-[0-9OIl]{2,4}|\s?[0-9OIl]{3,4})[A-Z]?(?![A-Za-z0-9])")
+_BOILERPLATE_PATTERN = re.compile(
+    r"(?i)\b(?:fault\s+code|error\s+code|code)?\s*[Eeई][-\s]?[0-9OIl]{2,4}[A-Z]?(?:\s*(?:indicates?|means?|shows?|is|:|-|–))\s*"
+)
+
+
+def _strip_code_boilerplate(text: str) -> str:
+    cleaned = _BOILERPLATE_PATTERN.sub("", text).strip()
+    return cleaned if len(cleaned) > 5 else text
+
+
+def _find_code_passages(src_text: str, code: str) -> list[str]:
+    digits = re.sub(r"[^0-9OIl]", "", code)
+    if not digits:
+        return []
+    pattern = re.compile(rf"\b[Eeई][-\s]?{re.escape(digits)}[A-Z]?\b", re.IGNORECASE)
+    passages = []
+    for line in re.split(r"[\r\n]+", src_text):
+        if line.strip() and pattern.search(line):
+            passages.append(line.strip())
+    if not passages:
+        for sent in re.split(r"(?<=[.!?])\s+", src_text):
+            if sent.strip() and pattern.search(sent):
+                passages.append(sent.strip())
+    return passages
+
+
 def check_negation_conflict(claim: str, source: str) -> bool:
     """Deterministic check for negation flip (V4 in STATUS.md).
 
@@ -159,7 +186,24 @@ def run_verifier_agent(generation: GenerationResult, query_text: str | None = No
         for cid in cited_ids:
             src_text = chunk_text_by_id[cid]
             src_emb = embedder.encode(src_text, convert_to_tensor=True)
-            chunk_sims.append(float(util.cos_sim(sent_emb, src_emb)[0][0]))
+            sim = float(util.cos_sim(sent_emb, src_emb)[0][0])
+
+            # For error code claims, check against the specific definition passage
+            # mentioning the code to avoid semantic dilution from the rest of the chunk.
+            codes = _CODE_PATTERN.findall(sentence_clean)
+            if codes:
+                for code in codes:
+                    passages = _find_code_passages(src_text, code)
+                    if passages:
+                        subpassage = " ".join(passages)
+                        sent_core = _strip_code_boilerplate(sentence_clean)
+                        sub_core = _strip_code_boilerplate(subpassage)
+                        emb_sent_core = embedder.encode(sent_core, convert_to_tensor=True)
+                        emb_sub_core = embedder.encode(sub_core, convert_to_tensor=True)
+                        code_sim = float(util.cos_sim(emb_sent_core, emb_sub_core)[0][0])
+                        sim = min(sim, code_sim)
+
+            chunk_sims.append(sim)
 
         min_sim = min(chunk_sims)
 
