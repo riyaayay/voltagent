@@ -66,6 +66,15 @@ def main() -> None:
     chunks = chunk_pages(pages, chunk_size_tokens=args.chunk_size, overlap_tokens=args.overlap)
     print(f"      Produced {len(chunks)} chunks.")
 
+    # Per-document chunk breakdown
+    doc_counts: dict[str, int] = {}
+    for c in chunks:
+        doc = c.doc_title or c.doc_id
+        doc_counts[doc] = doc_counts.get(doc, 0) + 1
+    print("      Chunks per document:")
+    for doc, count in sorted(doc_counts.items()):
+        print(f"        - {doc}: {count} chunks")
+
     print("[3/4] Indexing into Elasticsearch (BM25 leg) ...")
     es = ElasticsearchRetriever()
     es.index_chunks(chunks)

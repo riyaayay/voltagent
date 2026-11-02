@@ -159,3 +159,31 @@ function speak(text, language) {
   window.speechSynthesis.cancel(); // don't stack utterances
   window.speechSynthesis.speak(utterance);
 }
+
+// Honesty & readiness check on page load
+async function checkReadiness() {
+  setStatus("Connecting to VoltAgent backend…");
+  micBtn.disabled = true;
+  while (true) {
+    try {
+      const resp = await fetch(`${API_BASE}/ready`);
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data.ready) {
+          setStatus("Ready. Tap mic to speak.");
+          micBtn.disabled = false;
+          return;
+        } else {
+          setStatus(`Backend initializing (${data.status})…`);
+        }
+      } else {
+        setStatus("Warming up embedder and index…");
+      }
+    } catch (e) {
+      setStatus("Waiting for backend server to start…");
+    }
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+}
+
+window.addEventListener("DOMContentLoaded", checkReadiness);
