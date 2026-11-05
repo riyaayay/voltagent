@@ -4,39 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VoltAgent — Field Copilot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="app">
-    <header class="app__header">
-      <h1>VoltAgent</h1>
-      <p class="app__subtitle">EV charger field copilot — voice-first, source-verified</p>
-    </header>
 
-    <section class="controls">
-      <label for="lang-select">Language</label>
-      <select id="lang-select">
-        <option value="en-IN">English</option>
-        <option value="hi-IN">हिन्दी (Hindi)</option>
-      </select>
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav__brand">VoltAgent</span>
+    <div class="nav__links">
+      <a href="#how">How it works</a>
+      <a href="#safety">Safety</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 
-      <button id="mic-btn" class="mic-btn" aria-pressed="false">
-        <span id="mic-icon">🎤</span>
-        <span id="mic-label">Tap to ask</span>
-      </button>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="hero__title">
+      Your query.<br>
+      <em>Your fastest answer.</em>
+    </h1>
+    <p class="hero__sub">
+      Voice-first EV charger copilot for field technicians — bilingual, source-verified,<br>
+      built for live 400 V DC equipment.
+    </p>
 
-    <section class="transcript" aria-live="polite">
-      <div id="status" class="status">Ready.</div>
-      <div id="user-text" class="bubble bubble--user" hidden></div>
-      <div id="answer-block" class="answer-block" hidden>
-        <div id="answer-text" class="bubble bubble--agent"></div>
-        <div id="confidence-badge" class="badge"></div>
-        <div id="citations" class="citations"></div>
-        <div id="raw-source" class="raw-source" hidden></div>
+    <!-- GLASS PANEL -->
+    <div class="panel" id="main-panel">
+
+      <!-- Status / query echo area -->
+      <div class="panel__body">
+        <p class="panel__hint" id="panel-hint">
+          Speak a fault code, error LED, or safety question in English or Hindi.
+          VoltAgent retrieves the exact manufacturer spec and verifies every claim
+          before answering.
+        </p>
+        <!-- User query bubble (shown after speech) -->
+        <div class="bubble bubble--user" id="user-text" hidden></div>
+
+        <!-- Answer area -->
+        <div class="answer-block" id="answer-block" hidden>
+          <div class="bubble bubble--agent" id="answer-text"></div>
+          <div class="badge" id="confidence-badge"></div>
+          <div class="citations" id="citations"></div>
+          <div class="raw-source" id="raw-source" hidden></div>
+        </div>
+
+        <!-- Status line -->
+        <div class="status" id="status">Connecting to backend…</div>
       </div>
-    </section>
-  </main>
+
+      <!-- MIC PILL -->
+      <div class="panel__controls">
+        <!-- Language toggle -->
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en-IN" id="lang-en">EN</button>
+          <button class="lang-btn" data-lang="hi-IN" id="lang-hi">हि</button>
+        </div>
+
+        <!-- Waveform + mic pill -->
+        <button class="mic-pill" id="mic-btn" aria-pressed="false" aria-label="Tap to ask">
+          <div class="waveform" id="waveform" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="mic-pill__icon" id="mic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 1a4 4 0 0 1 4 4v7a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v7a2 2 0 0 0 4 0V5a2 2 0 0 0-2-2zm7 8a1 1 0 0 1 1 1 8 8 0 0 1-7 7.94V21h2a1 1 0 0 1 0 2H9a1 1 0 0 1 0-2h2v-1.06A8 8 0 0 1 4 12a1 1 0 0 1 2 0 6 6 0 0 0 12 0 1 1 0 0 1 1-1z"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
 
   <script src="app.js"></script>
 </body>
