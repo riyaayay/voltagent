@@ -46,3 +46,17 @@ def test_dependency_down_returns_explicit_degraded_response_not_500(fake_llm, es
     body = resp.json()
     assert body["verified"] is False
     assert body["answer"]
+
+
+def test_pipeline_exception_handling_logs_and_returns_outcome_c(monkeypatch):
+    """Regression test: graph.py exception handler uses valid logger without NameError."""
+    def _raise_failure(*args, **kwargs):
+        raise RuntimeError("Forced simulation error for testing logger in exception handler")
+
+    monkeypatch.setattr(graph._compiled_graph, "invoke", _raise_failure)
+    resp = graph.run_pipeline("simulate failure")
+
+    assert resp["outcome"] == "C"
+    assert resp["verified"] is False
+    assert "Forced simulation error" in resp["fallback_reason"]
+

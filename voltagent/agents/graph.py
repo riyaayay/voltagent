@@ -9,6 +9,7 @@ be a rewrite if this were a flat pipeline function.
 """
 from __future__ import annotations
 
+import logging
 from dataclasses import dataclass
 from typing import Any, TypedDict
 
@@ -20,6 +21,8 @@ from voltagent.agents.verifier_agent import VerificationResult, run_verifier_age
 from voltagent.cache import cache
 from voltagent.logging_utils import QueryTrace
 from voltagent.retrieval.hybrid import HybridRetriever, RetrievedChunk
+
+logger = logging.getLogger(__name__)
 
 
 class GraphState(TypedDict, total=False):
