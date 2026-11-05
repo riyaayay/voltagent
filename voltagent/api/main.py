@@ -180,7 +180,24 @@ def query(request: QueryRequest, http_request: Request) -> dict:
     _check_rate_limit(client_ip)
     _check_daily_cap()
 
-    return run_pipeline(request.text, station_id=request.station_id, charger_model=request.charger_model)
+    try:
+        return run_pipeline(request.text, station_id=request.station_id, charger_model=request.charger_model)
+    except Exception as e:
+        logger.exception("Unexpected error in /query endpoint: %s", e)
+        return {
+            "query_id": "error",
+            "answer": f"Backend processing error: {e}",
+            "language": request.lang or "en",
+            "verified": False,
+            "confidence": 0.0,
+            "fallback": True,
+            "cache_hit": False,
+            "fallback_reason": str(e),
+            "outcome": "C",
+            "citations": [],
+            "raw_source": None,
+        }
+
 
 
 @app.post("/feedback")

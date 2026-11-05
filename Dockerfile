@@ -33,9 +33,9 @@ COPY --chown=voltagent:voltagent frontend /app/frontend
 COPY --chown=voltagent:voltagent data /app/data
 COPY --chown=voltagent:voltagent scripts /app/scripts
 
-# Pre-create writable index_cache directory for non-root user
-RUN mkdir -p /app/data/index_cache && \
-    chown -R voltagent:voltagent /app/data
+# Pre-create writable index_cache and observability directories for non-root user
+RUN mkdir -p /app/data/index_cache /app/observability && \
+    chown -R voltagent:voltagent /app
 
 USER voltagent
 

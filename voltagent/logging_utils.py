@@ -41,9 +41,14 @@ def extract_error_code(text: str) -> str | None:
 
 
 def _write(event: dict[str, Any]) -> None:
-    os.makedirs(os.path.dirname(settings.log_file), exist_ok=True)
-    with open(settings.log_file, "a", encoding="utf-8") as f:
-        f.write(json.dumps(event, ensure_ascii=False) + "\n")
+    try:
+        log_dir = os.path.dirname(settings.log_file)
+        if log_dir:
+            os.makedirs(log_dir, exist_ok=True)
+        with open(settings.log_file, "a", encoding="utf-8") as f:
+            f.write(json.dumps(event, ensure_ascii=False) + "\n")
+    except Exception as e:
+        logger.debug("Observability file write skipped: %s", e)
 
 
 def log_event(stage: str, **fields: Any) -> None:

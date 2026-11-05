@@ -199,8 +199,12 @@ def run_pipeline(
             response["outcome"] = "A" if response.get("verified") else "B1"
         return response
     except Exception as exc:
-        trace.record(error=str(exc))
-        trace.finalize(final_verified=False)
+        logger.exception("Pipeline invocation failed: %s", exc)
+        try:
+            trace.record(error=str(exc))
+            trace.finalize(final_verified=False)
+        except Exception as log_err:
+            logger.debug("Failed to finalize trace: %s", log_err)
         return {
             "outcome": "C",
             "query_id": trace.query_id,
@@ -209,7 +213,7 @@ def run_pipeline(
             "verified": False,
             "confidence": 0.0,
             "fallback": True,
-            "fallback_reason": f"System degradation: {type(exc).__name__}",
+            "fallback_reason": f"System degradation: {type(exc).__name__}: {str(exc)[:100]}",
             "degraded_stages": ["pipeline"],
             "cache_hit": False,
             "citations": [],
