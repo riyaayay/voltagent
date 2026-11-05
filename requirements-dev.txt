@@ -1,5 +1,9 @@
 -r requirements.txt
 
+# Testing
+pytest==8.3.3
+pytest-asyncio==0.24.0
+
 # Phase 1 corpus generation (dev only)
 reportlab==4.2.5
 PyMuPDF==1.24.11

@@ -38,7 +38,7 @@ jobs:
         # and `live` tests (require paid LLM API keys).
         # All unit, e2e (fake LLM), fusion, verifier, ingestion, and cache tests run.
         run: |
-          pytest -v -m "not slow and not live and not integration"
+          python -m pytest -v -m "not slow and not live and not integration"
 
       - name: Run Frozen Verifier Evaluation (Claim C)
         # Calls run_verifier_agent with synthetic GenerationResult objects from
