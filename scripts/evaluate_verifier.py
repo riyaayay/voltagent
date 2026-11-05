@@ -24,17 +24,25 @@ from voltagent.config import settings
 from voltagent.retrieval.types import RetrievedChunk
 
 EXPECTED_HASHES = {
-    "test_wrong_10.json": "dd0e1ce1b3a516eae81816793072f681cb55315fae3dfed8860f5e8d07d09b51",
-    "test_correct.json": "511a4ef2519b25fb010ebfacc235f8fe37cdaaf026ef6b4fc5bf7d290bfbb6dd",
+    # Hashes computed over LF-normalised bytes (CRLF→LF) so they are
+    # platform-agnostic: identical on Linux CI (LF checkout) and Windows
+    # dev machines (CRLF checkout via core.autocrlf=true).
+    "test_wrong_10.json": "43d61f3a928f3e46783a21211fc49591a003a2fc8ecadda753d80b9d45de0e3c",
+    "test_correct.json": "b4245134db5f1af76832a37f2f12670f5736bd5eaa08cb6b3c56ab6d0350a008",
 }
 
 
 def compute_sha256(path: Path) -> str:
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        while chunk := f.read(65536):
-            h.update(chunk)
-    return h.hexdigest()
+    """Compute SHA-256 over LF-normalised file bytes.
+
+    git's core.autocrlf converts LF→CRLF on Windows checkout, which would
+    produce a different raw hash than CI (Linux, LF checkout) sees.  Normalising
+    CRLF→LF before hashing makes the digest platform-agnostic and consistent
+    with the values stored in EXPECTED_HASHES above.
+    """
+    raw = Path(path).read_bytes()
+    normalised = raw.replace(b"\r\n", b"\n")
+    return hashlib.sha256(normalised).hexdigest()
 
 
 def evaluate_dataset(file_name: str, expected_hash: str) -> tuple[dict, list[dict]]:
