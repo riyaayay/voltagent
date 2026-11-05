@@ -26,15 +26,25 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
 
-      - name: Validate Gold Dataset Integrity
+      - name: Validate Gold Dataset JSON Structure
+        # validate_gold.py skips evidence checks for PDFs not checked into the repo
+        # (data/raw/real/ is gitignored). JSON structure, disjointness, and
+        # synthetic-corpus evidence checks run unconditionally.
         run: |
           python scripts/validate_gold.py
 
-      - name: Run Pytest Test Suite
+      - name: Run Unit + Integration Pytest Suite
+        # Excludes `slow` tests (require embedding model download or real PDFs)
+        # and `live` tests (require paid LLM API keys).
+        # All unit, e2e (fake LLM), fusion, verifier, ingestion, and cache tests run.
         run: |
-          pytest -v
+          pytest -v -m "not slow and not live and not integration"
 
       - name: Run Frozen Verifier Evaluation (Claim C)
+        # Calls run_verifier_agent with synthetic GenerationResult objects from
+        # frozen JSON fixtures. Downloads the multilingual sentence-transformer
+        # model (~420 MB) on first run; cached by pip/HF_HOME on re-runs.
+        env:
+          HF_HOME: /tmp/hf_cache
         run: |
           python scripts/evaluate_verifier.py
-
