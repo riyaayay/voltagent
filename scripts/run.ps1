@@ -1,7 +1,7 @@
 # scripts/run.ps1 - Start VoltAgent FastAPI service and frontend
 [CmdletBinding()]
 param(
-    [string]$Host = "127.0.0.1",
+    [string]$BindHost = "127.0.0.1",
     [int]$Port = 8000
 )
 
@@ -20,14 +20,18 @@ if (-not (Test-Path $EnvFile)) {
 }
 
 Write-Host "===========================================================" -ForegroundColor Cyan
-Write-Host " VoltAgent — Field Copilot for EV Charger Technicians" -ForegroundColor Cyan
+Write-Host " VoltAgent -- Field Copilot for EV Charger Technicians" -ForegroundColor Cyan
 Write-Host "===========================================================" -ForegroundColor Cyan
-Write-Host " Serving UI & API at: http://$Host`:$Port/" -ForegroundColor Green
+Write-Host " Serving UI and API at: http://${BindHost}:${Port}/" -ForegroundColor Green
 Write-Host " Browser mic: Chrome / Edge allow microphone on http://localhost" -ForegroundColor Yellow
-Write-Host " Health check: http://$Host`:$Port/health"
-Write-Host " Readiness probe: http://$Host`:$Port/ready"
+Write-Host " Health check: http://${BindHost}:${Port}/health"
+Write-Host " Readiness probe: http://${BindHost}:${Port}/ready"
 Write-Host " Press CTRL+C to stop the server.`n"
 
-# Run Uvicorn directly from virtual environment
-& $VenvPython -m uvicorn voltagent.api.main:app --host $Host --port $Port
-
+# Run Uvicorn directly from virtual environment with working directory at RepoRoot
+Push-Location $RepoRoot
+try {
+    & $VenvPython -m uvicorn voltagent.api.main:app --host $BindHost --port $Port
+} finally {
+    Pop-Location
+}

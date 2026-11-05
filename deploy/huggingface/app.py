@@ -5,16 +5,6 @@ running on host 0.0.0.0, port 7860.
 """
 from __future__ import annotations
 
-# ZeroGPU startup check compliance (must be imported before torch/voltagent)
-try:
-    import spaces
-
-    @spaces.GPU
-    def _zerogpu_startup_marker() -> str:
-        # Never called. Exists only so ZeroGPU's startup check finds a GPU function.
-        return "ok"
-except ImportError:
-    pass
 
 import os
 from pathlib import Path
@@ -22,16 +12,7 @@ import uvicorn
 from fastapi.staticfiles import StaticFiles
 
 from voltagent.api.main import app
-try:
-    import spaces
 
-    @spaces.GPU
-    def _zerogpu_startup_marker() -> str:
-        return "ok"
-
-    print("ZeroGPU marker registered", flush=True)
-except ImportError as e:
-    print(f"spaces import failed: {e}", flush=True)
     
 # Mount frontend/ static files at "/"
 frontend_dir = Path(__file__).resolve().parent / "frontend"
