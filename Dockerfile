@@ -25,18 +25,25 @@ COPY --from=builder /root/.local /home/voltagent/.local
 ENV PATH=/home/voltagent/.local/bin:$PATH
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
+ENV PORT=8000
 
-# Copy source code and scripts
+# Copy source code, frontend UI, data, and scripts
 COPY --chown=voltagent:voltagent voltagent /app/voltagent
+COPY --chown=voltagent:voltagent frontend /app/frontend
+COPY --chown=voltagent:voltagent data /app/data
 COPY --chown=voltagent:voltagent scripts /app/scripts
-COPY --chown=voltagent:voltagent data/manifest.json /app/data/manifest.json
+
+# Pre-create writable index_cache directory for non-root user
+RUN mkdir -p /app/data/index_cache && \
+    chown -R voltagent:voltagent /app/data
 
 USER voltagent
 
 EXPOSE 8000
 
 HEALTHCHECK --interval=15s --timeout=5s --retries=3 \
-    CMD curl -f http://localhost:8000/health || exit 1
+    CMD python -c "import urllib.request, os; p = os.environ.get('PORT', '8000'); urllib.request.urlopen(f'http://localhost:{p}/health')"
 
-CMD ["uvicorn", "voltagent.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "uvicorn voltagent.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+
 
