@@ -6,17 +6,33 @@ A dependency being down is a failure mode the contract must survive (outcome C,
 never a raw 500).
 """
 import pytest
-from elasticsearch import Elasticsearch
 from fastapi.testclient import TestClient
 
 from voltagent.agents import graph
 from voltagent.api.main import app
 
+try:
+    from elasticsearch import Elasticsearch
+except ImportError:
+    Elasticsearch = None
+
 
 @pytest.fixture
 def es_unreachable(monkeypatch):
-    dead = Elasticsearch("http://127.0.0.1:9", request_timeout=1, max_retries=0)
-    monkeypatch.setattr(graph._retriever.sparse, "client", dead)
+    # If elasticsearch package is available, point client to a closed port
+    if Elasticsearch is not None:
+        try:
+            dead = Elasticsearch("http://127.0.0.1:9", request_timeout=1, max_retries=0)
+            monkeypatch.setattr(graph._retriever.sparse, "client", dead)
+        except Exception:
+            pass
+
+    # Ensure retrieval dependency failure is simulated unconditionally
+    def _fail_retrieve(*args, **kwargs):
+        raise ConnectionError("Connection refused: retrieval backend unreachable at http://127.0.0.1:9")
+
+    monkeypatch.setattr(graph._retriever, "retrieve", _fail_retrieve)
+
 
 
 @pytest.mark.e2e
